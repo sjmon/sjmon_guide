@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Solaris - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Solaris";
+    var mkdocs_page_input_path = "install\\install_client_solaris.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Solaris</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#2-auto-installation-program-upload-installing-the-agent-program">2. Auto Installation Program Upload &amp; Installing the Agent Program</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-agent-installation-by-auto-installer">2.1) Agent Installation by Auto Installer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-agent-installation-by-manual-procedure">2.2) Agent Installation by Manual Procedure</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-agent-program-check">3. Agent program check</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-crontab">4. crontab 등록</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-agent-program-start-stop">5. Agent Program Start &amp; Stop</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation of OS Client &raquo;</li>
+        
+      
+    
+    <li>Solaris</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="solaris-agent-installation">Solaris Agent Installation</h1>
+<p>## 1. Prerequisite Check</p>
+<p>Agent 설치를 원하는 Client에 java 1.6 버전이 설치되어 있는지 확인합니다.</p>
+<pre><code># java -version
+</code></pre>
+<p>Client Agent 구동시 해당 버전이 필요하므로 사전에 설치를 해줍니다. File set만 설치되어 있으면 되며 경로 설정 등은 변경하지 않아도 됩니다.</p>
+<p><br></p>
+<p><br></p>
+<h2 id="2-auto-installation-program-upload-installing-the-agent-program">2. Auto Installation Program Upload &amp; Installing the Agent Program</h2>
+<ul>
+<li>sjmon 신규 계정을 생성할 수 있는 경우</li>
+</ul>
+<pre><code># useradd -m -d /opt/sjmon -u 9999 sjmon
+</code></pre>
+<p>계정 생성이 완료되면 Auto Installer 또는 manual Installation 절차에 따라 설치를 진행합니다. </p>
+<ul>
+<li><strong>기존에 사용중인 계정을 활용하는 경우</strong><br />
+  기존에 사용중인 계정을 활용하는 경우 staff group 권한 이상이면 됩니다.<br />
+  사용하려는 계정으로 전환한 뒤 해당 user의 home directory 아래 sjmon 디렉터리를 만들고 <strong>Auto Installer</strong> 또는 <strong>manual Installation</strong> 절차에 따라 설치를 진행합니다.  <br></li>
+</ul>
+<h3 id="21-agent-installation-by-auto-installer">2.1) Agent Installation by Auto Installer</h3>
+<p>sjmon (<code>$ su – sjmon</code>) 계정으로 전환한 뒤 아래 install과 관련된 파일들을 <code>/opt/sjmon</code> 안에 upload한 뒤 <strong>sjmonInstall.sh</strong> 파일을 실행하면 Manager로부터 설치파일을 내려 받아 자동으로 설치를 완료합니다.</p>
+<ul>
+<li>파일 위치 : manager 의 <code>/home/sjmonv2user/sjmon_file/installer/(installer버전)</code><br />
+  필요 파일명 : <strong>install_log4j.xml / sjmon_install.jar / sjmonInstall.sh</strong></li>
+</ul>
+<p></p>
+
+<ul>
+<li>sjmonInstall.sh 파일 실행시 sftp 또는 ftp를 사용, manager ip, 그리고 기본적으로는 <strong>43001</strong> port를 사용해서 설치합니다.<br />
+  (포트는 manager설치 시 변경을 했다면 변경된 Port를 사용합니다)</li>
+</ul>
+<pre><code># ./sjmonInstall.sh sftp XXX.XXX.XXX.XXX 43001 sjmonv2user zaq12wsx 0
+</code></pre>
+<p><br></p>
+<h3 id="22-agent-installation-by-manual-procedure">2.2) Agent Installation by Manual Procedure</h3>
+<p>고객사 사정으로 Manager서버에 ftp나 sftp접속이 어려운 경우, Manager서버에 있는 Installation 파일을 직접 다운받아 Agent에 SJMON을 위해 생성한 디렉터리에 SJMON 수집용 계정을 통해 업로드한 뒤 설치를 진행합니다. </p>
+<p><img alt="image-20210513170144427" src="../solaris_image/image-20210513170144427.png" /></p>
+<p>Manager서버에 sjmonv2user로 접속한 뒤, SOLARIS의 경우 all_files_SOL 디렉터리안으로 이동하여 해당하는 버전(TL까지 Check)의 설치 파일들을 client의 Agent 디렉터리로 다운받습니다 (ex. <code>/opt/sjmon</code>).</p>
+<p>다운이 완료되면 아래 5개 파일을 확인 및 수정한 뒤 Agent를 구동합니다. <br></p>
+<ul>
+<li><strong>agent.properties</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&nbsp;&nbsp;설정 항목</th>
+<th>&nbsp;&nbsp;설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;&nbsp;agent.host</td>
+<td>&nbsp;&nbsp;SJMON manager서버의 IP</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;agent.hport</td>
+<td>&nbsp;&nbsp;SJMON manager와 연결되는 Port (default 43001)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;agent.home</td>
+<td>&nbsp;&nbsp;Agent가 설치된 경로 (ex. /opt/sjmon)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;agent.pipelocation</td>
+<td>&nbsp;&nbsp;Agent의 pipe위치 (ex. /opt/sjmon/sjmonpipe)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;Agent.configlocation &nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;Agent의  agent.properties(ex. /opt/sjmon/agent.properties) &nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li><strong>startAgent.sh, startObserver.sh, stopAgent.sh, stopObserver.sh</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&nbsp;&nbsp;설정 항목</th>
+<th>&nbsp;&nbsp;설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;&nbsp;JAVA</td>
+<td>&nbsp;&nbsp;Agent의 Java가 설치된  위치 (ex. /usr/java6_64/jre/bin/java) &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;AGENT_HOME &nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;Agent가 설치된 위치 (ex.  /opt/sjmon)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li><strong>Agent Start</strong></li>
+</ul>
+<p>Agent의 SJMON 계정을 통해 파일이 업로드 된 위치에서 Agent를 구동합니다.</p>
+<p><code># startObserver.sh</code></p>
+<p><br></p>
+<p><br></p>
+<h2 id="3-agent-program-check">3. Agent program check</h2>
+<p>설치가 완료되면 sjmon process의 동작 여부를 확인합니다.</p>
+<p>EX ) <code>ps -fu sjmon</code><br />
+<img alt="image-20210513170003896" src="../solaris_image/image-20210513170003896.png" /></p>
+<p>solaris_sjmon, 그리고 java process 두 개가 실행된 상태가 정상 상태입니다.</p>
+<p><br></p>
+<p><br></p>
+<h2 id="4-crontab">4. crontab 등록</h2>
+<p>client 로그를 주기적으로 지우기 위해 crontab에 아래 내용을 등록합니다.</p>
+<ul>
+<li><strong>root 권한으로 Agent를 구동한 계정의 crontab 파일 수정</strong></li>
+</ul>
+<pre><code># crontab -e sjmon
+00,10,20,30,40,50 * * * * cat /dev/null &gt; /opt/sjmon/nohup.out
+</code></pre>
+<p><br></p>
+<p><br></p>
+<h2 id="5-agent-program-start-stop">5. Agent Program Start &amp; Stop</h2>
+<ul>
+<li><strong>Agent Program Start</strong><br />
+  sjmon Agent를 구동한 계정에서 startObserver.sh 실행합니다</li>
+</ul>
+<pre><code># ./startObserver.sh
+</code></pre>
+<p></p>
+
+<ul>
+<li><strong>Agent Program Stop</strong><br />
+  sjmon Agent를 구동한 계정에서 stopAgent.sh 실행합니다</li>
+</ul>
+<pre><code># ./stopAgent.sh
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install_client_apm_tomcat/" class="btn btn-neutral float-right" title="Tomcat">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install_client_hp/" class="btn btn-neutral" title="HP-UX"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install_client_hp/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install_client_apm_tomcat/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

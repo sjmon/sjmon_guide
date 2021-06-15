@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Oracle Agent Installation - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Oracle Agent Installation";
+    var mkdocs_page_input_path = "install\\install_client_oracle.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Oracle Agent Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="oracle-agent-installation">Oracle Agent Installation</h1>
+<p><strong><em>Oracle Agent를 설치하려면 먼저 Oracle이 설치되어 있는 Agent의 OS type에 맞춰 SJMON Agent를 설치하신 뒤 Oracle 연결을 시도할 수 있습니다.</em></strong></p>
+<p><br></p>
+<h2 id="1-prerequisite-check">1. Prerequisite Check</h2>
+<p>모니터링 대상 오라클 버전, IP, Port, SID, 계정정보를 확인합니다.<br />
+SID는 UNIX 기준 아래와 같은 명령어로 확인 가능합니다. (ora_smon_<strong>SID</strong>)<br />
+<img alt="image-20210514152638714" src="../oracle_image/image-20210514152638714.png" /></p>
+<p></p>
+
+<p>Windows는 아래와 같은 명령어로 확인 가능합니다. (OracleService<strong>SID</strong>)<br />
+<img alt="image-20210514152511227" src="../oracle_image/image-20210514152511227.png" /></p>
+<p><br></p>
+<h2 id="2-os-setting-for-the-agent-program">2. OS Setting for the Agent Program</h2>
+<ul>
+<li><strong>sjmon 계정이 oracle 에 접속할 수 있도록 OS profile 을 수정.</strong><br />
+  오라클을 사용하는 계정의 OS profile 을 cat 으로 열어 해당 내용을 복사하여 sjmon 을 위한 OS 계정의 OS profile 에 복사합니다. <br />
+<img alt="image-20210514133938711" src="../oracle_image/image-20210514133938711.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>인스턴스 설정 (대소문자 주의)</strong></li>
+</ul>
+<p>인스턴스 접속 및 계정 설정 작업을 위하여 인스턴스를 명시해줍니다. 인스턴스가 1개인 경우에는 필수 사항은 아니지만, 여러 개의 인스턴스를 접속하는 경우에는 인스턴스를 명시해 준 후 접속해야 원하는 인스턴스에 대하여 작업이 가능합니다.</p>
+<ul>
+<li>Unix<br />
+<img alt="image-20210514135156641" src="../oracle_image/image-20210514135156641.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>Windows <br />
+<img alt="image-20210514135208824" src="../oracle_image/image-20210514135208824.png" /></li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>인스턴스 접속</strong></li>
+</ul>
+<p>1안)</p>
+<p><code>#&gt; sqlplus " /as sysdba"</code></p>
+<p>2안) </p>
+<p><code>#&gt; sqlplus sys/패스워드 as sysdba</code></p>
+<p>고객사 보안정책 상 <code>$ORACLE_HOME/network/admin/sqlnet.ora</code>  파일에 <code>SQLNET.AUTHENTICATION_SERVICES=(NTS)</code> 를 설정하였을 경우 1안에서 <code>ORA-01031: insufficient privileges</code> 와 같은 에러메시지가 나오고 접속이 안될수 있습니다. </p>
+<p>이런 경우 고객에게 패스워드를 고객에게 물어보거나 고객이 직접 타이핑할 수 있게 하여 sys 계정으로 sysdba 권한을 가지고 로그인할 수 있어야 한다.</p>
+<ul>
+<li><strong>접속한 인스턴스 및 계정 확인</strong></li>
+</ul>
+<p><img alt="image-20210514135439356" src="../oracle_image/image-20210514135439356.png" /></p>
+<ul>
+<li><strong>DB 모니터링을 위한 DB 계정을 생성</strong></li>
+</ul>
+<p>Oracle 버전에 맞는 <strong>ora_user.sql</strong> 파일을 업로드한 후, 파일을 실행하여 계정 생성 작업을 진행합니다. 여러 개의 인스턴스 모니터링 시, 각 인스턴스로 접속을 변경하면서 진행해야 합니다.</p>
+<ul>
+<li>
+<p>Linux</p>
+<p><img alt="image-20210514135502507" src="../oracle_image/image-20210514135502507.png" /></p>
+</li>
+<li>
+<p>Windows</p>
+<p><img alt="image-20210514135514222" src="../oracle_image/image-20210514135514222.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left">11g R2 이하</th>
+<th align="left">12c R1 이상 (cdb 환경)/(non-cdb 환경)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="../oracle_files/11g/ora_user.sql">ora_user.sql</a></td>
+<td align="left"><a href="../oracle_files/ora_user.sql">ora_user.sql</a></td>
+</tr>
+<tr>
+<td align="left">-- 11g R2 이하<br/>-- sys as sysdba 로 실행<br/>create user ora_user identified by "ora123";<br/>alter user ora_user account unlock;<br/>grant create session to ora_user;<br/><br/>create view SJMON$KSUSGSTA as select * from X$KSUSGSTA;<br/>create view SJMON$KSUSE as select * from X$KSUSE;<br/>create view SJMON$KSUPR as select * from X$KSUPR;<br/>create view SJMON$KSLWT as select * from X$KSLWT;<br/>create view SJMON$KSLSCS as select * from X$KSLSCS;<br/>create view SJMON$KSLEI as select * from X$KSLEI;<br/>create view SJMON$KSLED as select * from X$KSLED;<br/>create view SJMON$KQFTA as select * from X$KQFTA;<br/>create view SJMON$KQFCO as select * from X$KQFCO;<br/><br/>-- 11g R2 이하<br/>-- sys as sysdba 로 실행<br/>create user ora_user identified by "ora123";<br/>alter user ora_user account unlock;<br/>grant create session to ora_user;<br/><br/>create view SJMON$KSUSGSTA as select * from X$KSUSGSTA;<br/>create view SJMON$KSUSE as select * from X$KSUSE;<br/>create view SJMON$KSUPR as select * from X$KSUPR;<br/>create view SJMON$KSLWT as select * from X$KSLWT;<br/>create view SJMON$KSLSCS as select * from X$KSLSCS;<br/>create view SJMON$KSLEI as select * from X$KSLEI;<br/>create view SJMON$KSLED as select * from X$KSLED;<br/>create view SJMON$KQFTA as select * from X$KQFTA;<br/>create view SJMON$KQFCO as select * from X$KQFCO;<br/><br/>grant select on SJMON$KSUSGSTA to ora_user;<br/>grant select on SJMON$KSUSE to ora_user;<br/>grant select on SJMON$KSUPR to ora_user;<br/>grant select on SJMON$KSLWT to ora_user;<br/>grant select on SJMON$KSLSCS to ora_user;<br/>grant select on SJMON$KSLEI to ora_user;<br/>grant select on SJMON$KSLED to ora_user;<br/>grant select on SJMON$KQFTA to ora_user;<br/>grant select on SJMON$KQFCO to ora_user;<br/><br/>grant select on gv_$parameter to ora_user;<br/>grant select on v_$parameter to ora_user;<br/>grant select on v_$sys_time_model to ora_user;<br/>grant select on v_$session to ora_user;<br/>grant select on v_$sess_time_model to ora_user;<br/>grant select on v_$process to ora_user;<br/>grant select on v_$sess_io to ora_user;<br/>grant select on dba_data_files to ora_user;<br/>grant select on dba_free_space to ora_user;<br/>grant select on dba_segments to ora_user;<br/>grant select on v_$segment_statistics to ora_user;<br/><br/>grant select on v_$sql to ora_user;<br/>grant select on v_$sqltext_with_newlines to ora_user;<br/>grant select on v_$sql_plan to ora_user;</td>
+<td align="left">-- 12c R1 이상<br/>-- sys as sysdba 로 실행<br/>alter session set "<em>ORACLE_SCRIPT"=true;<br/>create user ora_user identified by "ora123";<br/>alter user ora_user account unlock;<br/>grant create session to ora_user;<br/>grant create synonym to ora_user;<br/><br/>create view SJMON$KSUSGSTA as select * from X$KSUSGSTA;<br/>create view SJMON$KSUSE as select * from X$KSUSE;<br/>create view SJMON$KSUPR as select * from X$KSUPR;<br/>create view SJMON$KSLWT as select * from X$KSLWT;<br/>create view SJMON$KSLSCS as select * from X$KSLSCS;<br/>create view SJMON$KSLEI as select * from X$KSLEI;<br/>create view SJMON$KSLED as select * from X$KSLED;<br/>create view SJMON$KQFTA as select * from X$KQFTA;<br/>create view SJMON$KQFCO as select * from X$KQFCO;<br/><br/>grant select on SJMON$KSUSGSTA to ora_user;<br/>grant select on SJMON$KSUSE to ora_user;<br/>grant select on SJMON$KSUPR to ora_user;<br/>grant select on SJMON$KSLWT to ora_user;<br/>grant select on SJMON$KSLSCS to ora_user;<br/>grant select on SJMON$KSLEI to ora_user;<br/>grant select on SJMON$KSLED to ora_user;<br/>grant select on SJMON$KQFTA to ora_user;<br/>grant select on SJMON$KQFCO to ora_user;<br/><br/>grant select on gv</em>$parameter to ora_user;<br/>grant select on v_$parameter to ora_user;<br/>grant select on v_$sys_time_model to ora_user;<br/>grant select on v_$session to ora_user;<br/>grant select on v_$sess_time_model to ora_user;<br/>grant select on v_$process to ora_user;<br/>grant select on v_$sess_io to ora_user;<br/>grant select on dba_data_files to ora_user;<br/>grant select on dba_free_space to ora_user;<br/>grant select on dba_segments to ora_user;<br/>grant select on v_$segment_statistics to ora_user;<br/><br/>grant select on v_$sql to ora_user;<br/>grant select on v_$sqltext_with_newlines to ora_user;<br/>grant select on v_$sql_plan to ora_user;<br/><br/>conn ora_user/ora123; -- 계정변경<br/>create synonym SJMON$KSUSGSTA for sys.SJMON$KSUSGSTA;<br/>create synonym SJMON$KSUSE for sys.SJMON$KSUSE;<br/>create synonym SJMON$KSUPR for sys.SJMON$KSUPR;<br/>create synonym SJMON$KSLWT for sys.SJMON$KSLWT;<br/>create synonym SJMON$KSLSCS for sys.SJMON$KSLSCS;<br/>create synonym SJMON$KSLEI for sys.SJMON$KSLEI;<br/>create synonym SJMON$KSLED for sys.SJMON$KSLED;<br/>create synonym SJMON$KQFTA for sys.SJMON$KQFTA;<br/>create synonym SJMON$KQFCO for sys.SJMON$KQFCO;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>참고  Oracle 12c 버전의 경우에는, SJMON 에서 사용하는 JDBC driver Version 이 낮은 관계로 아래와 같이 <code>$ORACLE_HOME/network/admin/sqlnet.ora</code> 파일 내에 두 줄을 추가합니다.</p>
+</li>
+</ul>
+<p><code>sqlnet.allowed_logon_version_server=8
+  sqlnet.allowed_logon_version_client=8</code></p>
+<p><img alt="image-20210514151259564" src="../oracle_image/image-20210514151259564.png" /></p>
+<p><br></p>
+<h3 id="3-agent-program-setting">3) Agent Program Setting</h3>
+<p>SJMON Agent가 설치된 디렉터리에서 <strong>agent.properties</strong> 파일을 sjmon 계정으로 열어서 DB 관련 정보(<strong>굵은 글자</strong>)를 입력합니다.</p>
+<p>만약 두개 이상의 DB instance를 모니터링 한다면 <strong>agent.db.count</strong> 값을 변경하고 <code>agent.dbuse, db.count</code> 줄을 제외한 모든 붉은 박스줄을 instance 개수만큼 복사하여 입력합니다.</p>
+<p><strong>agent.db.user1</strong> 과 <strong>agent.db.pass1</strong> 은 DB 모니터링을 사용할 DB 계정을 입력합니다. 입력한 계정이 수행하는 Session 과 SQL 정보는 수집되지 않습니다.</p>
+<p>Schedule Time 중 수집 여부를 Y/N 값으로 설정하거나 수집 주기를 변경한 경우, agent를 다시 시작하여 적용할 수 있습니다.</p>
+<pre><code>##### Properties used by Agent #################
+# Property Version : 2.0
+# Agent ID
+agent.agent_id = 328
+</code></pre>
+<p>​   agent.db.<strong>sis</strong>.agent_id = 329 (인스턴스명)</p>
+<pre><code># Schedule Time
+agent.sched.job.inven = 0 0 0 * * ?
+agent.sched.job.pm = 0 0 22 * * ?
+agent.sched.job.log = 0 0 23 * * ?
+
+…… (중략) ......
+
+##### Properties user should set ###############
+# Repository Server Info
+agent.host = 172.16.30.94
+agent.hport = 43001
+# Client Info
+agent.ostype = aix
+agent.protocol = sftp
+agent.home = /opt/sjmon
+agent.pipelocation = /opt/sjmon/sjmonpipe
+agent.configlocation = /opt/sjmon/agent.properties
+
+#Database Monitoring
+</code></pre>
+<p>​   agent.dbuse = <strong>Y</strong></p>
+<p>​   agent.db.count = <strong>1</strong></p>
+<p>​   agent.db.dbms1 = <strong>oracle</strong></p>
+<p>​   agent.db.version1 = <strong>11g</strong> (10g/11g/12c)</p>
+<p>​   agent.db.driver1 = <strong>oracle.jdbc.driver.OracleDriver</strong></p>
+<p>​   agent.db.connection1 = <strong>jdbc:oracle:thin:@10.1.2.51:30001</strong> (jdbc:oracle:thin:@IP주소:포트번호)</p>
+<p>​   agent.db.sid1 = <strong>sis</strong> <em>(</em><em>인스턴스명</em><em>)</em></p>
+<p>​   agent.db.user1 = <strong>ora_user</strong> <em>(DB</em> 계정명)</p>
+<p>​   agent.db.pass1 = <strong>nFFsqAjURrnmD1mOk4GxHe1razS8PEL3</strong> <em>(DB</em> <em>계정</em> <em>비밀번호</em> <em>암호화한</em> 값)</p>
+<pre><code>
+# Database Oracle Schedule Time
+agent.db.sched.global = 0/2 * * * * ?
+agent.db.sched.session = 0/1 * * * * ?
+agent.db.sched.sql = 0/2 * * * * ?
+agent.db.sched.sqltext = 0 * * * * ?
+agent.db.sched.sqlplan = 0 * * * * ?
+agent.db.sched.param = 0 0 1 * * ?
+agent.db.sched.space = 0 10 1 * * ?
+
+…… (이하 생략) ......
+</code></pre>
+<p><br></p>
+<h3 id="4-agent-program-start-stop">4) Agent Program Start &amp; Stop</h3>
+<ul>
+<li><strong>Agent Program Start</strong></li>
+</ul>
+<p>startObserver.sh 실행합니다</p>
+<p><code># ./startObserver.sh</code></p>
+<ul>
+<li><strong>Agent Program Stop</strong></li>
+</ul>
+<p>stopAgent.sh 실행합니다</p>
+<p><code># ./stopAgent.sh</code></p>
+<p><br></p>
+<h3 id="5-uninstall">5) Uninstall</h3>
+<p><strong>undo_ora_user.sql</strong>파일을 업로드 후, 아래와 같이 실행하여 생성한 뷰와 계정을 제거합니다. </p>
+<p>해당 계정이 사용 중인 경우 제거가 불가능하므로, Agent 를 종료한 후 진행해야 합니다.</p>
+<p><img alt="image-20210514143835555" src="../oracle_image/image-20210514143835555.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="center"><a href="../oracle_files/undo_ora_user.sql">undo_ora_user.sql</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>-- sys / as sysdba 로 실행
+
+-- ora_user로 접속되어 있는 상태에서는 ora_user가 삭제되지 않습니다.
+-- 만약 다른 client에서 접속하고 계시다면 ora_user의 접속을 종료해주세요.
+-- 또는, agent.properties 파일의 ora_user정보를 올바르게 입력한 상태로 ./startObserver.sh을 실행하여 
+-- sjmon에 접속하셨다면, ./stopObserver.sh로 종료하고 시행시켜 주십시오.
+
+DROP VIEW SJMON$KSUSGSTA;
+DROP VIEW SJMON$KSUSE;
+DROP VIEW SJMON$KSUPR;
+DROP VIEW SJMON$KSLWT;
+DROP VIEW SJMON$KSLSCS;
+DROP VIEW SJMON$KSLEI;
+DROP VIEW SJMON$KSLED;
+DROP VIEW SJMON$KQFTA;
+DROP VIEW SJMON$KQFCO;
+
+DROP USER ora_user;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

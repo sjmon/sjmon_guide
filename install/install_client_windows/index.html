@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Windows - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Windows";
+    var mkdocs_page_input_path = "install\\install_client_windows.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Windows</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-prerequisite-check">1. Prerequisite Check</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-auto-installation-program-upload-installing-the-agent-program">2. Auto Installation Program Upload &amp; Installing the Agent Program</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-agent-installation-by-auto-installer">2.1) Agent Installation by Auto Installer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#exe">* exe 파일을 통한 자동 설치 시</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#batch">* batch 파일을 통한 자동 설치 시</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-agent-installation-by-manual-procedure">2.2) Agent Installation by Manual Procedure</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_1">* 수동 설치 시</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-agent-program-check">3. Agent program check</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-agent-program-start-stop">4.  Agent Program Start &amp; Stop</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation of OS Client &raquo;</li>
+        
+      
+    
+    <li>Windows</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="windows-client-agent-installation">Windows Client Agent Installation</h1>
+<h2 id="1-prerequisite-check">1. Prerequisite Check</h2>
+<p>Client Agent 자동 설치를 위해 해당 파일을 원하는 위치에 업로드 합니다. </p>
+<ul>
+<li>
+<p>설치 파일 위치 : manager 의 <code>/home/sjmonv2user/sjmon_file/installer</code></p>
+</li>
+<li>
+<p>exe 파일을 통한 자동 설치 시<br />
+<img alt="image-20210510115717455" src="../win_image/image-20210510115717455.png" /></p>
+<p><p></p></p>
+</li>
+<li>
+<p>batch 파일을 통한 자동 설치 시<br />
+<img alt="image-20210510115741028" src="../win_image/image-20210510115741028.png" /></p>
+</li>
+</ul>
+<p><br></p>
+<p><br></p>
+<h2 id="2-auto-installation-program-upload-installing-the-agent-program">2. Auto Installation Program Upload &amp; Installing the Agent Program</h2>
+<h3 id="21-agent-installation-by-auto-installer"><strong>2.1) Agent Installation by Auto Installer</strong></h3>
+<h4 id="exe">* <strong>exe 파일을 통한 자동 설치 시</strong></h4>
+<p>업로드 된 위치에서 <strong>SJMON-Client-Setup-x.x.x.exe</strong> 파일을 실행합니다.<br />
+<img alt=" " src="../win_image/image-20210507170152009.png" /></p>
+<p></p>
+
+<p>연결할 Manager의 정보를 입력합니다<br />
+<img alt="image-20210507135732936" src="../win_image/image-20210507135732936.png" /></p>
+<p></p>
+
+<p>설치하고자 하는 위치를 선택하여 설치를 진행합니다.<br />
+<img alt="image-20210507135940272" src="../win_image/image-20210507135940272.png" /></p>
+<p></p>
+
+<p>설치가 완료되면, 원하는 않는 옵션은 해제한 후 종료합니다.<br />
+<img alt="image-20210507140727373" src="../win_image/image-20210507140727373.png" /></p>
+<p></p>
+
+<p>모든 설치가 완료되면, 선택한 위치에 관련 파일 확인 및 실행 가능합니다.<br />
+<img alt="image-20210507141323003" src="../win_image/image-20210507141323003.png" /></p>
+<p><br></p>
+<h4 id="batch">* <strong>batch 파일을 통한 자동 설치 시</strong></h4>
+<p>Manager로부터 설치파일을 내려 받아 업로드 된 위치에서 <strong>sjmonInstall.bat</strong> 파일을 실행하면 자동으로 설치가 완료됩니다.</p>
+<p><img alt="image-20210507164124635" src="../win_image/image-20210507164124635.png" /></p>
+<ul>
+<li>파일 위치 : manager 의 <code>/home/sjmonv2user/sjmon_file/installer/(installer버전)</code></li>
+</ul>
+<p>필요 파일명: <strong>install_log4j.xml / sjmon_install.jar / sjmonInstall.bat</strong></p>
+<p><img alt="image-20210507165107240" src="../win_image/image-20210507165107240.png" /></p>
+<p><strong>sjmonInstall.bat</strong> 파일 실행 전 JAVA의 위치를 체크하고 변경합니다</p>
+<p>ex) <code>"JAVA_HOME=C:\Program Files\Java\jdk1.8.0_211"</code></p>
+<p><img alt="image-20210507175311611" src="../win_image/image-20210507175311611.png" /></p>
+<p>sjmonInstall.bat파일을 실행 시 sftp 또는 ftp를 사용, manager ip, 그리고 기본적으로는 <strong>43001</strong> port를 사용해서 설치합니다.</p>
+<pre><code>sjmonInstall.bat sftp XXX.XXX.XXX.XXX 43001 sjmonv2user zaq12wsx 0
+</code></pre>
+<p><img alt="image-20210507163722509" src="../win_image/image-20210507163722509.png" /></p>
+<p>(포트는 manager설치 시 변경을 했다면 변경된 Port를 사용합니다)</p>
+<p><br></p>
+<h3 id="22-agent-installation-by-manual-procedure"><strong>2.2) Agent Installation by Manual Procedure</strong></h3>
+<h4 id="_1">* 수동 설치 시</h4>
+<p>고객사 사정으로 Manager서버에 ftp나 sftp접속이 어렵고 exe 파일도 실행되지 않는 경우, Manager서버에 sjmonv2user로 접속한 뒤, Windows의 경우 all_files_WIN 디렉터리안으로 이동하여 해당하는 버전의 설치 파일들을 client의 Agent 디렉터리로 다운받습니다.</p>
+<p><img alt="image-20210507164857130" src="../win_image/image-20210507164857130.png" /></p>
+<p>다운이 완료되면 addService_XXBit 폴더 안의 <strong>addServiceXX_observer.bat</strong> 파일과 <strong>addServiceXX_client.bat</strong> 을 실행하여 서비스로 등록합니다. </p>
+<p>그 후 아래 파일을 수정합니다. <br></p>
+<ul>
+<li><strong>agent.properties</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&nbsp;&nbsp;설정 항목</th>
+<th>&nbsp;&nbsp;설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;&nbsp;agent.host</td>
+<td>&nbsp;&nbsp;SJMON manager서버의 IP</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;agent.hport</td>
+<td>&nbsp;&nbsp;SJMON manager와 연결되는 Port (default 43001)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;agent.home</td>
+<td>&nbsp;&nbsp;Agent가 설치된 경로 (ex. C:/sjmon)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;agent.pipelocation</td>
+<td>&nbsp;&nbsp;Agent의 pipe위치 (ex. \\.\pipe\nmonnamedpipe)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;Agent.configlocation &nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;Agent의  agent.properties(ex. C:/sjmon/agent.properties) &nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>​       <p>서비스 등록 및 수정이 완료되면 <strong>startObserver.bat</strong> 파일을 실행하여 Agent를 구동합니다. </p></p>
+<p><br></p>
+<p><br></p>
+<h2 id="3-agent-program-check">3. Agent program check</h2>
+<p>Window 관리 도구 -&gt; 서비스에서 SjmonClient 실행을 확인 할 수 있습니다.<br />
+<img alt="image-20210510114439999" src="../win_image/image-20210510114439999.png" /><br />
+<img alt="image-20210510183942373" src="../win_image/image-20210510183942373.png" /></p>
+<p><br></p>
+<p><br></p>
+<h2 id="4-agent-program-start-stop">4.  Agent Program Start &amp; Stop</h2>
+<ul>
+<li><strong>start 방법</strong><br />
+<strong>startObserver.bat</strong>을 실행합니다.<br />
+<img alt="image-20210510115440329" src="../win_image/image-20210510115440329.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>stop 방법</strong><br />
+<strong>stopAgent.bat</strong>을 실행합니다.<br />
+<img alt="image-20210510115512826" src="../win_image/image-20210510115512826.png" /></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install_client_hp/" class="btn btn-neutral float-right" title="HP-UX">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install_client_linux/" class="btn btn-neutral" title="Linux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install_client_linux/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install_client_hp/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>on Linux - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "on Linux";
+    var mkdocs_page_input_path = "install\\install_manager_linux.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">on Linux</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-postgresql">1. Postgresql 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-repository">2. Repository 구성</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-manager-installer-manager-tomcat-scouter">3. Manager Installer 를 통해 Manager &amp; Tomcat &amp; Scouter 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-viewer">4. Viewer 접속 확인</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nagios">Nagios 연동 설치</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#nagios_1">Nagios 연동 설치 전 확인 사항</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nagios_2">Nagios 연동 스크립트 실행</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scouter">최초 설치 이후 Scouter 추가 설치 시</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation of Manager &raquo;</li>
+        
+      
+    
+    <li>on Linux</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="linux-sjmon-manager">Linux 서버에 SJMON Manager 설치</h1>
+<p><a href="https://ibm.box.com/v/sjmon-setup-linux">SJMON_for_Linux.zip</a> 파일을 다운로드 받아, 원하는 디렉터리에 압축 해제 합니다. 권장 위치는 /pgdata 입니다.</p>
+<pre><code class="language-powershell">[root@sjmon-m-2 ~]# cd /pgdata
+[root@sjmon-m-2 pgdata]# ls -l
+total 1507088
+-rw-r--r--. 1 root root 1543255818 Apr  7 13:26 SJMON_for_Linux.zip
+[root@sjmon-m-2 pgdata]# unzip SJMON_for_Linux.zip
+Archive:  SJMON_for_Linux.zip
+</code></pre>
+<p>파일 압축 해제 후 폴더 구조는 아래와 같습니다.</p>
+<p><img alt="image-20210407160006242" src="../images/image-20210407160006242.png" /></p>
+<h3 id="1-postgresql">1. Postgresql 설치</h3>
+<p><strong>postgre_installer</strong> 디렉토리로 이동하여, <strong>postgresql_install.sh</strong>을 실행합니다. shell 파일에 실행 권한이 없다면 <code>chmod +x postgresql_install.sh</code> 을 수행하여 실행 권한을 부여합니다.</p>
+<p><img alt="image-20210407170002280" src="../images/image-20210407170002280.png" /></p>
+<p><strong>000</strong> 을입력하여 일괄 진행합니다. 단계별로 개별 진행하고자 하는 경우에는 <strong>AAA</strong> 부터 <strong>KKK</strong> 까지 순차적으로 입력합니다.</p>
+<p><img alt="image-20210408093308026" src="../images/image-20210408093308026.png" /></p>
+<p>각 단계 설명은 아래와 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[AAA]</td>
+<td>/tmp 폴더에 있는 RPM파일을 install 합니다</td>
+</tr>
+<tr>
+<td>[BBB]</td>
+<td>FILE_PATH(/pgdata/data)폴더가 없는 경우 생성하고 postgres 권한을 부여합니다.</td>
+</tr>
+<tr>
+<td>[CCC]</td>
+<td>설치에 필요한 라이브러리를 업데이트 합니다.</td>
+</tr>
+<tr>
+<td>[DDD]</td>
+<td>데이터베이스를 생성합니다.</td>
+</tr>
+<tr>
+<td>[EEE]</td>
+<td>iptables에 SJMON에 사용되는 포트를 추가합니다.</td>
+</tr>
+<tr>
+<td>[FFF]</td>
+<td>postgresql DB Config를 SJMON 서비스를 위한 형태로 변경합니다.</td>
+</tr>
+<tr>
+<td>[GGG]</td>
+<td>postgresql DB profile 설정을 합니다.</td>
+</tr>
+<tr>
+<td>[HHH]</td>
+<td>현재 postgresql DB가 설치된 경로(/pgdata/data)로 DB 셋팅을 합니다.</td>
+</tr>
+<tr>
+<td>[III]</td>
+<td>postgresql 서비스를 재시작합니다.</td>
+</tr>
+<tr>
+<td>[JJJ]</td>
+<td>postgresql 서비스가 부팅 시 자동으로 시작하도록 설정합니다.</td>
+</tr>
+<tr>
+<td>[KKK]</td>
+<td>DB 테이블스페이스를 생성하고 스키마와 메타데이터를 생성합니다.</td>
+</tr>
+<tr>
+<td>[000]</td>
+<td>[AAA] 부터 [KKK]까지의 모든 단계를 한번에 설치합니다.</td>
+</tr>
+</tbody>
+</table>
+<p>설치가 자동으로 진행되며, 진행이 완료되면 “Postgre is successfully installed”라는 message와 함께 shell이 종료됩니다.</p>
+<p><img alt="image-20210412094918541" src="../images/image-20210412094918541.png" /></p>
+<p><strong>PostgreSQL Database가 정상적으로 구동되었는지 확인</strong></p>
+<ol>
+<li>실행 중인 프로세스로 확인하는 방법:  <code>ps -ef | grep postgres</code></li>
+</ol>
+<p><img alt="image-20210407180105957" src="../images/image-20210407180105957.png" /></p>
+<ol>
+<li>
+<p>서비스 상태 조회 명령어로 확인하는 방법</p>
+</li>
+<li>
+<p>centos 6의 경우 <code>service postgresql-9.4 status</code></p>
+</li>
+</ol>
+<p><img alt="image-20210408092215431" src="../images/image-20210408092215431.png" /></p>
+<ul>
+<li>centos 7의 경우 <code>systemctl status postgresql-9.4</code> 혹은 <code>su - postgres -c "/usr/pgsql-9.4/bin/pg_ctl status"</code></li>
+</ul>
+<p><img alt="image-20210407180353730" src="../images/image-20210407180353730.png" /></p>
+<h3 id="2-repository">2. Repository 구성</h3>
+<p>기본 설치 위치 (기본값 /pgdata)  에 있는 <strong>sjmon_file.tar</strong> 파일의 권한을 <code>sjmonv2user</code> 로 변경한 후, <code>sjmonv2user</code> 의 Home Directory로 옮깁니다.</p>
+<p><img alt="image-20210408140347243" src="../images/image-20210408140347243.png" /></p>
+<p>sjmonv2user로 로그인하여 파일의 압축을 해제합니다.</p>
+<p><img alt="image-20210408155100654" src="../images/image-20210408155100654.png" /></p>
+<p>압축 해제한 sjmon_file 폴더 내 구조는 아래와 같으며, Client 설치 및 Viewer를 위한 repository로 활용됩니다.</p>
+<p><img alt="image-20210408155945528" src="../images/image-20210408155945528.png" /></p>
+<p>각 폴더에 대한 설명은 아래와 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>폴더명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>all_files_</strong>*</td>
+<td>SJMON Client 수동 설치를 위한 파일 존재</td>
+</tr>
+<tr>
+<td><strong>COMMON</strong></td>
+<td>Client 설치 시 필요한 common 파일 존재</td>
+</tr>
+<tr>
+<td><strong>deploy</strong></td>
+<td>Viewer 에서 Deploy 기능 사용 시 활용되는 폴더</td>
+</tr>
+<tr>
+<td><strong>installer</strong></td>
+<td>Client 설치 시 사용되는 Auto Installer 파일 존재</td>
+</tr>
+<tr>
+<td><strong>INVENTORY</strong></td>
+<td>Viewer에서 Version Check 기능 사용 시 활용되는 파일 존재</td>
+</tr>
+<tr>
+<td><strong>OS</strong></td>
+<td>Client 설치 시 사용되는 OS 관련  파일 존재</td>
+</tr>
+<tr>
+<td><strong>pg_csv, pm_result</strong></td>
+<td>PM Report 수동 업로드 시 활용되는 폴더</td>
+</tr>
+<tr>
+<td><strong>pm_script</strong></td>
+<td>Auto PM 기능 사용 시 사용되는 기본 PM  Script 파일 존재</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-manager-installer-manager-tomcat-scouter">3. Manager Installer 를 통해 Manager &amp; Tomcat &amp; Scouter 설치</h3>
+<p>기본 설치 위치 (기본값 /pgdata) 로 이동하여 아래 명령을 수행합니다. shell 파일에 실행 권한이 없다면 <code>chmod +x managerInstall.sh</code> 을 수행하여 실행 권한을 부여합니다. Postgresql 기본 포트는 <strong>5432</strong>, 매니저 기본 포트는 <strong>43001</strong>입니다.</p>
+<p>[Usage]</p>
+<pre><code>./managerInstall.sh all [매니저 IP] [PostgreSQL 포트] [매니저 포트]
+</code></pre>
+<p>[Example]</p>
+<pre><code class="language-powershell"> ./managerInstall.sh all localhost 5432 43001
+</code></pre>
+<p><img alt="image-20210408092553261" src="../images/image-20210408092553261.png" /></p>
+<p>발급받은 License 정보를 입력하</p>
+<p>Tomcat 과 Manager 설치가 완료되면, Scouter 설치 여부를 선택한다. Default는 n 이며, y 입력 시 Scouter 설치를 진행하고 n 입력 시 Scouter 설치 없이 종료한다.</p>
+<p><img alt="image-20210408105929403" src="../images/image-20210408105929403.png" /></p>
+<p>Manager, Tomcat, Scouter 가 정상적으로 구동된 경우 아래와 같이 프로세스를 확인할 수 있습니다.</p>
+<ul>
+<li>Manager </li>
+</ul>
+<p>​ <img alt="image-20210408134544420" src="../images/image-20210408134544420.png" /></p>
+<ul>
+<li>Tomcat</li>
+</ul>
+<p>​ <img alt="image-20210408134605569" src="../images/image-20210408134605569.png" /></p>
+<ul>
+<li>Scouter</li>
+</ul>
+<p>​ <img alt="image-20210408134715584" src="../images/image-20210408134715584.png" /></p>
+<h3 id="4-viewer">4. Viewer 접속 확인</h3>
+<p>Chrome web browser에 http://localhost:9090을 입력하여 SJMON Viewer에 접속합니다. 기본 계정 ID는  <code>admin</code>, 비밀번호는 <code>IBMP@ssw0rd</code> 입니다.</p>
+<h2 id="nagios">Nagios 연동 설치</h2>
+<h4 id="nagios_1">Nagios 연동 설치 전 확인 사항</h4>
+<p>SJMON과 Nagios를 연동하려면 사전에 CHECKMK 1.4.x 혹은 1.5.x 가 Manager서버에 설치되어 있어야 합니다. 설치가 완료된 상태에서 아래 순서에 따라 진행해주세요.</p>
+<p>또한, Database를 이용한 SMS을 사용 할 경우 설치 전 다음 파일을 설정하여 주시기 바랍니다.</p>
+<p><strong>dbconfig.json(=Database를 이용한 sms 설정파일 (sjmon_noti_script에 위치))</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>설정 항목</strong></th>
+<th><strong>항목 설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DATABASE</td>
+<td>DATABASE 종류명 (현재 지원 되는  DB : MYSQL, POSTGRESQL, ORACLE)</td>
+</tr>
+<tr>
+<td>HOST</td>
+<td>연결되는 DB HOST 주소   ※ postgresql은 명령어 특성상 외부IP의  입력이 불가능합니다.  (localhost(=127.0.0.1)만 입력 가능)</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>연결되는 DB PORT</td>
+</tr>
+<tr>
+<td>SID</td>
+<td>연결 할 SID명 (※ Oracle에서  사용)</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>연결 할 DB USER명</td>
+</tr>
+<tr>
+<td>PASSWORD</td>
+<td>연결 할 DB USER의 PASSWORD</td>
+</tr>
+<tr>
+<td>DATEFORMAT</td>
+<td>현재 날짜 사용  시 적용되는 DATE 포맷    (%Y : 연도, %m: 월, %d: 일, %H: 시간, %M: 분, %S:  초)</td>
+</tr>
+<tr>
+<td>DBNAME</td>
+<td>연결 할 DATABSE명 (※ Oracle에서  사용 하지 않음)</td>
+</tr>
+<tr>
+<td>TABLE</td>
+<td>연결 할 DATABSE의 TABLE명</td>
+</tr>
+<tr>
+<td>COLUMNS</td>
+<td>TABLE 컬럼 및 설정 컬럼값.  ※ 다음 값을  컬럼값에 입력 시 지정되는 특수값을 컬럼값으로 넣을 수 있습니다.   컬럼값 : ' ' 래핑하여 설정된 값 사용 (ex.  samju → 'samju')   $컬럼값$ : ' '으로  래핑 없이 값 $와 $ 사이의 값 그대로 사용    (ex. $SDK_SMS_SEQ.NEXTVAL$ → SDK_SMS_SEQ.NEXTVAL)   #컬럼값# : #와 # 사이의 값에 해당하는 값을 내부의 변수   (=내부에서 전닯받은 값으로 사용)로 설정값을 불러와서 사용   (ex. #MSG# → 'NAGIOS ERROR MESSAGE')</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Postgresql 을 연결하는 예시 화면입니다. <code>COLUMNS</code> 내에 컬럼명과 컬럼값을 json 형식으로 입력합니다.</li>
+</ul>
+<p><img alt="image-20210406164559798" src="../images/image-20210406164559798.png" /></p>
+<ul>
+<li>Mysql 예시</li>
+</ul>
+<p><img alt="image-20210406164929422" src="../images/image-20210406164929422.png" /></p>
+<ul>
+<li>Oracle 예시</li>
+</ul>
+<p><img alt="image-20210406164944610" src="../images/image-20210406164944610.png" /></p>
+<h4 id="nagios_2">Nagios 연동 스크립트 실행</h4>
+<p>매니저 설치 위치(기본값 <code>/pgdata</code>) 에 있는 Nagios_for_Sjmon.tar 파일을 압축해제 합니다.</p>
+<p><img alt="image-20210414130410897" src="../images/image-20210414130410897.png" /></p>
+<p>압축해제 후  <code>nagios</code>폴더가 생성된 것을 확인할 수 있습니다. SJMON과 Nagios를 연동하기 위한 설정 파일이 존재합니다.</p>
+<p><img alt="image-20210414130328052" src="../images/image-20210414130328052.png" /></p>
+<table>
+<thead>
+<tr>
+<th>폴더 및 파일명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>nagios_plugin_install.sh</strong></td>
+<td>설치 자동화  스크립트</td>
+</tr>
+<tr>
+<td><strong>sjmon_cfg_for_nagios</strong></td>
+<td>설정 자동화  스크립트 (nagios_plugin_install.sh에 연결 되어있습니다.)</td>
+</tr>
+<tr>
+<td><strong>sjmon</strong></td>
+<td>NAGIOS 연동 프로그램의 실행 및 설정 파일 모음</td>
+</tr>
+<tr>
+<td><strong>sjmon_mk_dep_install</strong></td>
+<td>NAGIOS 연동 프로그램 실행을 위한 종속 라이브러리 모음</td>
+</tr>
+<tr>
+<td><strong>sjmon_mk_config</strong></td>
+<td>NAGIOS 연동을 위한 CheckMk의 SJMON 전용 화면 설정 파일 모음</td>
+</tr>
+<tr>
+<td><strong>sjmon_noti_script</strong></td>
+<td>SJMON Threshold 전용 Notification 스크립트 모음</td>
+</tr>
+</tbody>
+</table>
+<p>nagios 폴더 내에 있는 설치 shell을 실행합니다.</p>
+<p>[Usage]</p>
+<pre><code>./nagios_plugin_install.sh &lt;설치 옵션&gt; &lt;CHECKMK SITE명&gt; &lt;Apache 포트&gt; &lt;SJMON과 통신 할 포트&gt; 
+&lt;CHECKMK AUTOMATION 계정명&gt; &lt;SJMON ADMIN ROLE과 연결 될 CHECKMK ROLE명&gt;
+&lt;SJMON USER ROLE과 연결 될 CHECKMK ROLE명&gt;
+</code></pre>
+<p>[Example]</p>
+<p><img alt="image-20210414130516037" src="../images/image-20210414130516037.png" /></p>
+<p>각 옵션에 대한 설명입니다. 옵션 없이 설치를 진행할 경우 입력요청에 따라 진행합니다.</p>
+<ul>
+<li>다음 두 가지 옵션 중 한 가지를 입력합니다.
+   [1] MAKE NEW SITE : CHECKMK 신규 SITE 생성
+   [2] USE EXIST SITE : CHECKMK에 이미 등록 된 SITE 사용</li>
+<li>CHECKMK SITE명은 입력 후 Enter를 누릅니다. 
+   (DEFAULT가 없기 때문에 반드시 입력하여야 합니다.)</li>
+<li>Apache 포트는 DEFAULT로 80 값이 입력되어 있고, 수정을 원하는 경우 Port를 입력한 뒤 Enter를 누릅니다. 설정 포트 확인은 <code>/etc/httpd/conf/httpd.conf</code></li>
+<li>SJMON과 통신 할 포트는 DEFAULT로 44001 값이 입력되어 있고, 수정을 원하는 경우 Port를 입력한 뒤 Enter를 누릅니다.</li>
+<li>automation account는 DEFAULT로 automation(=SITE 초기 설정 계정)이 입력되어 있고, 수정을 원하는 경우 수정 할 automation account를 입력한 뒤 Enter를 누릅니다.</li>
+<li>Admin Role(=SJMON ADMIN ROLE과 연결 될 CHECKMK ROLE)은 DEFAULT로 admin(=SITE 초기 등록 된 권한)이 입력되어 있고, 수정을 원하는 경우 수정 할 Admin Role을 입력한 뒤 Enter를 누릅니다.</li>
+<li>User Role(=SJMON USER ROLE과 연결 될 CHECKMK ROLE)은 DEFAULT로 user(=SITE 초기 등록 된 권한)이 입력되어 있고, 수정을 원하는 경우 수정 할 Admin Role을 입력한 뒤 Enter를 누릅니다.</li>
+</ul>
+<p>설치 시 적용되는 내용은 아래와 같습니다.</p>
+<ul>
+<li>CHECK_MK SITE 체크 및 생성</li>
+<li>NAGIOS – SJMON 연동 전용 프로그램 설치  및 설정</li>
+<li>SJMON DEFAULT 계정(admin, test) NAGIOS에 추가</li>
+<li>NAGIOS에 SJMON 전용 설정 화면 추가</li>
+<li>SJMON 전용 NOTIFICATION 스크립트 추가 </li>
+<li>SJMON 매니저 NAGIOS 연동 항목 설정</li>
+</ul>
+<p>[설치 진행 예시]</p>
+<p>설치 전 SJMON MANAGER, TOMCAT을 중지시킵니다.<img alt="image-20210414131345249" src="../images/image-20210414131345249.png" /></p>
+<p>NAGIOS 연동 전용 프로그램에 대한 필수 라이브러리를 설치가 진행됩니다.</p>
+<p><img alt="image-20210414131446750" src="../images/image-20210414131446750.png" /></p>
+<p><img alt="image-20210414131517956" src="../images/image-20210414131517956.png" /></p>
+<p>NAGIOS 연동프로그램 설정파일인 <code>config.json</code>이 자동으로 설정 됩니다.</p>
+<p><img alt="image-20210414131542709" src="../images/image-20210414131542709.png" /></p>
+<p>SJMON DEFAULT 계정(admin, test)이 NAGIOS에 추가됩니다. </p>
+<p><img alt="image-20210414131549321" src="../images/image-20210414131549321.png" /></p>
+<p>※ 이미 등록 된 계정이라면 다음 메시지가 출력 됩니다.</p>
+<p><img alt="image-20210414131608869" src="../images/image-20210414131608869.png" /></p>
+<p>Manager와 연동할 수 있도록 <code>repo.sh</code>, <code>config.properties</code>의 NAGIOS 연동 설정 정보를 수정합니다. Viewer와의 연동을 위해서도 Tomcat의 <code>sjmon.properties</code>의 설정 정보를 수정합니다.</p>
+<p><img alt="image-20210414131755339" src="../images/image-20210414131755339.png" /></p>
+<p>※ NAGIOS 연동 설정에 문제가 발생하였을 경우 다음 메시지가 출력 됩니다.</p>
+<p><img alt="image-20210414131927182" src="../images/image-20210414131927182.png" /> </p>
+<p>설치 및 설정이 모두 완료된 후 <strong>SJMON Manager와 Tomcat</strong>은 자동으로 시작됩니다.</p>
+<p><img alt="image-20210414131951645" src="../images/image-20210414131951645.png" /></p>
+<p><strong>SJMON Manager</strong>와 NAGIOS 연동 프로그램이 연결되기 까지 약 1분 소요됩니다. <code>manager</code> 폴더 내의 로그에서 연결여부를 확인할 수 있습니다.</p>
+<p><img alt="image-20210414132043177" src="../images/image-20210414132043177.png" /></p>
+<p>[설정 파일 수동 확인]
+NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다음 형식으로 등록되었는지 확인합니다. 해당 파일의 기본 위치는 <code>/omd/sites/사이트명/sjmon</code> 입니다.</p>
+<p><img alt="image-20210414132242870" src="../images/image-20210414132242870.png" /></p>
+<p>각 항목에 대한 내용은 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>분류</th>
+<th><strong>설정 항목</strong></th>
+<th><strong>항목 설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BASE</strong></td>
+<td>SITE</td>
+<td>연동 대상이  되는 CHECKMK SITE</td>
+</tr>
+<tr>
+<td></td>
+<td>APACHE_PORT</td>
+<td>APACHE 서버의 접속 Port  (DEFAULT : 80)</td>
+</tr>
+<tr>
+<td></td>
+<td>SJMON_PORT</td>
+<td>SJMON Manager와 연결되는 Port (DEFAULT : 44001)</td>
+</tr>
+<tr>
+<td></td>
+<td>ROLE_ADMIN</td>
+<td>SJMON ADMIN ROLE과 연결 할 CHECKMK의 ROLE명  (DEFAULT : admin)</td>
+</tr>
+<tr>
+<td></td>
+<td>ROLE_USER</td>
+<td>SJMON USER ROLE과 연결 할 CHECKMK의 ROLE명   (DEFAULT : user)</td>
+</tr>
+<tr>
+<td></td>
+<td>LOGLEVEL</td>
+<td>NAGIOS 연동 프로그램 로그 출력 레벨  (Default : error)</td>
+</tr>
+<tr>
+<td><strong>WEBAPI</strong></td>
+<td>AUTOMATION_ID</td>
+<td>SITE에 등록된 AUTOMATION 계정  ID (Default : automation)</td>
+</tr>
+<tr>
+<td></td>
+<td>AUTOMATION_SECRET</td>
+<td>SITE에 등록된 AUTOMATION SECRET(=암호)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><code>manager/config.properties</code> 파일이 다음 형식으로 등록되었는지 확인합니다. </li>
+</ol>
+<p><img alt="image-20210414162630300" src="../images/image-20210414162630300.png" /></p>
+<p>각 설정 항목에 대한 설명은 아래와 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>설정값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nagios.sched</td>
+<td>Nagios 연동 사용 여부 : Y, N</td>
+</tr>
+<tr>
+<td>nagios.conn.port</td>
+<td>Nagios 연동 프로그램 연결 Port <strong>(</strong><strong>config.json의 BASE.PORT 동일</strong><strong>)</strong></td>
+</tr>
+<tr>
+<td>nagios.check.retry</td>
+<td>Nagios 연동 프로그램 상태 재확인 시도 횟수</td>
+</tr>
+<tr>
+<td>nagios.sched.hoststat</td>
+<td>host상태 체크 주기 (ex: 0 0/1 * * * ?)</td>
+</tr>
+<tr>
+<td>nagios.sched.datasync</td>
+<td>Nagios 호스트, 유저, 룰 상태 체크 주기 (ex: 0 0/2 * * * ?)</td>
+</tr>
+<tr>
+<td>nagios.sched.threshold</td>
+<td>Sjmon Threshold 상태 체크 및 전송 주기 (ex: 0 0/1 * * * ?)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>매니저의 <strong>repo.sh</strong>에 NAGIOS SITE명이 올바르게 입력되었는지 확인합니다. 
+    ※ NAGS_SITE입력되는 SITE명은 반드시 <code>/omd/sites/사이트명/sjmon/config.json</code>의 <code>BASE.SITE</code>와 일치해야 합니다.</li>
+</ol>
+<p>​    <img alt="image-20210414162836059" src="../images/image-20210414162836059.png" /></p>
+<p><img alt="image-20210414163212604" src="../images/image-20210414163212604.png" /></p>
+<p>Nagios 연동 후에는 Viewer를 재로그인해야 관련 메뉴를 확인할 수 있습니다.</p>
+<h2 id="scouter">최초 설치 이후 Scouter 추가 설치 시</h2>
+<p>최초 설치 시 Scouter를 설치하지 않는 경우에는, 필요 없는 기능으로 판단하여 관련 폴더 및 파일을 모두 삭제합니다. Scouter를 추가로 설치하고자 하는 경우, <a href="https://ibm.box.com/v/scouter-setup-linux">Scouter_for_Linux.zip</a> 파일을 다운로드 받아, 기존 매니저 설치 위치(기본값 <code>/pgdata</code>)에 압축 해제 합니다.</p>
+<pre><code># unzip Scouter_for_Linux.zip
+</code></pre>
+<p><img alt="image-20210414130617809" src="../images/image-20210414130617809.png" /></p>
+<p><code>scouter/server/conf/scouter.conf</code> 파일을 열어, <code>ext_plugin_sjmon_target_ip</code> 에 Manager IP를, <code>ext_plugin_sjmon_target_port</code>에 Manager 연결 Port를 입력합니다.</p>
+<p><img alt="image-20210414130710295" src="../images/image-20210414130710295.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install_manager_windows/" class="btn btn-neutral float-right" title="on Windows">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="about SJMON"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install_manager_windows/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>on Windows - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "on Windows";
+    var mkdocs_page_input_path = "install\\install_manager_windows.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">on Windows</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-windows-sjmon">1. Windows에 SJMON 설치</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#11-pc-java">1.1) PC 또는 서버에 Java가 설치되어 있는지 확인</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12">1.2) 연결할 포트 열려 있는지 확인</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#13-sjmon-manager-setupexe-sjmon">1.3) SJMON-Manager-Setup.exe 실행해서 SJMON 파일 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#14-postgresql-database-installation">1.4) PostgreSQL Database Installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#15-windows-windows-ftp">1.5) [WINDOWS] Windows FTP 서비스 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#16-windows-tomcat-service">1.6) [WINDOWS] Tomcat Service 프로그램 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#17-windows-sjmon-manager-program">1.7) [WINDOWS] SJMON Manager Program 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#18-sjmon-program">1.8) SJMON Program이 정상적으로 설치되었는지 확인</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#19-repository">1.9) Repository 파일 구성</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#110-sjmon-viewer">1.10) SJMON Viewer 접속 확인</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-sjmon">2. SJMON 수동으로 시작 및 종료 방법</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-postgresql-database">2.1) PostgreSQL Database 수동 시작 및 종료</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-sjmon-manager">2.2) SJMON Manager 시작 및 종료</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#221-sjmon-manager">2.2.1) SJMON Manager 실행</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-sjmon-tomcat">2.3) SJMON Tomcat 시작 및 종료</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#24-sjmon-viewer">2.4) SJMON Viewer 접속 확인</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-sjmon-program-uninstallation-on-windows">3. SJMON Program Uninstallation on Windows</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-sjmon">3.1) SJMON 제거 방법</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation of Manager &raquo;</li>
+        
+      
+    
+    <li>on Windows</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sjmon-program-installation-on-windows">SJMON Program Installation on Windows</h1>
+<h2 id="1-windows-sjmon">1. Windows에 SJMON 설치</h2>
+<h3 id="11-pc-java">1.1) PC 또는 서버에 Java가 설치되어 있는지 확인</h3>
+<ul>
+<li><strong>Java 설치 여부 확인하기</strong><br />
+cmd실행 -&gt; java -version 명령어를 입력하여 확인합니다.<br />
+<img alt="image-20210518104435374" src="../m_windows_image/image-20210518104435374.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>Java가 설치되어 있지 않은 경우</strong><br />
+아래 Site에서 Java를 설치합니다. (https://java.com/ko/download/)<br />
+<img alt="image-20210518104743158" src="../m_windows_image/image-20210518104743158.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>Java 환경변수 설정</strong> 
+  Java를 설치했거나 설치되어 있는 경우, <code>C:\Program Files\Java</code>에 <strong>jre</strong>가 있는지 확인합니다.<br />
+<img alt="image-20210518104927905" src="../m_windows_image/image-20210518104927905.png" /></li>
+</ul>
+<p></p>
+
+<p>설치가 되어 있는 것을 확인한 뒤에, <strong>"내 컴퓨터(우클릭)” -&gt; “속성” -&gt; “고급 시스템 설정” -&gt; “환경변수”</strong>를 클릭해서 JRE_HOME을 추가합니다.</p>
+<ul>
+<li>시스템 변수에서 <strong>새로 만들기</strong> 클릭<br />
+<img alt="image-20210518112112551" src="../m_windows_image/image-20210518112112551.png" /></li>
+</ul>
+<p>환경변수 설정이 완료되면 아래 명령을 cmd창에서 수행하여 JRE_HOME이 정상적으로 설정되었는지 확인합니다. (<code>echo %JRE_HOME%</code>)<br />
+<img alt="image-20210520112656939" src="../m_windows_image/image-20210520112656939.png" /></p>
+<p><br></p>
+<h3 id="12">1.2) 연결할 포트 열려 있는지 확인</h3>
+<p>Viewer에서 사용할 <strong>9090</strong> 포트와, Manager-Client 통신에 사용할 <strong>43001</strong> 포트, FTP 연결에 사용할 <strong>21</strong> 포트가 사용 가능한지 방화벽 설정을 확인합니다. <br />
+설정해야 하는 경우, “인바운드 규칙” 의 “새 규칙”을 통해 해당 포트를 허용해야 합니다.<br />
+<img alt="image-20210518131947862" src="../m_windows_image/image-20210518131947862.png" /></p>
+<p><br></p>
+<h3 id="13-sjmon-manager-setupexe-sjmon">1.3) SJMON-Manager-Setup.exe 실행해서 SJMON 파일 설치</h3>
+<p><strong>SJMON-Manager-Setup-xxxxxx.exe</strong> 파일을 원하는 위치에 다운로드합니다.<br />
+설치를 시작하기 전에는 현재 설치를 진행하고 있는 Machine(PC or Server)가 인터넷 망에 연결되어 있어야 합니다. (관리 툴을 자동으로 다운받는 절차에 필요)<br />
+(PostgreSQL관련 troubleshooting과 관련된 자세한 사항은 아래 site에서 확인이 가능합니다. https://wiki.postgresql.org/wiki/Troubleshooting_Installation)</p>
+<p>​   a) 설치 위치 선택합니다. (ex.<code>D:\sjmon_program</code>)<br />
+<img alt="image-20210518143935048" src="../m_windows_image/image-20210518143935048.png" /></p>
+<p></p>
+
+<p>​   b) 설치 준비 완료 확인 후 “설치”버튼을 눌러 설치를 진행합니다.<br />
+<img alt="image-20210518144000094" src="../m_windows_image/image-20210518144000094.png" /></p>
+<p></p>
+
+<p>​   c) 설치 중 화면<br />
+<img alt="image-20210518144042140" src="../m_windows_image/image-20210518144042140.png" /></p>
+<p></p>
+
+<p>​   d) 설치 완료 확인 후 추가적으로 SJMON 프로그램의 설치를 “종료”버튼을 눌러 계속 진행합니다. <br />
+<img alt="image-20210518144422196" src="../m_windows_image/image-20210518144422196.png" /></p>
+<p><br></p>
+<h3 id="14-postgresql-database-installation">1.4) PostgreSQL Database Installation</h3>
+<ul>
+<li><strong>PostgreSQL Setup</strong><br />
+<img alt="image-20210518144643791" src="../m_windows_image/image-20210518144643791.png" /></li>
+</ul>
+<p></p>
+
+<p>PostgreSQL 설치경로 입력합니다.<br />
+<img alt="image-20210521140435782" src="../m_windows_image/image-20210521140435782.png" /></p>
+<p></p>
+
+<p>Select component에서 PostgreSQL Database Server만 체크된 상태에서 Next 합니다.<br />
+<img alt="image-20210521140452317" src="../m_windows_image/image-20210521140452317.png" /></p>
+<p></p>
+
+<p>Setup PostgreSQL password -&gt; 원하는 Password를 입력하고 기억해 둡니다. (ex. postgres)<br />
+<img alt="image-20210518144929154" src="../m_windows_image/image-20210518144929154.png" /></p>
+<p></p>
+
+<p>Summary를 확인하고 next를 누르면 설치가 시작됩니다.<br />
+<img alt="image-20210518145011638" src="../m_windows_image/image-20210518145011638.png" /></p>
+<p></p>
+
+<p>PostgreSQL이 성공적으로 설치되면 완료 화면이 나타납니다.<br />
+<img alt="image-20210518145508075" src="../m_windows_image/image-20210518145508075.png" /></p>
+<p></p>
+
+<p>PostgreSQL이 설치된 경로 및 *.sql 파일을 포함하고 있는 경로 입력합니다.<br />
+  SJMON Program이 설치된 경로 아래 postgre_installer 디렉터리  (ex. D:\sjmon_program\postgre_installer)</p>
+<p>PostgreSQL이 설치된 경로   SJMON Program이 설치된 경로<br />
+<img alt="image-20210518150802346" src="../m_windows_image/image-20210518150802346.png" /></p>
+<p><br></p>
+<h3 id="15-windows-windows-ftp">1.5) [WINDOWS] Windows FTP 서비스 설치</h3>
+<p>Windows에 sjmon manager를 설치한 경우 Client에 Agent를 자동으로 설치하기 위해서는 FTP 서비스를 시작해야 합니다. <br />
+(SJMON 설치 시 제공되는 FileZila를 사용해도 되고 별도의 FTP 서비스를 사용해도 됩니다.)</p>
+<p><img alt="image-20210518151149414" src="../m_windows_image/image-20210518151149414.png" /></p>
+<p></p>
+
+<p>Next 버튼을 클릭하여 진행합니다.<br />
+<img alt="image-20210518151211390" src="../m_windows_image/image-20210518151211390.png" /></p>
+<p></p>
+
+<p>설치를 원하는 경로를 입력하고 Next 버튼을 클릭합니다.<br />
+<img alt="image-20210518151230578" src="../m_windows_image/image-20210518151230578.png" /></p>
+<p></p>
+
+<p>Windows와 연결될 Port를 넣고 Next 버튼을 클릭합니다.<br />
+<img alt="image-20210518151251768" src="../m_windows_image/image-20210518151251768.png" /></p>
+<p></p>
+
+<p>FileZilla Server를 사용할 User를 선택한 뒤 Next버튼을 클릭합니다.<br />
+<img alt="image-20210518151310378" src="../m_windows_image/image-20210518151310378.png" /></p>
+<p></p>
+
+<p>설치 완료 화면<br />
+<img alt="image-20210518151331034" src="../m_windows_image/image-20210518151331034.png" /></p>
+<p></p>
+
+<p>프로그램 실행 후 IP address, Port 그리고 원하는 password정보를 입력합니다.<br />
+<img alt="image-20210518151414120" src="../m_windows_image/image-20210518151414120.png" /></p>
+<p></p>
+
+<p>프로그램 설치 후 Edit &gt; Users 를 클릭합니다.  <br />
+<img alt="image-20210521151359282" src="../m_windows_image/image-20210521151359282.png" /></p>
+<p></p>
+
+<p>우측 Users 의 Add 버튼을 클릭하여 <strong>sjmonv2user</strong>를 생성합니다.<br />
+<img alt="image-20210521144149322" src="../m_windows_image/image-20210521144149322.png" /></p>
+<p></p>
+
+<p>Password 체크박스를 Enable 한 후 비밀번호를 입력합니다. (<code>default : zaq12wsx</code>)<br />
+<img alt="image-20210521113015437" src="../m_windows_image/image-20210521113015437.png" /></p>
+<p></p>
+
+<p>그리고 Shared folders에서 <strong>Add</strong>버튼을 클릭하여 sjmon program이 설치되어 있는 경로를 선택합니다.<br />
+<img alt="image-20210518151726097" src="../m_windows_image/image-20210518151726097.png" /></p>
+<p></p>
+
+<p>Shared folders 의 Directores 와 Users 확인 후 OK 를 클릭하여 작업을 완료합니다.<br />
+<img alt="image-20210518151838182" src="../m_windows_image/image-20210518151838182.png" /></p>
+<p><br></p>
+<h3 id="16-windows-tomcat-service">1.6) [WINDOWS] Tomcat Service 프로그램 설치</h3>
+<ul>
+<li><strong>Tomcat Service 설치 시작</strong></li>
+</ul>
+<p><img alt="image-20210518152021856" src="../m_windows_image/image-20210518152021856.png" /></p>
+<p></p>
+
+<p>License Agreement 동의 후 진행합니다.<br />
+<img alt="image-20210518152050517" src="../m_windows_image/image-20210518152050517.png" /></p>
+<p></p>
+
+<p>설치할 Components 선택합니다.<br />
+<img alt="image-20210518152111071" src="../m_windows_image/image-20210518152111071.png" /></p>
+<p></p>
+
+<p>HTTP/1.1 Connector Port 및 Windows Service Name 설정합니다. (<code>권장 Port : 9090</code>)<br />
+<img alt="image-20210518152209818" src="../m_windows_image/image-20210518152209818.png" /></p>
+<p></p>
+
+<p>Java 설치 위치 설정합니다.<br />
+<img alt="image-20210518152454640" src="../m_windows_image/image-20210518152454640.png" /></p>
+<p></p>
+
+<p>SJMON설치위치\tomcat 로 설치할 위치 설정합니다.</p>
+<ul>
+<li>
+<p><strong>Default로 제공되는 경로를 지우고 SJMON이 설치된 경로에 tomcat디렉터리를 붙여 입력합니다.</strong><br />
+<img alt="image-20210518152405254" src="../m_windows_image/image-20210518152405254.png" /></p>
+<p><p></p></p>
+</li>
+</ul>
+<p>SJMON tomcat 설정을 저장여부를 물어보면 확인을 클릭합니다.<br />
+<img alt="image-20210518152536768" src="../m_windows_image/image-20210518152536768.png" /></p>
+<p></p>
+
+<p>설치 완료 시 체크 모두 해제 후 Finish 합니다.<br />
+<img alt="image-20210518152603870" src="../m_windows_image/image-20210518152603870.png" /></p>
+<p><br></p>
+<h3 id="17-windows-sjmon-manager-program">1.7) [WINDOWS] SJMON Manager Program 설치</h3>
+<p>Manager Installer가 실행되면 엔터 혹은 all을 입력하여 설치를 진행합니다.<br />
+<img alt="image-20210518152807392" src="../m_windows_image/image-20210518152807392.png" /></p>
+<p></p>
+
+<p>DB IP는 Default는 localhost값이 입력되어 있고 수정을 원하는 경우 수정할 IP Address를 입력한 뒤 Enter를 누릅니다.<br />
+<img alt="image-20210518155219332" src="../m_windows_image/image-20210518155219332.png" /></p>
+<p></p>
+
+<p>Manager IP는 Default로 직전에 입력한 DB IP 값이 입력되어 있고, 수정을 원하는 경우 수정할 IP Address를 입력한 뒤 Enter를 누릅니다.<br />
+<img alt="image-20210518155306658" src="../m_windows_image/image-20210518155306658.png" /></p>
+<p></p>
+
+<p>DB Port는 Default로 5432 값이 입력되어 있고 수정을 원하는 경우 수정할 Port를 입력한 뒤 Enter를 누릅니다.<br />
+<img alt="image-20210518155420072" src="../m_windows_image/image-20210518155420072.png" /></p>
+<p></p>
+
+<p>Manager Port는 Default로 43001~43005가 입력되어 있고, 수정을 원하는 경우 수정할 Port를 입력한 뒤 Enter를 누릅니다.<br />
+<img alt="image-20210518155517070" src="../m_windows_image/image-20210518155517070.png" /></p>
+<p></p>
+
+<p>Customer Name은 SSR Trial Version의 경우 License발급 요청 시 사용한 Notes의 Short Name을 입력하고, 고객 Trial이나 고객의 정식 버전의 경우는 License발급 요청 시 작성한 고객사명을 입력합니다. (한글이나 띄어쓰기 상관없음)<br />
+<img alt="image-20210520165926762" src="../m_windows_image/image-20210520165926762.png" /></p>
+<p></p>
+
+<p>설치를 진행하고 <strong>TomcatSJMON</strong>과 <strong>SjmonManager</strong> 서비스가 잘 시작되었다는 message 출력 확인합니다.<br />
+<img alt="image-20210518161129427" src="../m_windows_image/image-20210518161129427.png" /></p>
+<p></p>
+
+<p>Manager 설치 완료 후, Scouter 설치 여부를 결정합니다. <br />
+Default는 n이며, y를 입력 시 Scouter 설치를 진행하고 n을 입력 시 설치 없이 종료됩니다.<br />
+<img alt="image-20210518161429796" src="../m_windows_image/image-20210518161429796.png" /><br />
+<img alt="image-20210520170058060" src="../m_windows_image/image-20210520170058060.png" /></p>
+<p><br></p>
+<h3 id="18-sjmon-program">1.8) SJMON Program이 정상적으로 설치되었는지 확인</h3>
+<ul>
+<li><strong>SJMON Manager 구동 확인</strong> </li>
+</ul>
+<p><strong>Windows 작업 관리자 실행(Ctrl+Alt+Del) -&gt; 작업 관리자 시작 -&gt; 서비스 Tab</strong>에서 <strong>SjmonManager</strong>서비스가 정상적으로 실행 중인지 확인합니다.<br />
+<img alt="image-20210520191352264" src="../m_windows_image/image-20210520191352264.png" /></p>
+<p></p>
+
+<ul>
+<li><strong>Manager가 실행이 안되고 중지된 상태인 경우</strong> <br />
+<img alt="image-20210520191418323" src="../m_windows_image/image-20210520191418323.png" /></li>
+</ul>
+<p></p>
+
+<p>SJMON Manager 프로그램의 기본 로그 위치는 <strong>SJMON_Program이 설치된 위치\manager\logs</strong>입니다. <br />
+  Manager가 정상적으로 실행이 안되는 경우 아래 로그파일을 열어 log type에 따라 조치를 진행하시면 됩니다.</p>
+<p></p>
+
+<p><strong>Commons-daemon-date</strong> 로그파일과 <strong>application</strong> 로그파일이 존재합니다.</p>
+<ul>
+<li>
+<p><strong>commons-deamon-date 로그 : SJMON manager 서비스가 등록될 때 발생하는 오류</strong></p>
+<p>1) 지정된 경로를 찾을 수 없습니다.”라는 오류가 발생하는 경우<br />
+<img alt="image-20210521145131876" src="../m_windows_image/image-20210521145131876.png" /></p>
+<p>Java가 설치되어 있는 경로에서 (ex. <code>C:\Program Files (x86)\Java\jre1.8.0_131/bin</code>) server 또는 client라고 되어있는 디렉터리를 확인한 뒤에 manager 디렉터리로 이동하여 <strong>addServicexx.bat</strong> 파일을 열어서 JVM 설정 경로를 <strong>jvm.dll</strong> 파일 위치로 수정합니다.</p>
+<p><img alt="image-20210521145126682" src="../m_windows_image/image-20210521145126682.png" /></p>
+<p><br></p>
+</li>
+<li>
+<p><strong>application 로그 : SJMON manager가 구동되면서 발생하는 오류</strong></p>
+<ul>
+<li><strong>application 로그 파일 Error 종류</strong></li>
+</ul>
+<p><p>1) [9001] Problem of license is null</p>
+<p>License 값을 입력하는 부분이 “null”로 입력되어 발생한 문제입니다. SJMON이 설치된 곳에 manager디렉터리로 이동하여 config.properties파일을 열어 “server.license”부분에 값이 정상으로 입력되었는지 확인이 필요합니다.</p></p>
+<p><p>2) [9002] Problem of customer number is null</p>
+<p>Customer name 값을 입력하는 부분이 “null”로 입력되어 발생한 문제입니다. SJMON이 설치된 곳에 manager디렉터리로 이동하여 config.properties파일을 열어 “server.cust.name”부분에 값이 정상으로 입력되었는지 확인이 필요합니다.</p></p>
+<p><p>3) [9003] Problem of customer name check</p>
+<p>Customer name 값을 입력하는 부분이 잘못 입력되어 발생한 문제입니다. SJMON이 설치된 곳에 manager디렉터리로 이동하여 config.properties파일을 열어 “server.cust.name”부분에 값이 정상으로 입력되었는지 확인이 필요합니다. (license발급시 사용한 customer name이 입력되어야 합니다)</p></p>
+<p><p>4) [9004] Problem of UUID or MAC address check</p>
+<p>License 값을 정상적으로 인식되지 않아서 발생한 문제입니다. SJMON이 설치된 곳에 manager디렉터리로 이동하여 config.properties파일을 열어 “server.license”부분에 값이 정상으로 입력되었는지 확인이 필요합니다. (license발급시 제공한 license key확인)</p></p>
+<p><p>5) [9005] Problem of agent registration</p>
+<p>등록한 License 대비 연결된 Agent 수가 초과되어 신규 Agent연결이 안되는 상황입니다. 구매한 License에 맞게 Agent 대수를 조절하시거나 신규로 License를 구매해야 해결할 수 있습니다.</p></p>
+<p><p>6) [9006] Problem of license expiration</p>
+<p>발급된 license가 만료되어 발생한 문제입니다. <a href="mailto:sjlyh@kr.ibm.com">sjlyh@kr.ibm.com</a>으로 문의해서 조치를 받으시기 바랍니다.</p></p>
+</li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>SJMON Tomcat 구동 확인</strong>
+  <code>Windows 작업 관리자 실행(Ctrl+Alt+Del) -&gt; 작업 관리자 시작 -&gt; 서비스 Tab</code>에서 <strong>TomcatSJMON</strong>이 정상적으로 실행 중인지 확인합니다.</li>
+</ul>
+<p><img alt="image-20210520191716975" src="../m_windows_image/image-20210520191716975.png" /></p>
+<p><br></p>
+<h3 id="19-repository">1.9) Repository 파일 구성</h3>
+<p>SJMON Manager를 설치한 경로에 sjmon_file디렉터리로 이동하여  파일이 정상적으로 upload되었는지 확인합니다</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;<strong>Repository File List</strong>&nbsp;&nbsp;</th>
+<th>&nbsp;설명 &nbsp;&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;COMMON &nbsp;&nbsp;</td>
+<td>&nbsp;SJMON Agent 설치 시 필요한 common 파일 &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;Installer</td>
+<td>&nbsp;Agent 사용 시 사용되는 Auto Installer 파일 &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;INVENTORY &nbsp;&nbsp;</td>
+<td>&nbsp;Version Check 기능에 사용되는 기본 파일 &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;OS</td>
+<td>&nbsp;Agent 사용 시 사용되는 OS 관련  파일 &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;pm_script &nbsp;&nbsp;</td>
+<td>&nbsp;Auto PM 기능 사용 시 사용되는 기본 PM Script 파일 &nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>SJMON 설치가 완료되었습니다. 이제 Web으로 SJMON에 접속하여 정상적으로 프로그램이 동작하는지 확인하세요.</p>
+<p><br></p>
+<h3 id="110-sjmon-viewer">1.10) SJMON Viewer 접속 확인</h3>
+<p>Chrome web browser에 http://localhost:9090을 입력하여 SJMON Viewer에 접속합니다.</p>
+<ul>
+<li>Default Login ID / PW  : <strong>admin / IBMP@ssw0rd</strong></li>
+</ul>
+<p>설정된 IP 주소(예: http://172.1.2.3:9090)로 IE를 이용해 접속 시 로그인이 되지 않는 경우가 있습니다. 이 경우, 서버 관리자의 “로컬 서버” 속성 중 “IE 보안 강화 구성” 값을 “사용 안 함”으로 변경 후 다시 접속합니다.</p>
+<p><img alt="image-20210520194058497" src="../m_windows_image/image-20210520194058497.png" /></p>
+<p><br><br></p>
+<h2 id="2-sjmon">2. SJMON 수동으로 시작 및 종료 방법</h2>
+<h3 id="21-postgresql-database">2.1) PostgreSQL Database 수동 시작 및 종료</h3>
+<p>PostgreSQL DB를 설치하면 자동으로 서비스에 등록되고, PC재부팅 후에도 자동으로 시작이 되도록 설정되어 있습니다.</p>
+<p>해당 부분을 수동으로 전환하고 싶은 경우 <strong>서비스</strong>를 자동에서 수동으로 전환하여 사용하시면 됩니다.</p>
+<ul>
+<li><strong>PostgreSQL Database 서비스 화면</strong></li>
+</ul>
+<p><img alt="image-20210520200845374" src="../m_windows_image/image-20210520200845374.png" /></p>
+<ul>
+<li><strong>PostgreSQL 서비스 등록 화면</strong> </li>
+</ul>
+<p><img alt="image-20210520200933600" src="../m_windows_image/image-20210520200933600.png" /></p>
+<p>PostgreSQL Database의 Start / Stop은 시작 menu에서도 수행이 가능합니다.</p>
+<p><br></p>
+<h3 id="22-sjmon-manager">2.2) SJMON Manager 시작 및 종료</h3>
+<h4 id="221-sjmon-manager">2.2.1) <strong>SJMON Manager 실행</strong></h4>
+<p>JRE_HOME을 환경변수에 등록한 경우 아래 <code>jvm.dll</code> 파일 수정은 생략가능합니다.</p>
+<ul>
+<li><strong>jvm.dll 파일 위치 수정 - Optional</strong><br />
+<strong>addServicexx.bat</strong> 파일 열어서 JVM 설정 경로를 <code>jvm.dll</code> 파일 위치로 수정합니다.<br />
+  (기본 위치는 <code>%JRE_HOME%/bin/server</code> 폴더가 없는 경우 client 폴더 안의 <code>jvm.dll</code> 경로로 지정합니다.)<br />
+<img alt="image-20210520201323111" src="../m_windows_image/image-20210520201323111.png" /></li>
+</ul>
+<p>SJMON설치위치에서 PC 사양에 맞는 addService_xxBit 폴더로 이동해서 <strong>addServicexx.bat</strong> 실행합니다.<br />
+  (32bit인 경우, <code>SJMON설치위치\addService_32Bit\addService32.bat</code> 실행)<br />
+<img alt="image-20210520212955938" src="../m_windows_image/image-20210520212955938.png" /></p>
+<p></p>
+
+<p>제어판 -&gt; 관리도구 -&gt; 서비스에서 <strong>SjmonManager</strong> 확인 후 시작 / 중지 가능합니다.<br />
+<img alt="image-20210520213110547" src="../m_windows_image/image-20210520213110547.png" /></p>
+<p></p>
+
+<p>Windows 작업 관리자의 서비스 탭에서도 상태 확인 및 시작 / 중지 가능합니다.<br />
+<img alt="image-20210520214010094" src="../m_windows_image/image-20210520214010094.png" /></p>
+<p><br></p>
+<h3 id="23-sjmon-tomcat">2.3) SJMON Tomcat 시작 및 종료</h3>
+<p><strong>[Tomcat서비스명]w.exe</strong>을 실행합니다.<br />
+<img alt="image-20210521145632678" src="../m_windows_image/image-20210521145632678.png" /></p>
+<p></p>
+
+<p><strong>Startup type</strong>을 Automatic이나 Manual로 설정 후 Service Start 클릭합니다. (PC나 서버 재시작시 Tomcat이 자동으로 시작되게 하려면 Automatic으로 변경)<br />
+<img alt="image-20210521145818092" src="../m_windows_image/image-20210521145818092.png" /></p>
+<p></p>
+
+<p>Tomcat Service 시작합니다.<br />
+<img alt="image-20210521150110191" src="../m_windows_image/image-20210521150110191.png" /></p>
+<p></p>
+
+<p>Tomcat Service 정상적으로 시작된 상태 확인 및 중지 가능합니다.<br />
+<img alt="image-20210521150141264" src="../m_windows_image/image-20210521150141264.png" /></p>
+<p></p>
+
+<p>비정상적으로 설치되어 제대로 실행이 되지 않는 경우, Service Stop 및 CMD 창을 통한 Service 종료 후 Tomcat 재설치 권장합니다.<br />
+<img alt="image-20210521150214599" src="../m_windows_image/image-20210521150214599.png" /></p>
+<p><br></p>
+<h3 id="24-sjmon-viewer">2.4) SJMON Viewer 접속 확인</h3>
+<p>Chrome web browser에 http://localhost:9090을 입력하여 SJMON Viewer에 접속합니다.</p>
+<p>Default Login ID / PW : <strong>admin / IBMP@ssw0rd</strong></p>
+<p><br></p>
+<p><br></p>
+<h2 id="3-sjmon-program-uninstallation-on-windows">3. SJMON Program Uninstallation on Windows</h2>
+<h3 id="31-sjmon">3.1) SJMON 제거 방법</h3>
+<ul>
+<li><strong>Manager 프로그램 제거</strong><br />
+  제어판에서 “SJMON 버전 2.0” 프로그램 Uninstall 합니다.<br />
+<img alt="image-20210521150515614" src="../m_windows_image/image-20210521150515614.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>Tomcat 서비스 중지</strong><br />
+  제어판에서 "Apache Tomcat" 프로그램 Uninstall 합니다.<br />
+<img alt="image-20210521150539127" src="../m_windows_image/image-20210521150539127.png" /></li>
+</ul>
+<p>SJMON program이 설치되었던 디렉터리도 삭제합니다.</p>
+<p></p>
+
+<ul>
+<li><strong>PostgreSQL Database 삭제</strong><br />
+  제어판에서 "PostgreSQL" 프로그램 Uninstall 합니다.<br />
+<img alt="image-20210521150617632" src="../m_windows_image/image-20210521150617632.png" /></li>
+</ul>
+<p>Postgresql이 설치되었던 디렉토리도 제거합니다.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install_client_aix/" class="btn btn-neutral float-right" title="AIX">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install_manager_linux/" class="btn btn-neutral" title="on Linux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install_manager_linux/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install_client_aix/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

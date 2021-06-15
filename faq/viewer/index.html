@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>about Viewer - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "about Viewer";
+    var mkdocs_page_input_path = "faq\\viewer.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">about Viewer</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">화면이 정상적으로 보이지 않습니다.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dashboard">Dashboard 의 도넛 차트가 보이지 않습니다.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#top-sql-trend">Top SQL 의 Trend 차트가 보이지 않습니다.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewer-x-tooltip">Viewer 의 시간이 맞지 않습니다. (시계, 차트의 x축, tooltip 등)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#centos-viewer">CentOS 에서 Viewer 접속 시, 위젯 추가 버튼이 동작하지 않습니다.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewer_1">정상 설치 후에도 Viewer 에 접속할 수 없습니다.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ie-viewer">IE에서 Viewer 에 접속할 수 없습니다.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameter-change-history-change-history-time-comparative-analysis">Parameter Change History 의 Change History 탭의 결과와, Time-comparative Analysis 탭의 결과가 다릅니다.</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>FAQ &raquo;</li>
+        
+      
+    
+    <li>about Viewer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="viewer">Viewer</h1>
+<p>아래 FAQ 에 없는 문의사항은 담당자에게 직접 연락 바랍니다.</p>
+<h2 id="_1">화면이 정상적으로 보이지 않습니다.</h2>
+<p><strong>Login</strong> 화면의 그림이 보이지 않거나, <strong>Inventory</strong> 메뉴 조회 시 목록이 제대로 조회되지 않는 등, 화면이 제대로 조회되지 않는 경우 <em>브라우저 캐시</em> 가 남아 제대로 보여지지 않을 수 있습니다. <code>Ctrl + F5</code> 혹은 브라우저 설정의 캐시 삭제를 진행한 후 다시 시도해주세요.</p>
+<h2 id="dashboard">Dashboard 의 도넛 차트가 보이지 않습니다.</h2>
+<p>설치 당일은 데이터가 충분히 수집되지 않아 빈 차트로 보이는 것이 맞습니다.</p>
+<p>Manager 설치 위치의 <code>config.properties</code> 에 설정된 <code>db.sched.dashboard.donut.month</code>에 설정된 주기마다 refresh 되므로, 최초 설치 이후에는 그 시간 이후 확인 가능합니다.</p>
+<pre><code class="language-config.properties">db.sched.dashboard.donut.month = 0 1 0 * * ?    # 기본값: 매일 0시 1분 0초
+</code></pre>
+<p>설정 주기 이후에도 계속해서 도넛 차트가 보이지 않는다면 로그를 확인하여 상세 원인을 파악해야 합니다.</p>
+<h2 id="top-sql-trend">Top SQL 의 Trend 차트가 보이지 않습니다.</h2>
+<p>조회 기간을 1시간 이내로 설정한 경우 차트가 나오지 않습니다. 1시간을 초과한 기간으로 조회한 경우에도 나오지 않는 경우는 연결된 DB Client 가 있는지 확인하거나 로그를 확인하여 상세 원인을 파악해야 합니다.</p>
+<h2 id="viewer-x-tooltip">Viewer 의 시간이 맞지 않습니다. (시계, 차트의 x축, tooltip 등)</h2>
+<p>OS, DB, Tomcat 의 timezone 이 일치하지 않을 때 일어나는 문제입니다. Viewer 2.1.2 버전에서 패치 완료되었습니다. OS의 Timezone 이 KST일 경우에만 정상적으로 사용 가능합니다.</p>
+<p>다만, <strong>Tomcat</strong> 과 <strong>Manager</strong> 가 서로 다른 OS에 설치되어 있는 경우에는 <strong>Tomcat</strong> 실행 옵션에서 <code>-Duser.timezone</code> 옵션을 이용해 <strong>Manager</strong>에 설치된 OS 의 Timezone 과 통일해야 정상적인 시간 확인 가능합니다.</p>
+<h2 id="centos-viewer">CentOS 에서 Viewer 접속 시, 위젯 추가 버튼이 동작하지 않습니다.</h2>
+<p>CentOS의 firefox 와 chrome 에서는 위젯 라이브러리인 gridster 지원 불가로 인하여 해당 기능이 동작하지 않습니다. Viewer 접속은 Windows OS 환경을 권장합니다.</p>
+<h2 id="viewer_1">정상 설치 후에도 Viewer 에 접속할 수 없습니다.</h2>
+<p>방화벽을 확인해야 합니다. <code>service iptables stop</code>이나 <code>systemctl stop firewalld</code> 명령어로 방화벽을 중지한 뒤 다시 시도해주세요.</p>
+<h2 id="ie-viewer">IE에서 Viewer 에 접속할 수 없습니다.</h2>
+<p><strong>Manager</strong> 와 <strong>Tomcat</strong> 설치가 정상적으로 완료된 경우, PC 에 설치된 보안프로그램으로 인해 <strong>Viewer</strong> 접속 시 아무 화면도 나타나지 않을 수 있습니다. 다른 PC나 Chrome 을 통해서는 잘 접속되는지 확인해야 합니다.</p>
+<h2 id="parameter-change-history-change-history-time-comparative-analysis">Parameter Change History 의 Change History 탭의 결과와, Time-comparative Analysis 탭의 결과가 다릅니다.</h2>
+<p>Parameter Change History 탭은 전체 시스템 조회가 가능하기 때문에 <strong>Manager</strong> 시간인 <code>inputtime</code> 기준으로 조회하고, Time-comparative Analysis 탭은 Client 별로 조회하므로 <strong>Client</strong> 시간인 <code>gettime</code> 기준으로 조회합니다. 따라서, <strong>Manager</strong>와 <strong>Client</strong>의 서버 시간이 다른 경우에는 다른 결과가 나올 수 있습니다.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../client/" class="btn btn-neutral" title="about Client"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../client/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

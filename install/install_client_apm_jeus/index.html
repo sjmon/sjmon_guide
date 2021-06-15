@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Jeus - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Jeus";
+    var mkdocs_page_input_path = "install\\install_client_apm_jeus.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Jeus</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-agent">1. Agent 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-config">2. config 파일 수정</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-jeus">3. Jeus 옵션 수정</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-jeus">4. Jeus를 재시작</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../user-guide/user_index/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation of WAS Client &raquo;</li>
+        
+      
+    
+    <li>Jeus</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="apm-agent-installation-jeus-monitoring">APM Agent Installation Jeus Monitoring</h1>
+<h2 id="1-agent">1. Agent 설치</h2>
+<p>Manager의 설치 위치 아래 <strong>scouter/agent.java/scouter.agent.jar</strong> 파일을 임의의 디렉토리에 copy 합니다. <br />
+(ex. <code>/engn/scouter/agent.java/</code>)</p>
+<p>Manager의 설치 위치 아래 <strong>scouter/agent.java/conf/scouter.conf</strong> 파일을 임의의 디렉토리에 copy 합니다. </p>
+<p><br></p>
+<p><br></p>
+<h2 id="2-config">2. config 파일 수정</h2>
+<p>아래와 같이 <strong>scouter.conf</strong> 파일을 수정합니다.</p>
+<table>
+<thead>
+<tr>
+<th>설정 항목</th>
+<th>설정값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;어플리케이션명 (Default: tomcat1) &nbsp;&nbsp;</td>
+<td>&nbsp;obj_name=SIS_WAS_DEV</td>
+</tr>
+<tr>
+<td>&nbsp;Scouter 서버 IP</td>
+<td>&nbsp;net_collector_ip=172.16.30.87</td>
+</tr>
+<tr>
+<td>&nbsp;Scouter 서버 Port (Default: 6100)</td>
+<td>&nbsp;net_collector_udp_port=6100</td>
+</tr>
+<tr>
+<td></td>
+<td>&nbsp;net_collector_tcp_port=6100</td>
+</tr>
+<tr>
+<td>&nbsp;서비스 연계 추적  활성화 여부</td>
+<td>&nbsp;trace_interservice_enabled=true &nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><br></p>
+<h2 id="3-jeus">3. Jeus 옵션 수정</h2>
+<p><strong>${JEUS_HOME}/config/${NODE_NAME}/JEUSMain.xml</strong> 파일을 수정합니다.<br />
+<code>&lt;engine-container&gt;</code> 내에 <code>&lt;command-option&gt;</code> 을 추가하고, WAS Agent 를 설치할 컨테이너 마다 위의 옵션을 추가해준 후 <strong>JEUSMain.xml</strong> 을 저장하고 닫습니다.</p>
+<pre><code>&lt;command-option&gt;
+   ......
+  -javaagent:/engn/scouter/agent.java/scouter.agent.jar
+   -Dscouter.config=/engn/scouter/agent.java/conf/scouter.conf
+  -Dobj_name=jeus1
+&lt;/command-option&gt;
+</code></pre>
+<p><br></p>
+<p><br></p>
+<h2 id="4-jeus">4. Jeus를 재시작</h2>
+<p>Jeus를 재시작합니다.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../user-guide/user_index/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install_client_apm_websphere/" class="btn btn-neutral" title="WebSphere"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install_client_apm_websphere/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../user-guide/user_index/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

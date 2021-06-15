@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Overview - SJMON Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Overview";
+    var mkdocs_page_input_path = "user-guide\\user_index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SJMON Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">about SJMON</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of Manager</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_manager_linux/">on Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_manager_windows/">on Windows</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of OS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_aix/">AIX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_linux/">Linux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_windows/">Windows</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_hp/">HP-UX</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_solaris/">Solaris</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation of WAS Client</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_apm_tomcat/">Tomcat</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_apm_websphere/">WebSphere</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../install/install_client_apm_jeus/">Jeus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-top-menu">1. Top menu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-home">2. Home</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-dashboard">3. DASHBOARD</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-usage-trend-last-1-month">1) Usage &amp; Trend Last 1 Month</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-change-item-of-last-1-month-view">2) Change Item of Last 1 Month View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-event-today">3) EVENT Today</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-top-5-servers-last-5-minute">4) Top 5 Servers Last 5 Minute</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-overall-performance-view">5) Overall Performance View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-target-process-monitoring">6) Target Process Monitoring</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-monitor">4. MONITOR</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-menu">1) Menu</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-screen-widgets">2) Screen widgets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-widget-menu">3) Widget Menu</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-xlog-chart">4) XLog Chart</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-tool">5. Tool</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-summary">1) Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-analyzer">2) Analyzer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_1">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-top-sql">3) Top SQL</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_2">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-db-space">4) DB Space</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_3">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-event">5) Event</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_4">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-quick-parameter-check">6) Quick Parameter Check</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_5">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-parameter-health-check">7) Parameter Health Check</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_6">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-parameter-change-history">8) Parameter Change History</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#9-aix-virtualization">9) AIX Virtualization</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-report">6. Report</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-quick-resource-trend">1) Quick Resource Trend</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_9">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-comparative-time-analysis">2) Comparative Time Analysis</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_10">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-comparative-system-analysis">3) Comparative System Analysis</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_11">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-preventive-maintenance">4) Preventive Maintenance</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#4-1-pm-report">4-1) Pm Report</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-2-pm-summary">4-2) PM Summary</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-3-pm-setting">4-3) PM Setting</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-nagios">7. NAGIOS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-host-status">1) Host Status</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-service-status">2) Service Status</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-event-console">3) Event Console</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-admin">8. Admin</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-user">1) User</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-inventory">2) Inventory</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-inventory-import">2.1) Inventory 정보 IMPORT 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-inventory-edit">2.2) Inventory 정보 Edit 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#23-inventory-delete">2.3) Inventory 정보 Delete기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#24-file-upload">2.4) File Upload 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#25-system-deploy">2.5) System Deploy 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#26-version-check">2.6) Version Check 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#27-nagios-host">2.7) NAGIOS Host 등록, 수정, 연동</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-system-group">3) System Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-threshold">4) Threshold</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-sjmon-threshold">4.1) SJMON THRESHOLD 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-nagios-threshold">4.2) NAGIOS THRESHOLD 기능</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#43-notification-configuration">4.3) NOTIFICATION CONFIGURATION</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-threshold-monitoring">5) Threshold Monitoring</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-admin-setting">6) Admin Setting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-data-size">7) Data Size</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-my-page">9. My page</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-info-setting">1) Info &amp; Setting</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">FAQ</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/manager/">about Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../faq/postgresql.md">about Postgresql</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/client/">about Client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/viewer/">about Viewer</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SJMON Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User Guide &raquo;</li>
+        
+      
+    
+    <li>Overview</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="user-manual">User Manual</h1>
+<h2 id="1-top-menu">1. Top menu</h2>
+<p>TOP MENU로 MANAGER에 연결된 CLIENT들의 상태를 확인할 수 있는 MENU입니다. </p>
+<p><img alt="image-20210520151552257" src="../user_guide_image/image-20210520151552257.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>메뉴</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="image-20210520145508214" src="../user_guide_image/image-20210520145508214.png" /></td>
+<td>Total List</td>
+<td>Manager에 연결된 모든 CLIENT의 정보를 보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520145545882" src="../user_guide_image/image-20210520145545882.png" /></td>
+<td>Up List</td>
+<td>Manager에 연결되어 데이터를 모니터링 할 수 있는 CLIENT를  보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520145615055" src="../user_guide_image/image-20210520145615055.png" /></td>
+<td>Down List</td>
+<td>Manager와의 연결이 끊어진 CLIENT를 보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520145626766" src="../user_guide_image/image-20210520145626766.png" /></td>
+<td>Threshold Event List</td>
+<td>주의, 경고 권고치 값을 초과한 CLIENT를 보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520145656931" src="../user_guide_image/image-20210520145656931.png" /></td>
+<td>Process Event List</td>
+<td>Process Monitoring 중 오류가 있는 CLIENT 정보를 보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520145717619" src="../user_guide_image/image-20210520145717619.png" /></td>
+<td>Error List</td>
+<td>에러가 발생한 CLIENT의 정보를 보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520145732125" src="../user_guide_image/image-20210520145732125.png" /></td>
+<td>Parameter Change List</td>
+<td>Parameter가 변경된 CLIENT의 정보를 보여줍니다.</td>
+</tr>
+<tr>
+<td><img alt="image-20210520151611848" src="../user_guide_image/image-20210520151611848.png" /></td>
+<td></td>
+<td>매니저 설치 위치인 /pgdata 의 사용량을 시각적으로  보여줍니다. 마우스를 대면 수치를 확인할 수 있습니다.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<p>상단 Search바에 System명을 입력하면 검색이 가능합니다. (Total, Up, Down List) <br />
+<img alt="image-20210520150238416" src="../user_guide_image/image-20210520150238416.png" /></p>
+<p><br></p>
+<p><br></p>
+<h2 id="2-home">2. Home</h2>
+<p>HOME은 로그인 후 처음으로 보여지는 메뉴입니다. 전체 메뉴와 모니터 테마를 한 눈에 확인하여 원하는 메뉴로 이동할 수 있습니다. </p>
+<p>★ 로 등록한 자주 사용하는 테마 및 메뉴를 확인할 수 있으며, 양측 버튼을 클릭하여 전체 테마와 전체 메뉴를 확인할 수 있습니다. </p>
+<p><img alt="image-20210520155847418" src="../user_guide_image/image-20210520155847418.png" /></p>
+<ul>
+<li><img alt="image-20210520155549535" src="../user_guide_image/image-20210520155549535.png" />  -  유저가 소유한 테마 중 공유하지 않은 테마.</li>
+<li><img alt="image-20210520155604316" src="../user_guide_image/image-20210520155604316.png" />  -  유저가 소유한 테마 중 공유 중인 테마.</li>
+<li><img alt="image-20210520155619428" src="../user_guide_image/image-20210520155619428.png" />   -  즐겨찾기 설정하지 않은 테마 및 메뉴</li>
+<li><img alt="image-20210520155705426" src="../user_guide_image/image-20210520155705426.png" />    -  즐겨찾기 설정하지 않은 테마 및 메뉴</li>
+<li><img alt="image-20210520155722461" src="../user_guide_image/image-20210520155722461.png" />    -  테마 및 메뉴 새 창으로 열기</li>
+</ul>
+<p><br></p>
+<p><br></p>
+<h2 id="3-dashboard">3. DASHBOARD</h2>
+<p>DASHBOARD는 MANAGER에 연결된 CLIENT들의 자원 사용 현황과, 사용량이 높은 서버, 사용량 패턴, 이벤트 발생 여부 등을 쉽게 확인할 수 있도록 구성되어 있습니다.<br />
+DASHBOARD 의 위젯은 한 row 가 다른 row 와 위치 변경이 가능합니다.<br />
+기본적으로 연결된 모든 Client 에 대한 정보가 표시되며, OPV 의 Host 를 선택한 경우에는 다른 위젯 역시 선택한 Host 만을 대상으로 한 정보가 표시됩니다.</p>
+<p><br></p>
+<h3 id="1-usage-trend-last-1-month">1) Usage &amp; Trend Last 1 Month</h3>
+<p><img alt="image-20210527093518513" src="../user_guide_image/image-20210527093518513.png" /></p>
+<ul>
+<li>
+<p>현재 시각을 기준으로 모니터링 대상 CLIENT들의 자원(CPU, MEMORY, DISK, NETWORK, DB TIME, NETWORK SWITCH)사용량이 과거 한달과 비교하여 어떤 패턴으로 사용 중인지 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>00시~현재시간 기준으로 CPU 사용량의 평균이, 오늘부터 과거 한달까지의 사용량보다 적으면 파란색, 같거나 높으면 노란색, 1.5배를 초과하는 경우 빨간색으로 변경됩니다.</p>
+</li>
+</ul>
+<p>Example 1) <br />
+<img alt="image-20210608170539852" src="../user_guide_image/image-20210608170539852.png" /></p>
+<ol>
+<li>현재 시각 기준 IT 인프라 CPU 자원을 평소 대비 적게 사용</li>
+<li>과거 한달과 오늘의 평균 사용량을 상세히 비교 가능</li>
+</ol>
+<p></p>
+
+<p>Example 2) <br />
+<img alt="image-20210608165817137" src="../user_guide_image/image-20210608165817137.png" /></p>
+<ol>
+<li>현재 시각 기준 IT 인프라 CPU 자원을 평소 대비 많이 사용 </li>
+<li>과거 한달과 오늘의 평균 사용량을 상세히 비교 가능</li>
+</ol>
+<p><br></p>
+<h3 id="2-change-item-of-last-1-month-view">2) Change Item of Last 1 Month View</h3>
+<p>CPU, Memory, Disk, Network, DB Time, Network Switch로 대표 메뉴를 변경하며 사용 가능합니다<br />
+<img alt="image-20210526154318498" src="../user_guide_image/image-20210526154318498.png" /></p>
+<p><br></p>
+<h3 id="3-event-today">3) EVENT Today</h3>
+<p>하루에 발생되는 EVENT들에 대해 확인할 수 있습니다.<br />
+<img alt="image-20210526154727846" src="../user_guide_image/image-20210526154727846.png" /></p>
+<ul>
+<li>EVENT의 시작 시간, 종료 시간을 확인할 수 있으며 이벤트를 CLICK 하면 상세한 EVENT 내용을 보여주는 화면으로 이동하게 됩니다.</li>
+</ul>
+<p><br></p>
+<h3 id="4-top-5-servers-last-5-minute">4) Top 5 Servers Last 5 Minute</h3>
+<p><strong>Trend last 1 month</strong>에서 선택한 자원 (CPU, memory, disk, network, DB time, network switch)에 따라 최근 5분 동안 해당 자원에 부하가 많이 발생한 top 5개의 서버 정보를 보여줍니다.<br />
+<img alt="image-20210607144845593" src="../user_guide_image/image-20210607144845593.png" /></p>
+<ul>
+<li>가장 높은 자원 사용량을 보이는 서버를 Click하면 해당 CLIENT에 대해 보다 상세한 자원 사용 현황을 보여주는 Monitor화면으로 이동하게 됩니다.</li>
+</ul>
+<p><br></p>
+<h3 id="5-overall-performance-view">5) Overall Performance View</h3>
+<p><img alt="image-20210607151452653" src="../user_guide_image/image-20210607151452653.png" /></p>
+<ol>
+<li>
+<p>모니터링 하고자 하는 CLIENT를 선택할 수 있습니다.</p>
+</li>
+<li>
+<p>모니터링 하고자 하는 지표를 선택할 수 있습니다.</p>
+</li>
+<li>
+<p>주기적으로 변하는 CLIENT의 performance 정보를 확인할 수 있으며, 체크된 상태의 CLIENT 정보로 이루어진 차트를 Dashboard 상단에서 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>더 이상 모니터링을 원하지 않는 CLIENT를 삭제할 수 있습니다.</p>
+</li>
+</ol>
+<p><br></p>
+<h3 id="6-target-process-monitoring">6) Target Process Monitoring</h3>
+<p>연결된 Client 중에서, 설정한 Process 에 대한 정보를 실시간으로 Monitoring 할 수 있습니다.</p>
+<p><img alt="image-20210607152629769" src="../user_guide_image/image-20210607152629769.png" /></p>
+<ol>
+<li>설정값에 해당하는 Process 가 수집되지 않는 경우 CHKREQ (Check Required)</li>
+<li>설정값에 해당하는 Process 의 State 가 정상이 아닌 경우</li>
+<li>설정값에 해당하는 Process 의 개수가 1개보다 많은 경우</li>
+</ol>
+<p><br></p>
+<p><br></p>
+<h2 id="4-monitor">4. MONITOR</h2>
+<p>모니터는 CLIENT들이 가지고 있는 다양한 성능 정보를 자유롭게 배치하여 모니터링 할 수 있도록 해줍니다. <br />
+사용자 별로 원하는 성능 정보들을 배치하여 theme로 저장하여 언제든 불러올 수 있도록 도와줍니다.</p>
+<p><img alt="image-20210527110218678" src="../user_guide_image/image-20210527110218678.png" /></p>
+<p><br></p>
+<h3 id="1-menu">1) Menu</h3>
+<p>Monitor는 위젯 추가, Interval 조정, Auto Refresh, Theme, Fixed Host 기능으로 구성되어 있습니다.</p>
+<p><img alt="image-20210607152936919" src="../user_guide_image/image-20210607152936919.png" /><br />
+<strong>STEP 1. 위젯 추가 :</strong>  원하는 위젯을 추가할 수 있습니다. <br />
+<strong>STEP 2. Auto Refresh :</strong>  주기적인 Auto Refresh가 발생하고, Checkbox해제 시 해당 화면은 더 이상 Auto Refresh가 안되는 상태로 멈춰 있게 됩니다.<br />
+<strong>STEP 3. Fixed a System :</strong>  기존에 보고 있던 Monitoring화면의 STATISTICS를 “Fixed a System”에서 선택한 CLIENT로 변경합니다.<br />
+<strong>STEP 4. History Theme :</strong>  저장한 Theme List 를 조회 및 선택하여 기존 Theme를 불러올 수 있습니다.<br />
+<strong>STEP 5. Theme :</strong>  Monitor화면에서 자유롭게 배치한 widget들이 상태를 Theme로 저장하여, 나중에 조회가 가능합니다.</p>
+<ul>
+<li><img alt="image-20210527113351782" src="../user_guide_image/image-20210527113351782.png" /> -    테마를 추가 합니다.</li>
+<li><img alt="image-20210527113502482" src="../user_guide_image/image-20210527113502482.png" />  -    현재 화면에 있는 위젯을 저장합니다.</li>
+<li><img alt="image-20210527113514458" src="../user_guide_image/image-20210527113514458.png" /> -    테마명을 수정합니다. (자신이 생성한 경우에만 가능)</li>
+<li><img alt="image-20210527113525641" src="../user_guide_image/image-20210527113525641.png" />  -    테마를 삭제 합니다. (자신이 생성한 경우에만 가능)</li>
+</ul>
+<p><br></p>
+<h3 id="2-screen-widgets">2) Screen widgets</h3>
+<p>Screen Widget을 통해 원하는 chart형식으로 STATISTICS를 조회할 수 있습니다.</p>
+<p><img alt="image-20210527115728896" src="../user_guide_image/image-20210527115728896.png" /><br />
+<strong>STEP 1 :</strong>  WIDGET 종류에 따라 구분할 수 있는 TAB을 제공하고, WIDGET종류는 CHART, GRID, GROUP, NETWORK, XLOG가 있습니다.<br />
+<strong>STEP 2 :</strong>  DEFAULT로 All을 통해 모든 CLIENT를 선택할 수 있고, OS, DB, Network별 CLIENT 선택도 가능합니다.<br />
+<strong>STEP 3 :</strong>  SYSTEM을 선택합니다. Host, DB, Application를 선택할 수 있습니다. 그룹을 선택하면 해당 그룹에 포함된 System만 확인 및 선택할 수 있습니다.</p>
+<p><img alt="image-20210527120005202" src="../user_guide_image/image-20210527120005202.png" /><br />
+<strong>STEP 4 :</strong>  CLIENT에 부합하는 STATISICS를 선택합니다. </p>
+<ul>
+<li>
+<p><img alt="image-20210527130340678" src="../user_guide_image/image-20210527130340678.png" /> -  평균 STATISTICS들을 선택할 수 있습니다.</p>
+</li>
+<li>
+<p><img alt="image-20210527130400221" src="../user_guide_image/image-20210527130400221.png" /> - 개별 STATISTICS들을 선택할 수 있습니다.</p>
+</li>
+<li>
+<p><img alt="image-20210527130413635" src="../user_guide_image/image-20210527130413635.png" /> - Process STATISTICS들을 선택할 수 있습니다.</p>
+</li>
+<li>
+<p><img alt="image-20210527130427769" src="../user_guide_image/image-20210527130427769.png" />  - Application STATISTICS들을 선택할 수 있습니다.</p>
+</li>
+</ul>
+<p></p>
+
+<p>[Example of Line Chart Widget]<br />
+<img alt="image-20210527131704769" src="../user_guide_image/image-20210527131704769.png" /></p>
+<p></p>
+
+<p>[Example of Grid Widget]<br />
+<img alt="image-20210527131737085" src="../user_guide_image/image-20210527131737085.png" /></p>
+<p></p>
+
+<p>[Example of Stack chart]<br />
+<img alt="image-20210527133814413" src="../user_guide_image/image-20210527133814413.png" /></p>
+<p><br></p>
+<h3 id="3-widget-menu">3) Widget Menu</h3>
+<p>MENU를 통해 최대값, 평균값, 현재값 확인 및 알림설정, Report export 등을 할 수 있습니다.</p>
+<p><img alt="image-20210607163519381" src="../user_guide_image/image-20210607163519381.png" /><br />
+<strong>STEP 1 :</strong>  현재값, 평균값, 최대값을 라벨에서 확인할 수 있습니다.</p>
+<ul>
+<li>
+<p><img alt="image-20210531131307804" src="../user_guide_image/image-20210531131307804.png" /> -  현재 값과 현재 Agent 시간을 확인할 수 있습니다.</p>
+</li>
+<li>
+<p><img alt="image-20210531131311231" src="../user_guide_image/image-20210531131311231.png" /> -  Widget 시작 시간부터 평균값을 확인할 수 있습니다.</p>
+</li>
+<li>
+<p><img alt="image-20210531131314590" src="../user_guide_image/image-20210531131314590.png" /> -  최대값과 Agent 시간을 확인할 수 있습니다.</p>
+</li>
+</ul>
+<p><strong>STEP 2 :</strong>  차트 관련 설정, 데이터 EXPORT를 할 수 있습니다.</p>
+<ul>
+<li><img alt="image-20210531131526206" src="../user_guide_image/image-20210531131526206.png" /> -  해당 위젯의 EVENT 알림을 on/off 합니다.</li>
+<li><img alt="image-20210531131541097" src="../user_guide_image/image-20210531131541097.png" /> -  해당 위젯 데이터를 엑셀 차트로 변환하여 익스포트 합니다.</li>
+<li><img alt="image-20210531132259665" src="../user_guide_image/image-20210531132259665.png" /> -  해당 위젯을 스크린 캡처 합니다.</li>
+<li><img alt="image-20210531132314615" src="../user_guide_image/image-20210531132314615.png" /> -  해당 위젯의 Type, STATISTICS, System을 수정합니다.</li>
+<li><img alt="image-20210531132943767" src="../user_guide_image/image-20210531132943767.png" /> -    해당 위젯을 화면에서 삭제합니다.</li>
+</ul>
+<p><br></p>
+<p>[Example of EXCEL file exported]<br />
+<img alt="image-20210531133350745" src="../user_guide_image/image-20210531133350745.png" /></p>
+<p></p>
+
+<p>[Example of Image file exported]<br />
+<img alt="image-20210531133542790" src="../user_guide_image/image-20210531133542790.png" /></p>
+<p><br></p>
+<h3 id="4-xlog-chart">4) XLog Chart</h3>
+<p>application의 트랜잭션이 하나의 점으로 표시 됩니다. </p>
+<p><img alt="image-20210607155651391" src="../user_guide_image/image-20210607155651391.png" /><br />
+<strong>STEP 1 : </strong>위젯 선택 시 XLOG 탭을 클릭합니다. <br />
+<strong>STEP 2 : </strong> SYSTEM과 STATISTICS을 선택합니다. </p>
+<p><img alt="image-20210531135330377" src="../user_guide_image/image-20210531135330377.png" /><br />
+<strong>STEP 3 : </strong> 원하는 구간을 드래그 합니다</p>
+<p></p>
+
+<p><img alt="image-20210531135512632" src="../user_guide_image/image-20210531135512632.png" /><br />
+<strong>STEP 4 : </strong> 구간 속 XLOG 상세 리스트가 팝업으로 표시 됩니다. 한 개를 선택하면 상세 PROFILE을 확인할 수 있습니다. </p>
+<p><img alt="image-20210531135549018" src="../user_guide_image/image-20210531135549018.png" /></p>
+<p><br></p>
+<p><br></p>
+<h2 id="5-tool">5. Tool</h2>
+<h3 id="1-summary">1) Summary</h3>
+<p>OS와 DB에 대하여, 일정 기간 동안의 CPU 사용량 평균 그래프를 조회하여 비교해 볼 수 있습니다.</p>
+<p><img alt="image-20210531135643604" src="../user_guide_image/image-20210531135643604.png" /></p>
+<p>조회 후 기본 그래프는 CPU 평균 그래프를 보여줍니다. CPU 최대 사용 값과 CPU 평균 사용률에 대해서 비교가 가능합니다.</p>
+<p><br></p>
+<ul>
+<li><strong>상세 사용 방법</strong></li>
+</ul>
+<p>상단의 메뉴를 통해 아래와 같이 CLIENT와 조회 기간을 선택할 수 있습니다.</p>
+<p><img alt="image-20210607155906142" src="../user_guide_image/image-20210607155906142.png" /><br />
+<strong>STEP 1 : </strong> System 선택(OS, DB, aPPLICATION)<br />
+<strong>STEP 2 : </strong> 편리한 방식의 combo방식 기간 선택(1일, 1주일, 1개월, 3개월, 6개월, 1년)<br />
+<strong>STEP 3 : </strong> 사용자가 직접 기간 선택<br />
+<strong>STEP 4 : </strong> all day 선택시 00시 ~ 23시로 자동 선택<br />
+<strong>STEP 5 : </strong> 3번에 선택된 기간에 대한 시간 선택<br />
+<strong>STEP 6 : </strong> TOP 서버 중 N개의 서버 조회</p>
+<p></p>
+
+<p>CPU 최대 값과 함께 CPU평균 및 가중치 평균에 대해서 비교할 수 있습니다.</p>
+<p></p>
+
+<ul>
+<li>TOP 서버들의 CPU 평균<br />
+<img alt="image-20210531145211884" src="../user_guide_image/image-20210531145211884.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>TOP 서버들의 CPU 가중치 평균값 확인<br />
+<img alt="image-20210531150020927" src="../user_guide_image/image-20210531150020927.png" /></li>
+</ul>
+<p></p>
+
+<p>※ DB 의 경우 , DB Time을 비교할 수 있습니다.<br />
+※ Application 의 경우 , TPS를 비교할 수 있습니다.<br />
+<img alt="image-20210531150332085" src="../user_guide_image/image-20210531150332085.png" /></p>
+<p></p>
+
+<p>특정 CLIENT의 상세내역을 조회하기 위해서는 해당 서버의 BAR를 클릭하면, 해당 서버의 CPU, Memory, Paging, Disk, Network에 대한 사용률을 확인할 수 있습니다. <br />
+TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수 있고 DB는 TOP SQL을 확인할 수 있습니다.<br />
+Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다.</p>
+<p><img alt="image-20210531150744427" src="../user_guide_image/image-20210531150744427.png" /></p>
+<p><img alt="image-20210531150818395" src="../user_guide_image/image-20210531150818395.png" /></p>
+<p><img alt="image-20210531150832238" src="../user_guide_image/image-20210531150832238.png" /></p>
+<p></p>
+
+<p>Top Process, Disk, Network TAB을 통해서 가장 많이 사용한 자원을 확인할 수 있습니다.<br />
+<img alt="image-20210531154344524" src="../user_guide_image/image-20210531154344524.png" /></p>
+<p><img alt="image-20210531154406192" src="../user_guide_image/image-20210531154406192.png" /></p>
+<p><img alt="image-20210531154431247" src="../user_guide_image/image-20210531154431247.png" /></p>
+<p><img alt="image-20210531154443586" src="../user_guide_image/image-20210531154443586.png" /></p>
+<p><br></p>
+<h3 id="2-analyzer">2) Analyzer</h3>
+<p>Analyzer기능을 통해 기간별로 CLIENT의 과거 데이터 분석이 가능합니다. 원하는 CLIENT와 STATISTICS를 선택하여 확인이 가능합니다.</p>
+<p><img alt="image-20210531155755620" src="../user_guide_image/image-20210531155755620.png" /></p>
+<p>한 그래프에서 마우스를 이동하면, 해당 화면의 모든 차트에서 같은 시간대의 시계열 축이 움직이면서 동 시간대 자원 사용률을 비교할 수 있습니다.</p>
+<p></p>
+
+<h4 id="_1">* 상세 사용 방법</h4>
+<p>시계열, 구간 분석도구 입니다. 아래와 같은 방법으로 데이터를 조회할 수 있습니다.</p>
+<p><img alt="image-20210608105659560" src="../user_guide_image/image-20210608105659560.png" /><br />
+<strong>STEP 1 :</strong>  System을 선택합니다.<br />
+<strong>STEP 2 :</strong>  STATISTICS를 선택합니다.<br />
+<strong>STEP 3 :</strong>  기간을 선택합니다.<br />
+<strong>STEP 4 :</strong>  차트의 FOCUS에 맞는 시간을 보여줍니다.</p>
+<p><img alt="image-20210608110058490" src="../user_guide_image/image-20210608110058490.png" /><br />
+<strong>STEP 5 :</strong>  조회된 차트, STATISTICS 및 CLIENT를 변경하여 조회하면 새로 차트가 만들어지며 비교분석을 할 수 있습니다.<br />
+<strong>STEP 6 :</strong>  Chart Menu 입니다.</p>
+<ul>
+<li><img alt="image-20210531165358379" src="../user_guide_image/image-20210531165358379.png" /> -  차트 데이터를 초단위, 분단위, 시간단위, 일단위로 조정할 수 있습니다.</li>
+<li><img alt="image-20210531165415043" src="../user_guide_image/image-20210531165415043.png" /> -  차트 데이터를 엑셀 EXPORT 또는 캡처할 수 있습니다.</li>
+<li><img alt="image-20210531165432873" src="../user_guide_image/image-20210531165432873.png" /> -  차트 형태를 라인, 바, 스택으로 바꿀 수 있습니다.</li>
+<li><img alt="image-20210531165445669" src="../user_guide_image/image-20210531165445669.png" /> -  차트를 기준으로 한 상관계수 Report 를 확인할 수 있습니다.</li>
+<li><img alt="image-20210531165507371" src="../user_guide_image/image-20210531165507371.png" /> -  조회한 차트를 닫습니다.</li>
+</ul>
+<p><strong>STEP 7 : </strong> 화면에 보여지는 모든 차트에서 FOCUS를 같은 시점으로 이동시키면서 비교분석 할 수 있습니다.</p>
+<p><img alt="image-20210531165530459" src="../user_guide_image/image-20210531165530459.png" /></p>
+<p></p>
+
+<p>※ 해당 그래프에서 원하는 구간을 드래그, CLICK하면 자세한 정보를 확인할 수 있는 POP-UP창이 나타납니다.<br />
+※ XLOG 차트에 경우 원하는 구간을 드래그 하면 상세 XLOG 리스트 POP-UP 창이 나타납니다.</p>
+<ul>
+<li>
+<p>Performance Report 버튼을 클릭하여, 해당 차트의 데이터를 기준으로 하여 상관도를 분석해 주는 Report 를 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>해당 차트의 System 과 Statistics 중 기준으로 사용할 데이터를 선택하고, 상관도를 분석하고자 하는 System 을 원하는 만큼 선택하면, Target System 이 가지는 모든 스탯과의 상관도를 분석하여 높은 순으로 10개의 스탯 차트를 확인하고, Report 출력할 수 있습니다.</p>
+</li>
+</ul>
+<p><img alt="image-20210531170150082" src="../user_guide_image/image-20210531170150082.png" /></p>
+<p><img alt="image-20210531170303952" src="../user_guide_image/image-20210531170303952.png" /></p>
+<p><br></p>
+<h3 id="3-top-sql">3) Top SQL</h3>
+<p>특정 구간에 가장 많은 자원을 사용한 TOP SQL을 추출할 수 있는 기능입니다.<img alt="image-20210608170749567" src="../user_guide_image/image-20210608170749567.png" /></p>
+<p></p>
+
+<h4 id="_2">* 상세 사용 방법</h4>
+<p>TOP SQL 추출 및 분석 도구 입니다.</p>
+<p><img alt="image-20210608171659737" src="../user_guide_image/image-20210608171659737.png" /><br />
+<strong>STEP 1 :</strong>  DB INSTANCE를 선택합니다.<br />
+<strong>STEP 2 :</strong>  조회할 기간을 선택합니다.</p>
+<p><img alt="image-20210608171712826" src="../user_guide_image/image-20210608171712826.png" /><br />
+<strong>STEP 3 :</strong>  SQL ID를 통한 검색 조건식을 추가합니다.<br />
+<strong>STEP 4 :</strong>  Module 을 통한 검색 조건식을 추가합니다.<br />
+<strong>STEP 5 :</strong>  Action 을 통한 검색 조건식을 추가합니다.</p>
+<p><img alt="image-20210608171840179" src="../user_guide_image/image-20210608171840179.png" /><br />
+<strong>STEP 6 :</strong>  조회 시 TOP SQL 정보를 확인할 수 있습니다.</p>
+<p><img alt="image-20210608171922433" src="../user_guide_image/image-20210608171922433.png" /><br />
+<strong>STEP 7 :</strong>  ROW 클릭 시 SQL TEXT 확인할 수 있습니다.</p>
+<p><img alt="image-20210608171956921" src="../user_guide_image/image-20210608171956921.png" /><br />
+<strong>STEP 8 :</strong>  선택된ROW의 SQL PLAN을 확인할 수 있습니다.</p>
+<p><img alt="image-20210608172054198" src="../user_guide_image/image-20210608172054198.png" /><br />
+<strong>STEP 9 :</strong>  TREND 및 세부 정보를 확인할 수 있습니다.</p>
+<p><br></p>
+<h3 id="4-db-space">4) DB Space</h3>
+<p>DB 테이블 스페이스 및 세그먼트 분석도구 입니다.</p>
+<p><img alt="image-20210608172126592" src="../user_guide_image/image-20210608172126592.png" /></p>
+<p></p>
+
+<h4 id="_3">* 상세 사용 방법</h4>
+<p><img alt="image-20210608172452137" src="../user_guide_image/image-20210608172452137.png" /><br />
+<strong>STEP 1 :</strong>  DB INSTANCE를 선택합니다.<br />
+<strong>STEP 2 :</strong>  Tablespace 선택(선택 하지 않을 경우 전체 Tablespace 조회)합니다.</p>
+<p><img alt="image-20210608172803558" src="../user_guide_image/image-20210608172803558.png" /><br />
+<strong>STEP 3 :</strong>  기간 선택 후 조회를 합니다.</p>
+<p><img alt="image-20210608172833550" src="../user_guide_image/image-20210608172833550.png" /><br />
+<strong>STEP 4 :</strong>  TABLESPACE TREND 차트 및 TABLESPACE, TOP SEGMENT 등의 정보를 확인할 수 있습니다.</p>
+<p><br></p>
+<h3 id="5-event">5) Event</h3>
+<p>이벤트 조회 및 분석 도구 입니다. 이를 통해 EVENT들의 상태를 한 눈에 확인할 수 있습니다.</p>
+<p><img alt="image-20210531171940412" src="../user_guide_image/image-20210531171940412.png" /></p>
+<p></p>
+
+<h4 id="_4">* 상세 사용 방법</h4>
+<p><img alt="image-20210608111052264" src="../user_guide_image/image-20210608111052264.png" /><br />
+<strong>STEP 1 :</strong>  EVENT를 조회할 대상 CLIENT를 조회합니다.<br />
+<strong>STEP 2 :</strong>  EVENT 값을 조회(선택하지 않을 경우 전체 조회)합니다.<br />
+<strong>STEP 3 :</strong>  기간 선택 후 “INQUIRY” 버튼을 누릅니다.</p>
+<p><img alt="image-20210608111133040" src="../user_guide_image/image-20210608111133040.png" /><br />
+<strong>STEP 4 :</strong>  TOP EVENT 정보를 확인할 수 있습니다.</p>
+<p><img alt="image-20210608111208939" src="../user_guide_image/image-20210608111208939.png" /><br />
+<strong>STEP 5 :</strong>  EVENT LIST정보를 확인할 수 있습니다.</p>
+<p><br></p>
+<h3 id="6-quick-parameter-check">6) Quick Parameter Check</h3>
+<p>전체 시스템 파라미터 권고 적용 여부를 확인하는 도구 입니다. 이를 통해 현재 서버의 파라미터가 권고 값을 따르고 있는지 한눈에 확인이 가능합니다.</p>
+<p><img alt="image-20210608111428509" src="../user_guide_image/image-20210608111428509.png" /></p>
+<p></p>
+
+<h4 id="_5">* 상세 사용 방법</h4>
+<p><img alt="image-20210608111347828" src="../user_guide_image/image-20210608111347828.png" /><br />
+<strong>STEP 1 :</strong> AIX에서 제공하는 주요 파라미터의 변경여부를 직관적으로 확인이 가능합니다.</p>
+<ul>
+<li>BLACK : 사용되지 않는 파라미터</li>
+<li>RED : 권고치에 맞지 않는 파라미터</li>
+<li>GREEN : 권고치에 해당하는 파라미터</li>
+</ul>
+<p><br></p>
+<h3 id="7-parameter-health-check">7) Parameter Health Check</h3>
+<p>파라미터 변경에 따른 권고사항을 확인할 수 있는 분석도구 입니다. 이를 통해 권고 치와 현재 파라미터 상태를 확인할 수 있습니다.</p>
+<p><img alt="image-20210601102440515" src="../user_guide_image/image-20210601102440515.png" /></p>
+<p></p>
+
+<h4 id="_6">* 상세 사용 방법</h4>
+<p><img alt="image-20210601102317378" src="C:\Users\JungSunKim\AppData\Roaming\Typora\typora-user-images\image-20210601102317378.png" /><br />
+<strong>STEP 1 :</strong>  SYSTEM을 선택 후 조회합니다.</p>
+<p><img alt="image-20210601102414745" src="../user_guide_image/image-20210601102414745.png" /><br />
+<strong>STEP 2 :</strong>  SYSTEM을 이름을 보여줍니다.<br />
+<strong>STEP 3 :</strong>  설정된 파라미터를 보여줍니다.<br />
+<strong>STEP 4 :</strong>  권고치 파라미터 값을 보여줍니다.<br />
+<strong>STEP 5 :</strong>  NEXT BOOT값을 보여줍니다.<br />
+<strong>STEP 6 :</strong>  SYSTEM의 현재 파라미터 value를 보여줍니다.<br />
+<strong>STEP 7 :</strong>  권고된 VALUE 값을 보여줍니다.</p>
+<p><br></p>
+<h3 id="8-parameter-change-history">8) Parameter Change History</h3>
+<p>파라미터 변경에 따른 history를 분석할 수 있는 도구입니다.</p>
+<p><img alt="image-20210601103530403" src="../user_guide_image/image-20210601103530403.png" /></p>
+<p></p>
+
+<h4 id="_7">* 상세 사용 방법</h4>
+<p><img alt="image-20210601104329075" src="../user_guide_image/image-20210601104329075.png" /><br />
+<strong>STEP 1 :</strong>  파라미터 변경을 확인 할 HOST를 선택합니다.<br />
+<strong>STEP 2 :</strong>  변경 기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
+<p><img alt="image-20210601111145418" src="../user_guide_image/image-20210601111145418.png" /><br />
+<strong>STEP 3 :</strong>  변경 시간을 확인합니다.<br />
+<strong>STEP 4 :</strong>  변경이 일어난 CLIENT 를 확인합니다.<br />
+<strong>STEP 5 :</strong>  변경이 일어난 DB INSTANCE를 확인합니다.<br />
+<strong>STEP 6 :</strong>  변경이 일어난 파라미터를 확인합니다.<br />
+<strong>STEP 7 :</strong>  변경되기 전의 값을 확인합니다.<br />
+<strong>STEP 8 :</strong>  변경된 이후의 값을 확인합니다.<br />
+<strong>STEP 9 :</strong>  현재 권고된 값을 확인합니다.</p>
+<p></p>
+
+<p>Time-comparative Analysis 탭에서는 두 날짜의 전체 파라미터 값을 비교할 수 있습니다.<br />
+<img alt="image-20210601111233847" src="../user_guide_image/image-20210601111233847.png" /></p>
+<p><br></p>
+<h3 id="9-aix-virtualization">9) AIX Virtualization</h3>
+<p>AIX Virtualization 툴이 제공하는 물리적 machine의 자원 사용 현황을 통해 서버 자원 할당 계획에 활용할 수 있습니다.</p>
+<p><img alt="image-20210601113009784" src="../user_guide_image/image-20210601113009784.png" /></p>
+<p></p>
+
+<h4 id="_8">* 상세 사용 방법</h4>
+<p><img alt="image-20210608112628727" src="../user_guide_image/image-20210608112628727.png" /><br />
+<strong>STEP 1 :</strong>  MACHINE 을 선택합니다.<br />
+<strong>STEP 2 :</strong>  기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
+<p><img alt="image-20210608112703147" src="../user_guide_image/image-20210608112703147.png" /><br />
+<strong>STEP 3 :</strong>  TREND 차트를 확인 (CORE 별 분석) 합니다.<br />
+<strong>STEP 4 :</strong>  PHYSICAL COU USAGE TREND, SCSI USAGE TREND, LAN USAGE TREND, ETHERNET USAGE TREND 차트를 확인할 수 있습니다.<br />
+<strong>STEP 5 :</strong>  LPAR 정보를 확인합니다.</p>
+<p><br></p>
+<p><br></p>
+<h2 id="6-report">6. Report</h2>
+<h3 id="1-quick-resource-trend">1) Quick Resource Trend</h3>
+<p>Resource Trend툴에서 제공하는OS자원 활용 패턴을 통해 Leak등의 문제를 감지할 수 있으며, 아키텍처 개선의 아이디어를 얻을 수 있습니다</p>
+<p><img alt="image-20210601114848162" src="../user_guide_image/image-20210601114848162.png" /></p>
+<p></p>
+
+<h4 id="_9">* 상세 사용 방법</h4>
+<p><img alt="image-20210608112821309" src="../user_guide_image/image-20210608112821309.png" /><br />
+<strong>STEP 1 :</strong>  MACHINE 을 선택합니다.<br />
+<strong>STEP 2 :</strong>  기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
+<p><img alt="image-20210608130557000" src="../user_guide_image/image-20210608130557000.png" /><br />
+<strong>STEP 3 :</strong>  CLIENT별로 조회 기간 동안의 미니 트렌트 차트와 함께, 평균 사용량, 최대 사용량 정보를 확인합니다.<br />
+<strong>STEP 4 :</strong>  Performance Chart 를 확인하려면, 기준이 될 STATISITCS 에 해당하는 미니 트렌드 차트를 클릭합니다. (Client 이름을 클릭하면 CPU 기준)</p>
+<p><img alt="image-20210601132127367" src="../user_guide_image/image-20210601132127367.png" /><br />
+<strong>STEP 5 :</strong>  MACHINE 을 선택합니다.</p>
+<p><br></p>
+<h3 id="2-comparative-time-analysis">2) Comparative Time Analysis</h3>
+<p>CLIENT를 2개의 다른 기간으로 동시에 분석 가능합니다.</p>
+<p><img alt="image-20210601151115044" src="../user_guide_image/image-20210601151115044.png" /></p>
+<p><img alt="image-20210601151131857" src="../user_guide_image/image-20210601151131857.png" /></p>
+<p></p>
+
+<h4 id="_10">* 상세 사용 방법</h4>
+<p><img alt="image-20210601151908388" src="../user_guide_image/image-20210601151908388.png" /><br />
+<strong>STEP 1 :</strong>  CLIENT를 선택합니다..<br />
+<strong>STEP 2 :</strong>  구간 A를 선택합니다.<br />
+<strong>STEP 3 :</strong>  구간 B를 선택합니다.</p>
+<p><img alt="image-20210601152133706" src="../user_guide_image/image-20210601152133706.png" /><br />
+<strong>STEP 4 :</strong>  선택된 A구간과 B 구간의 비교 분석을 할 수 있습니다. 차트 드래그 시, Ananlyzer 로 이동하여 차트를 상세 확인할 수 있습니다.</p>
+<p><img alt="image-20210608130911213" src="../user_guide_image/image-20210608130911213.png" /><br />
+<strong>STEP 5 :</strong>  + ,- 버튼으로 Memory, Disk, Network 비교 차트도 볼 수 있습니다.</p>
+<p><img alt="image-20210601153817085" src="../user_guide_image/image-20210601153817085.png" /><br />
+<strong>STEP 6 :</strong>  선택된 A 구간과 B 구간의 WORKLOAD를 확인 할 수 있으며 GAP을 확인할 수 있습니다.</p>
+<p><br></p>
+<h3 id="3-comparative-system-analysis">3) Comparative System Analysis</h3>
+<p>설정한 기간에 따른 여러 대의 system 의 비교분석을 제공합니다.</p>
+<p><img alt="image-20210601154638562" src="../user_guide_image/image-20210601154638562.png" /></p>
+<p></p>
+
+<h4 id="_11">* 상세 사용 방법</h4>
+<p><img alt="image-20210601154754455" src="\user_guide_image/image-20210601154754455.png" /><br />
+<strong>STEP 1 :</strong>  구간을 선택합니다.<br />
+<strong>STEP 2 :</strong>  비교 할 system 선택 후 조회합니다.</p>
+<p><img alt="image-20210601160538989" src="../user_guide_image/image-20210601160538989.png" /><br />
+<strong>STEP 3 :</strong>  조회된 서버들을 비교분석 할 수 있습니다. 차트 드래그 시, Ananlyzer 로 이동하여 차트를 상세 확인할 수 있습니다.</p>
+<p><img alt="image-20210601160959364" src="../user_guide_image/image-20210601160959364.png" /><br />
+<strong>STEP 4 :</strong>  WORKLOAD를 system별로 확인할 수 있습니다.</p>
+<p><br></p>
+<h3 id="4-preventive-maintenance">4) Preventive Maintenance</h3>
+<p>PM Script가 수행된 결과를 SJMON Viewer에서 확인 및 관리가 가능합니다.</p>
+<p></p>
+
+<h4 id="4-1-pm-report">4-1) Pm Report</h4>
+<p><strong>SJMON Viewer에 접속 -&gt; Report -&gt; Preventive Maintenance -&gt; PM Report 선택</strong></p>
+<p><img alt="image-20210601161122947" src="../user_guide_image/image-20210601161122947.png" /></p>
+<p>접속하여 원하는 User, Group, Maintenance, OS Type, Host 선택 및 원하는 달 조회 가능합니다.</p>
+<ul>
+<li>
+<p>File Upload 버튼을 통해 직접 업로드할 PM Script 결과 파일이나 PM Report 를 Export 할 때 사용할 cover 파일 업로드합니다.<br />
+<img alt="image-20210601161213627" src="../user_guide_image/image-20210601161213627.png" /></p>
+</li>
+<li>
+<p>PM Script : 업로드 규칙에 맞는 파일명을 가진 txt 파일 업로드합니다.</p>
+</li>
+<li>
+<p>PM Cover : PM Report export 시 필요한 cover 파일을pm_report_cover.docx 로 생성하여 업로드합니다.<br />
+<img alt="image-20210601161258580" src="../user_guide_image/image-20210601161258580.png" /></p>
+</li>
+<li>
+<p>원하는 조건 선택하여 조회 시 해당 달의 PM Report 결과 확인 가능</p>
+</li>
+<li>
+<p>OS Type 별로 총 수집된 Report 수 확인 가능</p>
+</li>
+<li>
+<p>Prev / Next 버튼을 통해 이전달 / 다음달 이동하여 조회 가능<br />
+<img alt="image-20210601161410171" src="../user_guide_image/image-20210601161410171.png" /></p>
+</li>
+<li>
+<p><img alt="image-20210601162312525" src="../user_guide_image/image-20210601162312525.png" />  -  이전달, 다음달 조회</p>
+</li>
+<li><img alt="image-20210601162326477" src="../user_guide_image/image-20210601162326477.png" />  -  조회된 달의 모든 PM Report 를 export</li>
+<li><img alt="image-20210601162607104" src="../user_guide_image/image-20210601162607104.png" />  -  날짜별 수집 내역 보여주기 / 숨기기</li>
+<li><img alt="image-20210601162628302" src="../user_guide_image/image-20210601162628302.png" />  -  원하는 날짜의 모든 PM Report를 export</li>
+</ul>
+<p><BR></p>
+<ul>
+<li>
+<p>월별, 일별 export 가능합니다.</p>
+</li>
+<li>
+<p>각 PM Report 를 zip 파일로 압축하거나 모든 PM Report를 하나의 word 파일로 내보내는 옵션 선택 가능합니다.</p>
+</li>
+</ul>
+<p><img alt="image-20210601163004876" src="../user_guide_image/image-20210601163004876.png" /></p>
+<p></p>
+
+<p><strong>[모든 리포트를 1개 리포트 파일로 내보내기]</strong><br />
+<img alt="image-20210608131624233" src="../user_guide_image/image-20210608131624233.png" /></p>
+<p></p>
+
+<p><strong>[개별 리포트를 zip 파일로 내보내기]</strong><br />
+<img alt="image-20210608131756088" src="../user_guide_image/image-20210608131756088.png" /></p>
+<ul>
+<li>
+<p>원하는 날짜의 Host 클릭 시 하단에서 상세 PM Report 확인 가능합니다.</p>
+</li>
+<li>
+<p>PM 결과에 대한 점검 결과 확인 및 작성, 삭제 가능합니다.<br />
+<img alt="image-20210608132707508" src="../user_guide_image/image-20210608132707508.png" /></p>
+</li>
+<li>
+<p><img alt="image-20210608132923391" src="../user_guide_image/image-20210608132923391.png" />  -  현재의 점검 결과 및 수동 입력한 내용으로 저장</p>
+</li>
+<li>
+<p><img alt="image-20210608133059218" src="../user_guide_image/image-20210608133059218.png" />  -  입력 및 저장한 내용을 없애고 기본 점검 결과로 초기화</p>
+</li>
+<li>
+<p><img alt="image-20210608133131080" src="../user_guide_image/image-20210608133131080.png" />  -  조회한 PM Report 삭제</p>
+<p><br></p>
+</li>
+<li>
+<p>Column Visibility 버튼에서 OUTPUT과 RESULT 컬럼 숨김 처리 가능<br />
+<img alt="image-20210608133409728" src="../user_guide_image/image-20210608133409728.png" /></p>
+</li>
+</ul>
+<p></p>
+
+<ul>
+<li>
+<p>Export 버튼으로 해당 Report 를 Word 로 export 가능</p>
+</li>
+<li>
+<p>Report table 의 앞에 입력할 Header와 뒤에 입력한 Footer의 내용과 글자 크기 설정 가능</p>
+</li>
+<li>
+<p>내보내고자 하는 컬럼 선택 가능 (Description 과 Command 는 필수선택)<br />
+<img alt="image-20210608133556222" src="../user_guide_image/image-20210608133556222.png" /></p>
+</li>
+</ul>
+<p></p>
+
+<ul>
+<li>Time-comparative Analysis Report 에서 두 날짜의 결과값 비교 가능<br />
+<img alt="image-20210608133852657" src="../user_guide_image/image-20210608133852657.png" /></li>
+</ul>
+<p><br></p>
+<h4 id="4-2-pm-summary">4-2) PM Summary</h4>
+<p>원하는 User, Group, Maintenance, OS Type, Host 선택 및 원하는 기간 조회하여 통합 점검 결과 및 권고사항 확인 가능합니다.</p>
+<p><img alt="image-20210601173440020" src="../user_guide_image/image-20210601173440020.png" /></p>
+<p><img alt="image-20210601171550033" src="\user_guide_image/image-20210601171550033.png" /></p>
+<ul>
+<li>
+<p>Item: Summary List와 Check List 중 원하는 항목 조회 가능</p>
+</li>
+<li>
+<p>Admin: 선택한 User 가 Admin 으로 설정되어 있는 Host 조회 가능</p>
+</li>
+<li>
+<p>Group: 선택한 Group 에 포함된 Host 조회 가능</p>
+</li>
+<li>
+<p>Maintenance: 선택한 유지보수 여부와 일치하는 Host 조회 가능</p>
+</li>
+<li>
+<p>Host: 선택한 Host 조회 가능</p>
+</li>
+<li>
+<p>Search Range: 선택한 기간 동안의 PM Report 조회 가능 (기본값: 당월초~오늘)</p>
+</li>
+<li>
+<ul>
+<li>PM Report가 수집된 날짜: Bold+Underline된 날짜로 확인 가능</li>
+</ul>
+</li>
+<li>Today, This Month, Last Month 버튼을 클릭하여 자주 조회하는 기간 선택 가능</li>
+<li>원하는 기간 입력하고자 하는 경우, 시작일-종료일을 차례로 클릭하여 Custom Range 설정 가능</li>
+<li>하단에서 선택한 날짜를 확인 가능 (Apply를 누르지 않아도 자동으로 Search Range 에 값 적용됨)</li>
+</ul>
+<p>Summary List 에서는 OS Type 별로 점검 결과(OK, Warning, Critical, Recommend)를 한 눈에 확인 가능합니다.</p>
+<ul>
+<li>
+<p>기본 점검값 확인 및 수동 입력하여 저장 가능<br />
+<img alt="image-20210608134542256" src="../user_guide_image/image-20210608134542256.png" /></p>
+</li>
+<li>
+<p><img alt="image-20210601173836748" src="../user_guide_image/image-20210601173836748.png" />  -  현재의 점검 결과 및 수동 입력한 내용으로 저장</p>
+</li>
+<li>
+<p><img alt="image-20210601173903524" src="../user_guide_image/image-20210601173903524.png" />  -  입력 및 저장한 내용을 없애고 기본 점검 결과로 초기화</p>
+</li>
+<li>
+<p><img alt="image-20210601173924222" src="../user_guide_image/image-20210601173924222.png" />  -  해당 OS Type의 PM Summary 결과를 엑셀 형식으로 export</p>
+<p><p></p></p>
+</li>
+</ul>
+<p>[Excel Export]<br />
+<img alt="image-20210608135337036" src="../user_guide_image/image-20210608135337036.png" /></p>
+<p>Check List에서는 조회한 PM Report 의 점검에 사용된 항목과, 점검 결과 및 권고 사항을 리스트 형태로 확인 가능합니다.<br />
+<img alt="image-20210601174231727" src="../user_guide_image/image-20210601174231727.png" /></p>
+<p></p>
+
+<p>[Excel Export]<br />
+<img alt="image-20210601174158474" src="../user_guide_image/image-20210601174158474.png" /></p>
+<p><br></p>
+<h4 id="4-3-pm-setting">4-3) PM Setting</h4>
+<p>PM Report을 활용한 PM Summary 점검 기준 목록을 확인하는 메뉴를 제공합니다.<br />
+<img alt="image-20210602100655926" src="../user_guide_image/image-20210602100655926.png" /></p>
+<p><br></p>
+<p><br></p>
+<h2 id="7-nagios">7. NAGIOS</h2>
+<p>NAGIOS에서 수집한 Host, Service의 정보를 쉽게 확인 할 수 있습니다.<br />
+※ 해당 메뉴는 NAGIOS와 연동이 되어야 이용 할 수 있는 메뉴입니다.</p>
+<p></p>
+
+<h3 id="1-host-status">1) Host Status</h3>
+<p>NAGIOS에 등록 된 Host의 상태 및 호스트 별 서비스 상태 현황 및 통계를 확인 할 수 있습니다</p>
+<p><strong>SJMON Viewer에 접속 -&gt; Nagios -&gt; Host Status 선택</strong></p>
+<p><img alt="image-20210602101439504" src="../user_guide_image/image-20210602101439504.png" /></p>
+<ul>
+<li>화면의 데이터가 갱신 된 시간을 표기합니다.<br />
+<img alt="image-20210602103256280" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602103256280.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>Host 서버의 UP, Down 상태를 표기합니다.<br />
+<img alt="image-20210602103327195" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602103327195.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>
+<p>SJMON CLIENT의 실행여부를 표기합니다.</p>
+</li>
+<li>
+<p>컬럼 값이 'Y’ 일 경우(=실행 상태) 클릭 시 해당 Host의 모니터 화면으로 이동합니다. </p>
+</li>
+<li>
+<p>컬럼 값이 ‘N' 일 경우(=중지 또는 미 연결 상태 ) 클릭이 불가능합니다. </p>
+</li>
+<li>
+<p>해당 Host의 모니터 화면으로 이동이 불가합니다<br />
+<img alt="image-20210602103341820" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602103341820.png" /></p>
+</li>
+</ul>
+<p></p>
+
+<ul>
+<li>각 호스트의 서비스 상태 별 합산 정보를 표기합니다.<br />
+  (상태에 대한 기준은 <strong>NAGIOS Rule Configuration</strong>에 의해 산정됩니다.)<br />
+<img alt="image-20210602103829758" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602103829758.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>합산 정보에 대한 셀을 클릭 시 클릭 한 상태의 상세 정보를 하단에 출력합니다.<br />
+  (추가 클릭 시 상세 화면은 닫힙니다.)<br />
+<img alt="image-20210602104143278" src="../user_guide_image/image-20210602104143278.png" /></li>
+</ul>
+<p><br></p>
+<h3 id="2-service-status">2) Service Status</h3>
+<p>NAGIOS에 등록 된 그룹별 Service의 상태 및 서비스 현황을 확인 할 수 있는 메뉴를 제공합니다. <br />
+※ 해당 메뉴는 NAGIOS와 연동이 되어야 이용 할 수 있는 메뉴입니다.</p>
+<p><strong>SJMON Viewer에 접속 -&gt; Nagios -&gt; Service Status 선택 </strong></p>
+<p><img alt="image-20210602104311729" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602104311729.png" /></p>
+<p><img alt="image-20210602104447759" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602104411844.png" /></p>
+<ul>
+<li>ALL SERVICE STATUS 는 전체 서비스에 대한 상태 별 합계를 나타냅니다.<br />
+  (상태에 대한 기준은 <strong>NAGIOS Rule Configuration</strong>에 의해 산정됩니다)<br />
+<img alt="image-20210602104447759" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602104447759.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>각 서비스 그룹 별 서비스상태 (좌측부터 OK, WARNING, CRITICAL) 및 합계를 나타냅니다.<br />
+<img alt="image-20210602104545058" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602104545058.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li>상태 도넛 차트를 클릭 시 해당 그룹, 상태에 대한 전체 Service 내역을 팝업으로 확인 할 수 있습니다.   </li>
+</ul>
+<p><br></p>
+<h3 id="3-event-console">3) Event Console</h3>
+<p>NAGIOS에 발생한 최근 3일의 모든 이벤트(=HOST, SERVICE 상태 변동 및  NOTIFICATION 발생내역)를 확인 할 수 있습니다. <br />
+※ 해당 메뉴는 NAGIOS와 연동이 되어야 이용 할 수 있는 메뉴입니다.</p>
+<p><strong>SJMON Viewer에 접속 -&gt; Nagios -&gt; Event Console 선택</strong></p>
+<p><img alt="image-20210602104816591" src="../user_guide_image/image-20210602104816591.png" /></p>
+<p><img alt="image-20210602111241862" src="../user_guide_image/image-20210602111241862.png" /></p>
+<ul>
+<li>
+<p><img alt="image-20210602111313016" src="../user_guide_image/image-20210602111313016.png" /> -  클릭 시 화면을 갱신합니다.</p>
+</li>
+<li>
+<p>Comment 의 <strong>SJMON_THRESHOLD</strong>로 표기된 내용은 SJMON THRESHOLD로 인하여 발생한 NOTIFICATION 내용입니다.<br />
+<img alt="image-20210602111503151" src="../user_guide_image/image-20210602111503151.png" /></p>
+</li>
+</ul>
+<p><br></p>
+<p><br></p>
+<h2 id="8-admin">8. Admin</h2>
+<h3 id="1-user">1) User</h3>
+<p>SJMON에 접속 가능한 유저를 관리할 수 있는 메뉴를 제공합니다. <br />
+NAGIOS연동 시 NAGIOS USER와 연동이 됩니다.<br />
+<img alt="image-20210602111557693" src="../user_guide_image/image-20210602111557693.png" /></p>
+<p>Add 버튼을 눌러 USER를 추가할 수 있습니다. <br />
+NAGIOS와 연동 했을 경우 NAGIOS USER도 추가 됩니다.<br />
+<img alt="image-20210602111701704" src="../user_guide_image/image-20210602111701704.png" /></p>
+<ul>
+<li><strong>User Name</strong> : 원하는 User Name을 입력합니다. (로그인 ID : 중복불가) </li>
+<li><strong>User EmP NAME</strong> : 본인의 이름을 입력합니다.</li>
+<li><strong>User Password</strong> : User의 Password를 입력합니다.</li>
+<li><strong>Select a Role</strong> : User와 Admin중에 선택이 가능합니다. Role이 User 인 경우 Admin 메뉴를 접근할 수 없습니다.  NAGIOS 연동 되었을 경우 설정 된 Nagios의 ROLE을 연동합니다. (default nagios role명 : Admin, user)</li>
+<li><strong>Recevie Notification</strong> : USER의 nOTIFICATION 수신 여부가 선택 가능합니다. (nagios Recevie Notification에 대한 설정 )   </li>
+</ul>
+<p></p>
+
+<p>Edit 버튼을 눌러 User의 정보를 변경할 수 있습니다. <br />
+NAGIOS 연동 했을 경우 NAGIOS USER도 수정 됩니다.  (NAGIOS에 수정 대상 USER가 없을 경우는 자동으로 추가합니다.)<br />
+<img alt="image-20210602111844927" src="../user_guide_image/image-20210602111844927.png" /></p>
+<p>Del버튼을 눌러 USER를 삭제할 수 있습니다.<br />
+NAGIOS와 연동 했을 경우 NAGIOS USER도 삭제 됩니다.<br />
+<img alt="image-20210602111953478" src="../user_guide_image/image-20210602111953478.png" /></p>
+<p>Upload 버튼을 눌러 USER List 를 csv형식으로 한 번에 등록할 수 있습니다.<br />
+ NAGIOS와 연동 했을 경우 NAGIOS USER도 일괄 등록 됩니다.<br />
+<img alt="image-20210602112648037" src="../user_guide_image/image-20210602112648037.png" /></p>
+<p>아래와 같은 형식으로 만들어진 파일을 작성하여 업로드하면 일괄 등록 가능합니다. <br />
+<img alt="image-20210602112856491" src="../user_guide_image/image-20210602112856491.png" /></p>
+<ul>
+<li>
+<p>User Type :  ROLE_ADMIN 은 1, ROLE_USER는 2 입력</p>
+</li>
+<li>
+<p>Notification : Y, N 입력</p>
+</li>
+<li>
+<p>일괄 등록 시 초기 비밀번호는 1234 
+  (NAGIOS와 연동했을 경우에도 일괄 등록되는 NAGIOS USER의 패스워드도 1234 입니다.)</p>
+</li>
+</ul>
+<p><br></p>
+<h3 id="2-inventory">2) Inventory</h3>
+<p>System 메뉴를 통해 현재 Manager에 등록되어 있는 CLIENT들의 정보를 확인할 수 있고, AIX에 관련된 Hardware/Software(AIX, PowerHA, GPFS, VIOS, F/W)의 정보를 최신 Level과 비교해서 보여줍니다.<br />
+뿐만 아니라 CLIENT의 신규설치, 패치, 파일 이동 및 명령어 실행도 할 수 있습니다.</p>
+<p><img alt="image-20210602113513103" src="../user_guide_image/image-20210602113513103.png" /></p>
+<ul>
+<li><img alt="image-20210602114012343" src="../user_guide_image/image-20210602114012343.png" /> - NAGIOS Host 추가, 수정, 연동 버튼 모음.  (※ NAGIOS 연동 했을 경우에만 보입니다)</li>
+<li><img alt="image-20210602114029777" src="\user_guide_image/image-20210602114029777.png" />-  SJMON CLIENT 추가, 수정 삭제</li>
+<li><img alt="image-20210602114048336" src="../user_guide_image/image-20210602114048336.png" /> - SJMON CLIENT 목록 EXCEL 출력</li>
+<li><img alt="image-20210602114059417" src="../user_guide_image/image-20210602114059417.png" /> - SJMON CLIENT 목록 컬럼 항목 보여주기 / 숨기기</li>
+<li><img alt="image-20210602114122868" src="../user_guide_image/image-20210602114122868.png" /> - 패치파일, Verification 파일, Business 정보 업로드</li>
+<li><img alt="image-20210602114148570" src="../user_guide_image/image-20210602114148570.png" /> - CLIENT의 설치, 명령어 실행, 파일 이동</li>
+<li><img alt="image-20210602114236112" src="../user_guide_image/image-20210602114236112.png" /> - Deploy 결과 및 패치 내역 조회</li>
+<li><img alt="image-20210602114254694" src="\user_guide_image/image-20210602114254694.png" /> - Verification 반영</li>
+</ul>
+<p><br></p>
+<h4 id="21-inventory-import">2.1) Inventory 정보 IMPORT 기능</h4>
+<p>Import 버튼을 통해 신규 CLIENT를 등록 할 수 있습니다.</p>
+<p><img alt="image-20210602114408481" src="../user_guide_image/image-20210602114408481.png" /></p>
+<h5 id="installation-info">* Installation Info : 설치 시 필요한 정보</h5>
+<ul>
+<li>
+<p>Platform: SJMON PLATFORM명 (필수값)</p>
+</li>
+<li>
+<p>ID: 접속 계정 ID</p>
+</li>
+<li>
+<p>PW : 접속 계정 패스워드</p>
+</li>
+<li>
+<p>Protocol :  접속 및 파일 다운로드를 사용을 위한 프로토콜 (Telent/FTP, SSH/SFTP 중 택일)</p>
+</li>
+<li>
+<p>Port: 접속을 위한 포트(빈 값일 경우 선택한 Protocol의 디폴트 포트)</p>
+</li>
+<li>
+<p>HOME: 실행을 위한 client 실행 위치</p>
+</li>
+<li>
+<p>Agent IP: 접속IP (ipv4) (필수값)</p>
+</li>
+</ul>
+<p></p>
+
+<h5 id="business-info-business">* Business Info : Business 관리에 필요한 정보</h5>
+<ul>
+<li>System Name : 설정 할 System의 이름 (필수값)</li>
+<li>Machine: Machine 그룹</li>
+<li>Group : Business 그룹 </li>
+<li>Admin : 관리자명</li>
+<li>Maintenance : 유지보수여부 </li>
+</ul>
+<p>※ 필수값은 저장 후 수정이 불가능합니다 .</p>
+<p></p>
+
+<p>엑셀을 이용하여 복사 및 붙여넣기가 가능합니다.<br />
+셀 우클릭 시 import 작성의 편리한 기능을 사용 할 수 있습니다.<br />
+<img alt="image-20210602115242619" src="../user_guide_image/image-20210602115242619.png" /></p>
+<ul>
+<li>
+<p><img alt="image-20210602115320832" src="../user_guide_image/image-20210602115320832.png" /> - 초기 설치 안내 툴팁입니다. (아이콘에 마우스를 올려놓았을 때 확인 가능합니다)</p>
+</li>
+<li>
+<p>row 추가, 삭제, 셀 복사 및 저장(=save as) 기능을 제공합니다. (셀에 마우스 우 클릭 시 발생)<br />
+<img alt="image-20210602115357868" src="../user_guide_image/image-20210602115357868.png" /></p>
+</li>
+</ul>
+<p><br></p>
+<h4 id="22-inventory-edit">2.2) Inventory 정보 Edit 기능</h4>
+<p>Edit 버튼을 통해 CLIENT의 일부 정보를 수정할 수 있습니다.<br />
+※ Platform, Agent IP, System Name에 대해서는 수정이 불가합니다.</p>
+<p></p>
+
+<p>[단일 CLIENT 수정 화면]<br />
+<img alt="image-20210602115500796" src="../user_guide_image/image-20210602115500796.png" /></p>
+<p></p>
+
+<p>[2개 이상 CLIENT 수정 화면]<br />
+<img alt="image-20210602115524667" src="../user_guide_image/image-20210602115524667.png" /></p>
+<h5 id="installation-info_1">* Installation Info : 설치 시 필요한 정보</h5>
+<ul>
+<li>Platform : SJMON PLATFORM명 (수정 불가)</li>
+<li>ID : 접속 계정 ID</li>
+<li>PW : 접속 계정 패스워드</li>
+<li>Protocol : 접속 및 파일 다운로드를 사용을 위한 프로토콜 (Telent/FTP, SSH/SFTP 중 택일)</li>
+<li>Port : 접속을 위한 포트(빈 값일 경우 선택한 Protocol의 디폴트 포트)</li>
+<li>HOME : 실행을 위한 client 실행 위치</li>
+<li>Agent IP : 접속IP (ipv4) (수정 불가)</li>
+</ul>
+<h5 id="business-info-business_1">* Business Info : Business 관리에 필요한 정보</h5>
+<ul>
+<li>System Name : 설정 할 System의 이름 (수정 불가)</li>
+<li>Machine : Machine 그룹</li>
+<li>Group : Business 그룹</li>
+<li>Admin : 관리자명</li>
+<li>Maintenance : 관리대상여부 </li>
+</ul>
+<p><br></p>
+<h4 id="23-inventory-delete">2.3) Inventory 정보 Delete기능</h4>
+<p>Del 버튼을 통해 더 이상 사용하지 않는 CLIENT를 삭제할 수 있습니다.<br />
+<img alt="image-20210602131327478" src="../user_guide_image/image-20210602131327478.png" /></p>
+<p><br></p>
+<h4 id="24-file-upload">2.4) File Upload 기능</h4>
+<p>패치파일, Verification 파일과 그 외 원하는 파일을 매니저 서버에 업로드 할 수 있습니다. </br>Tar 확장자 파일의 경우에는, 자동 untar 작업 수행 여부를 선택할 수 있습니다.<br />
+패치파일과 Verification 파일은, 업로드 규칙에 맞는 이름으로 업로드하면 서버에 저장됩니다.<br />
+<img alt="image-20210602131542388" src="../user_guide_image/image-20210602131542388.png" /></p>
+<p></p>
+
+<p>그 외 원하는 파일을 업로드하고자 하는 경우, 원하는 위치를 작성하여 업로드하면 해당 위치에 저장됩니다.<br />
+<img alt="image-20210602131709841" src="../user_guide_image/image-20210602131709841.png" /></p>
+<p><br></p>
+<h4 id="25-system-deploy">2.5) System Deploy 기능</h4>
+<p>신규 CLIENT의 AGENT 설치, 기존 CLIENT의 AGENT 패치, 명령어 실행, 파일 전송을 할 수 있게 합니다. </br>(※ PLATFROM 종류가 OS, NAGIOS의 CLIENT만 가능합니다.)</p>
+<ul>
+<li><strong>Install/Patch Client</strong> <br>선택한 Agent에 대해서 설치,  패치를 할 수 있습니다. <br>{home} - Inventory 에 저장된 Client 각자의 HOME 값 <br>(저장 값 없으면 sjmon.properties 의 sjmon.home 값 (기본 <code>/opt/sjmon</code> 참조))<br />
+<img alt="image-20210602132012473" src="../user_guide_image/image-20210602132012473.png" /><br />
+<img alt="image-20210602132030781" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602132030781.png" /> - CLENT 경로 안내입니다. (아이콘에 마우스를 올려놓았을 떄 확인 가능합니다)</li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>Execute Command</strong> <br />
+  선택한 Agent에 대해서 입력한 명령어를 실행 할 수 있습니다.<br />
+<img alt="image-20210602132240048" src="../user_guide_image/image-20210602132240048.png" />  <img alt="image-20210602133304642" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602133304642.png" /> - 명령어 실행 안내 (아이콘에 마우스를 올려놓았을 때 확인 가능합니다.)</li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>Transfer file</strong>  <br />
+  MANAGER 또는 LOCAL에서 지정한 파일을 선택한 Agent에 파일을 일괄적으로 업로드 할 수 있습니다.  </li>
+</ul>
+<p>[MANAGER -&gt; CLIENT]<br />
+<img alt="image-20210602133709848" src="../user_guide_image/image-20210602133709848.png" /></p>
+<p></p>
+
+<p>[LOCAL(=PC) -&gt; CLIENT]<br />
+<img alt="image-20210608144540130" src="../user_guide_image/image-20210608144540130.png" /><br />
+<img alt="image-20210602134023915" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602134023915.png" />-  MANAGER, CLIENT 경로 안내 (아이콘에 마우스를 올려놓았을 떄 확인 가능합니다)</p>
+<p>모든 실행 결과는 History 버튼을 통해 CLIENT 최근 패치 실행 내역을 확인할 수 있습니다.  <br />
+<img alt="image-20210602134243457" src="../user_guide_image/image-20210602134243457.png" /></p>
+<p><br></p>
+<h4 id="26-version-check">2.6) Version Check 기능</h4>
+<p>IBM Hardware/Software에 대한 최신 버전 및 호환성 여부를 IBM 공식 site의 정보를 기준으로 자동 체크합니다.</p>
+<ul>
+<li>Version Check 참조 Site<br></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;AIX OS Version</td>
+<td>&nbsp;System to AIX maps</td>
+</tr>
+<tr>
+<td>&nbsp;PowerHA Version &nbsp;&nbsp;</td>
+<td>&nbsp;Fix Central Cross-product relationship information &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;GPFS Version</td>
+<td>&nbsp;Fix Central Cross-product relationship information</td>
+</tr>
+<tr>
+<td>&nbsp;VIOS Version</td>
+<td>&nbsp;System to VIOS maps</td>
+</tr>
+<tr>
+<td>&nbsp;F/W Version</td>
+<td>&nbsp;Fix Central Cross-product relationship information &nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>SJMON Viewer에서 확인합니다.</p>
+<p><strong>SJMON -&gt; Admin -&gt; Inventory menu에서 확인</strong><br />
+<img alt="image-20210602135453566" src="../user_guide_image/image-20210602135453566.png" /></p>
+<p></p>
+
+<h5 id="aix-os-version">* AIX OS Version  <br></h5>
+<p><img alt="image-20210602135829566" src="../user_guide_image/image-20210602135829566.png" /></p>
+<ul>
+<li>AIX 버전의 TL을 기준으로 IBM System to AIX maps site 에서 제공하는 해당 버전의 Latest SP까지 비교하여 버전이 낮으면 붉은색 동일하면 파란색으로 표시</li>
+</ul>
+<p></p>
+
+<h5 id="powerha-version">* PowerHA Version  <br></h5>
+<p><img alt="image-20210602140021701" src="../user_guide_image/image-20210602140021701.png" /></p>
+<ul>
+<li>PowerHA의 Release 버전을 기준으로 IBM Fix central site에서 제공하는 해당 버전의 Latest SP까지 비교하여 버전이 낮으면 붉은색, 동일하면 파란색으로 표시</li>
+<li>현재 AIX 버전에서 현재 설치되어 있는 PowerHA버전이 지원이 안되는 경우 <strong>Unverified</strong>로 표시</li>
+<li>비교 대상이 존재하지 않는 경우 <strong>Check failure</strong>로 표시</li>
+</ul>
+<p></p>
+
+<h5 id="gpfs-version-check">* GPFS Version Check <br></h5>
+<p><img alt="image-20210602142536407" src="../user_guide_image/image-20210602142536407.png" /></p>
+<ul>
+<li>
+<p>GPFS의 Release 버전을 기준으로 IBM Fix central site에서 제공하는 해당 버전의 Latest SP까지 비교하여 버전이 낮으면 붉은색, 동일하면 파란색으로 표시</p>
+</li>
+<li>
+<p>현재 AIX 버전에서 현재 설치되어 있는 GPFS버전이 지원이 안되는 경우 <strong>Unverified</strong>로 표시</p>
+</li>
+<li>
+<p>비교 대상이 존재하지 않는 경우 <strong>Check failure</strong>로 표시</p>
+</li>
+</ul>
+<p></p>
+
+<h5 id="vios-version-check">* VIOS Version Check <br></h5>
+<p><img alt="image-20210602142625040" src="../user_guide_image/image-20210602142625040.png" /></p>
+<ul>
+<li>
+<p>VIOS의 버전을 기준으로 IBM System to VIOS maps site에서 제공하는 해당 버전의 Recommend 버전과 비교하여 버전이 낮으면 붉은색, 동일하면 파란색으로 표시</p>
+</li>
+<li>
+<p>해당 장비에서 현재 설치되어 있는 VIOS버전이 지원이 안되는 경우 <strong>Unverified</strong>로 표시</p>
+</li>
+</ul>
+<p></p>
+
+<h5 id="fw-version-check">* F/W Version Check <br></h5>
+<p><img alt="image-20210602142930141" src="../user_guide_image/image-20210602142930141.png" /></p>
+<ul>
+<li>
+<p>F/W 버전을 기준으로 IBM Fix central site에서 제공하는 해당 장비의 최신 F/W를 비교하여 버전이 낮으면 붉은색, 동일하면 파란색으로 표시</p>
+</li>
+<li>
+<p>현재 장비에서 지원이 안되는 경우 <strong>Unverified</strong>로 표시</p>
+</li>
+</ul>
+<p></p>
+
+<p>주기적으로 배포되는 csv파일을 SJMON Viewer에 등록하면 최신 Version에 대한 데이터를 최신으로 유지할 수 있습니다.</p>
+<p></p>
+
+<p>File Upload버튼 클릭합니다.<br />
+<img alt="image-20210602143146017" src="../user_guide_image/image-20210602143146017.png" /></p>
+<p></p>
+
+<p>Open Files를 열어 최신 파일을 선택하고 확인버튼을 누르면 최신 데이터가 upload됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>OS 파일</th>
+<th>파일명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;AIX 파일</td>
+<td>&nbsp;invent_aixoslevel_[date].csv &nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;PowerHA 파일 &nbsp;&nbsp;</td>
+<td>&nbsp;invent_halevel_[date].csv</td>
+</tr>
+<tr>
+<td>&nbsp;GPFS 파일</td>
+<td>&nbsp;invent_gpfslevel_[date].csv</td>
+</tr>
+<tr>
+<td>&nbsp;VIOS 파일</td>
+<td>&nbsp;invent_vioslevel_[date].csv</td>
+</tr>
+<tr>
+<td>&nbsp;F/W 파일</td>
+<td>&nbsp;invent_fw_[date].csv</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<p>Upload한 최신 데이터로 갱신을 하려면 <strong>Verification</strong> 버튼을 누릅니다.<br />
+<img alt="image-20210602143512384" src="../user_guide_image/image-20210602143512384.png" /></p>
+<p>Upload한 파일에 해당하는 내용을 Check하고 확인을 누르면 최신 데이터로 Viewer 내용이 update됩니다.</p>
+<p><br></p>
+<h4 id="27-nagios-host">2.7) NAGIOS Host 등록, 수정, 연동</h4>
+<p>Inventory 정보에서 NAGIOS의 Host를 등록, 수정 및 SJMON으로 연동이 가능합니다.</p>
+<p><img alt="image-20210602143724622" src="../user_guide_image/image-20210602143724622.png" /></p>
+<ul>
+<li>
+<p><img alt="image-20210602150514131" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602150514131.png" /> -  NAGIOS 호스트 등록 할 수 있는 팝업창을 보여줍니다.</p>
+</li>
+<li>
+<p><img alt="image-20210602150431970" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602150431970.png" /> -  NAGIOS 호스트 수정 하는 팝업을 발생시킵니다. </p>
+</li>
+</ul>
+<p>​                   - PLATFORM이 OS계열, NAGIOS인 경우에만 발생합니다.</p>
+<p>​                   - 단일 선택에 대해서만 팝업 발생합니다.</p>
+<ul>
+<li><img alt="image-20210602150634045" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602150634045.png" /> -  NAGIOS에 등록 된 호스트와 SJMON의 등록 된 System을 비교하여 </li>
+</ul>
+<p>​                -  SJMON에 없는 HOST를SJMON System으로 등록합니다.</p>
+<h5 id="_12">* 상세 등록 정보</h5>
+<h6 id="nagios-host">[Nagios Host 등록]</h6>
+<p><img alt="image-20210603162716827" src="../user_guide_image/image-20210603162716827.png" /></p>
+<p><strong>STEP 1 :</strong>  HOST의 정보를 입력합니다.<br />
+<strong>STEP 2 :</strong>  Save &amp; Finish를 클릭합니다.</p>
+<p><img alt="image-20210610145355178" src="../user_guide_image/image-20210610145355178.png" /><br />
+<strong>STEP 3 :</strong>  상단에 표기 된 <strong>1 Change</strong> 를 클릭 합니다.</p>
+<p><img alt="image-20210603163742694" src="../user_guide_image/image-20210603163742694.png" /><br />
+<strong>STEP 4 :</strong>  <strong>Activate affected</strong> 를 클릭 합니다.</p>
+<p></p>
+
+<h6 id="nagios-host_1">[Nagios Host 수정]</h6>
+<p><img alt="image-20210603163538528" src="../user_guide_image/image-20210603163538528.png" /><br />
+<strong>STEP 1 :</strong>  HOST의 수정 할 정보를 입력합니다.<br />
+<strong>STEP 2 :</strong>  Save &amp; Finish를 클릭합니다.</p>
+<p><img alt="image-20210603163712973" src="../user_guide_image/image-20210603163712973.png" /></p>
+<p><img alt="image-20210603163742694" src="../user_guide_image/image-20210603163742694.png" /><br />
+<strong>STEP 3 :</strong>  상단에 표기 된 <strong>1 Change</strong> 를 클릭 합니다.<br />
+<strong>STEP 4 :</strong>  <strong>Activate affected</strong> 를 클릭 합니다.</p>
+<p><br></p>
+<h3 id="3-system-group">3) System Group</h3>
+<p>CLIENT들의 GROUP을 관리할 수 있습니다. 다양한 메뉴에서 사용됩니다.<br />
+NAGIOS 연동 시 SJMON의 모든 그룹은 NAGIOS의 HostGroup으로  관리 됩니다.</p>
+<ul>
+<li>
+<p>MACHINE GROUP : MANAGER가 자동으로 등록하는 MACHINE TYPE 과, 사용자가 Machine 의 성격으로 분류하는 경우 설정하는 GROUP.</p>
+</li>
+<li>
+<p>BUSINESS GROUP : Inventory 에서 관리하는 Client 의 고객사 GROUP.</p>
+</li>
+<li>
+<p>CUSTOM GROUP : 사용자가 용도에 맞게 직접 설정하는 GROUP. </p>
+</li>
+</ul>
+<p><img alt="image-20210607144208695" src="../user_guide_image/image-20210607144208695.png" /></p>
+<p><br></p>
+<h3 id="4-threshold">4) Threshold</h3>
+<p>자원 별 임계치 설정을 통해, 특정 임계치를 초과하는 경우 Dashboard, Monitor, Top Menu화면에 표시합니다. 이를 통해 EVENT를 빠르게 찾아서 조치할 수 있도록 도와줍니다.<br />
+Nagios 연동 시 Nagios의 자원 별 임계치를 설정하는 Nagios Host &amp; Service Parameter 그리고 Notification 기능을 관리 사용 가능합니다.</p>
+<p></p>
+
+<h4 id="41-sjmon-threshold">4.1) SJMON THRESHOLD 기능</h4>
+<p><img alt="image-20210607164057449" src="../user_guide_image/image-20210607164057449.png" /></p>
+<ul>
+<li>
+<p><img alt="image-20210607164214000" src="../user_guide_image/image-20210607164214000.png" />  -  SJMON System에 대하여 실시간 THRESHOLD를 설정하는 화면입니다.</p>
+</li>
+<li>
+<p><img alt="image-20210607164228760" src="../user_guide_image/image-20210607164228760.png" />  -  NAGIOS의 RULE, PARAMETER를 설정하는 화면입니다. </p>
+</li>
+<li>
+<p><img alt="image-20210607164250952" src="../user_guide_image/image-20210607164250952.png" />  -  NAGIOS의 NOTIFICATION을 설정하는 화면입니다.</p>
+</li>
+<li>
+<p><img alt="image-20210607165828004" src="../user_guide_image/image-20210607165828004.png" />  -  화면 보여주기 / 숨기기</p>
+</li>
+<li>
+<p><img alt="image-20210607170814970" src="../user_guide_image/image-20210607170814970.png" />  -  등록, 수정, 삭제 버튼</p>
+</li>
+<li>
+<p><img alt="image-20210607170903260" src="../user_guide_image/image-20210607170903260.png" />  -   초기화면으로 이동</p>
+</li>
+</ul>
+<p></p>
+
+<p>NAGIOS THRESHOLD, NOTIFICATION CONFIGRUAION 설정 화면은 NAGIOS 로그인이 안 되었을 경우 화면에 보이지 않습니다.<br />
+Add 버튼을 통해 자원 별로 원하는 임계치를 설정할 수 있습니다. </p>
+<p><img alt="image-20210607171033672" src="../user_guide_image/image-20210607171033672.png" /></p>
+<ul>
+<li>
+<p>Threshold Name : 사용자가 인식할 수 있는 Threshold 이름을 입력합니다.</p>
+</li>
+<li>
+<p>Statistics Name : 원하는 성능 정보를 선택합니다(CPU, Memory etc.).</p>
+</li>
+<li>
+<p>Condition : 원하는 성능 정보의 임계치를 크거나, 같거나 작은 값으로 설정합니다.</p>
+</li>
+<li>
+<p>Threshold Value : 원하는 성능 정보의 임계치를 설정합니다.</p>
+</li>
+<li>
+<p>Severity : Critical과 Warning중에 원하는 값을 선택합니다.(Threshold의 중요도 선택)</p>
+</li>
+<li>
+<p>Threshold Map Names: 해당 임계치로 Monitoring할 대상 Group 또는 Host를 선택합니다.</p>
+</li>
+<li>
+<p>Use Flag : 사용 여부를 설정합니다.</p>
+</li>
+</ul>
+<p></p>
+
+<p>Edit버튼을 통해 이미 설정된 임계치 값을 변경할 수 있습니다.</p>
+<ul>
+<li>수정하기 원하는 Threshold name을 선택하고 Edit 버튼을 누릅니다.<br />
+<img alt="image-20210607171149218" src="../user_guide_image/image-20210607171149218.png" /></li>
+</ul>
+<p><br></p>
+<h4 id="42-nagios-threshold">4.2) NAGIOS THRESHOLD 기능</h4>
+<p>Nagios Threshold는 NAGIOS의 <strong>Nagios Host &amp; Service Parameter</strong>를 통하여 임계치 지정이 가능합니다.<br />
+NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
+<p><img alt="image-20210610141749026" src="../user_guide_image/image-20210610141749026.png" /></p>
+<p><img alt="image-20210610141819206" src="../user_guide_image/image-20210610141819206.png" />  -  NAGIOS에 등록이 가능한 Host를 보여줍니다.</p>
+<p><img alt="image-20210610141837721" src="../user_guide_image/image-20210610141837721.png" />  -  해당 Host명 클립보드에 저장합니다. (=Copy)</p>
+<p></p>
+
+<h5 id="_13">* 상세 등록 정보</h5>
+<p><img alt="image-20210610142117248" src="../user_guide_image/image-20210610142117248.png" /><br />
+<strong>STEP 1 :</strong>  설정 할 서비스를 조회합니다. </p>
+<p><img alt="image-20210610142708318" src="../user_guide_image/image-20210610142708318.png" /><br />
+<strong>STEP 2 :</strong>  <strong>Create rule in folder</strong>또는 <strong>Edit</strong>를 클릭합니다. </p>
+<p><img alt="image-20210610142856960" src="../user_guide_image/image-20210610142856960.png" /><br />
+<strong>STEP 3 :</strong>  내용 입력 후 <strong>Save</strong>를 눌러 저장 합니다.  </p>
+<p><img alt="image-20210610143009208" src="../user_guide_image/image-20210610143009208.png" /><br />
+<strong>STEP 4 :</strong>  상단에 표기 된 1 Change 를 클릭 합니다.   </p>
+<p><img alt="image-20210610143123217" src="../user_guide_image/image-20210610143123217.png" /><br />
+<strong>STEP 5 :</strong>  Activate affected를 클릭 합니다.</p>
+<p><br></p>
+<h4 id="43-notification-configuration">4.3) NOTIFICATION CONFIGURATION</h4>
+<p>Notification Configuration은 SJMON THRESHOLD, NAGIOS THRESHOLD에서 설정된 임계치에 대하여ALERT 지정이 가능합니다. <br />
+(※ Nagios 연동 시 사용 가능)</p>
+<p><img alt="image-20210610143235602" src="../user_guide_image/image-20210610143235602.png" /></p>
+<p><img alt="image-20210610141819206" src="../user_guide_image/image-20210610141819206.png" />-  NAGIOS에 등록이 가능한 Host를 보여줍니다.</p>
+<p><img alt="image-20210610141837721" src="../user_guide_image/image-20210610141837721.png" />  -  해당 Host명 클립보드에 저장합니다. (=Copy)</p>
+<p></p>
+
+<h5 id="_14">* 상세 등록 정보</h5>
+<p><img alt="image-20210610143531596" src="../user_guide_image/image-20210610143531596.png" /><br />
+<strong>STEP 1 :</strong>  <strong>New Rule</strong>또는 <strong>Edit</strong>를 클릭합니다.  </p>
+<p><img alt="image-20210610143710568" src="../user_guide_image/image-20210610143710568.png" /><br />
+<strong>STEP 2 :</strong>  내용 입력 후 <strong>Save</strong>를 눌러 저장 합니다.  </p>
+<p>[NOTIFICATION METHOD] <br />
+<img alt="image-20210610144120242" src="../user_guide_image/image-20210610144120242.png" /></p>
+<ul>
+<li>NOTIFICATION METHOD는 각종 NAGIOS EVENT 발생 시 수신 받을 방법에 대한 설정입니다. </li>
+<li><strong>(SJMON)</strong>의 항목은 SJMON THRESHOLD NOTIFICATION 수신 받을 수 있게 하는 항목입니다. (NAGIOS EVENT 수신 포함)</li>
+<li><strong>Slack(SJMON)</strong>을 설정시 하단 Call with the following parameters 입력란에 webhook URL을 입력하여 주시기 바랍니다.</li>
+<li><strong>SMS(usging database)(SJMON)</strong> 설정 시 연동 설치 시 설정한 dbconfig.json을 수정하여주시기 바랍니다.</li>
+</ul>
+<p>[CONTACT SELECTION]<br />
+<img alt="image-20210610144509542" src="../user_guide_image/image-20210610144509542.png" /></p>
+<ul>
+<li>CONTACT SELECTION은 NOTIFICATION을 수신 할 USER를 선택합니다. </li>
+<li>옵션 선택에 따라 한 명에서 여러 명까지 선택이 가능합니다. (반드시 한 명 이상을 선택하여야 합니다.)</li>
+<li><strong>*Slack(SJMON)</strong> 선택 시 USER는 대표자 한 명만 지정합니다. <br />
+  (※ 여러 명 선택 시 채널에 알림이 선택 한 USER 수 만큼 전송됩니다.) </li>
+</ul>
+<p>[CONDITIONS]<br />
+<img alt="image-20210610144616728" src="../user_guide_image/image-20210610144616728.png" /></p>
+<ul>
+<li>
+<p>CONDITIONS 은 발생되는 NAGIOS EVENT에 속성을 조건으로 NOTIFICATION 발생 여부를 결정합니다.</p>
+</li>
+<li>
+<p>CONDITION → Match notification comment : <strong>SJMON_THRESHOLD</strong>입력 시 SJMON에서 발생한 THRESHOLD만 수신됩니다. </p>
+</li>
+<li>
+<p>※ 해당 옵션은 반드시 NOTIFICATION METHOD에 <strong>(SJMON)</strong> 이 포함된 항목을 선택해야 합니다.</p>
+</li>
+</ul>
+<p><img alt="image-20210610145049154" src="../user_guide_image/image-20210610145049154.png" /><br />
+<strong>STEP 3 :</strong>  내용 입력 후 <strong>Save</strong>를 눌러 저장 합니다.  </p>
+<p><img alt="image-20210610144817249" src="../user_guide_image/image-20210610144817249.png" /><br />
+<strong>STEP 4 :</strong>  상단에 표기 된 1 Change 를 클릭 합니다.   </p>
+<p><img alt="image-20210610144936108" src="../user_guide_image/image-20210610144936108.png" /><br />
+<strong>STEP 5 :</strong>  Activate affected를 클릭 합니다.</p>
+<p><br></p>
+<h3 id="5-threshold-monitoring">5) Threshold Monitoring</h3>
+<p>임계치가 설정된 host는 임계치가 초과하면Monitoir화면과 Top menu에서 해당 내용을 직관적으로 확인할 수 있습니다.</p>
+<p><img alt="image-20210603161158767" src="../user_guide_image/image-20210603161158767.png" /></p>
+<ul>
+<li>
+<p>Top Menu의 Threshold 에 임계치를 초과한 숫자가 표시됩니다.</p>
+</li>
+<li>
+<p>노란 바탕색은 Warning, 빨간 바탕색은 Critical Event 입니다.</p>
+</li>
+</ul>
+<p><img alt="image-20210608150347991" src="../user_guide_image/image-20210608150347991.png" /></p>
+<ul>
+<li>
+<p>Monitor화면에서 설정된 임계치를 초과하는 Statistics는 Warning은 노란색, Critical은 빨간색 테두리로 blink되며 직관적으로 임계치가 초과되었음을 사용자에게 알려줍니다.</p>
+</li>
+<li>
+<p>Blink는 임계치가 초과되고 있는 동안 지속되며 임계치 이하로 다시 떨어지면 멈추게 됩니다. 사용자가 임계치가 초과되고 있는 동안 임의로 blink를 멈추고 싶으면 <strong>벨</strong>모양의 버턴을 누르면 됩니다.</p>
+</li>
+</ul>
+<p></p>
+
+<p>Nagios와 연동 및 Notification이 설정 되어있는 경우 지정된 사용자에게 설정된 방법으로 전달합니다.</p>
+<p><br></p>
+<h3 id="6-admin-setting">6) Admin Setting</h3>
+<p>Process 와 Network Switch Device를 모니터링 하기 위해서 Admin -&gt; Admin Setting에서 설정 값과 Device 정보를 추가할 수 있습니다.</p>
+<p><img alt="image-20210603160200622" src="../user_guide_image/image-20210603160200622.png" /></p>
+<p><img alt="image-20210603160841806" src="../user_guide_image/image-20210603160841806.png" /></p>
+<p></p>
+
+<p>Process setting : Add, Edit, Del 버튼을 통해 Process Setting 을 추가, 수정, 제거할 수 있습니다.<br />
+<img alt="image-20210603160534501" src="../user_guide_image/image-20210603160534501.png" /></p>
+<p></p>
+
+<p>NETWORK : Add, Edit, Del 버튼을 통해 모니터링 하려는 Device 를 추가, 수정, 삭제할 수 있습니다.<br />
+<img alt="image-20210603160809757" src="../user_guide_image/image-20210603160809757.png" /></p>
+<ul>
+<li>
+<p>IP : Network Switch Device의 Network IP를 등록합니다.</p>
+</li>
+<li>
+<p>Name : 장치를 확인할 수 있도록 원하는 이름을 넣어줍니다.</p>
+</li>
+<li>
+<p>Port : default로 161번을 사용하고, 변경이 가능합니다.</p>
+</li>
+<li>
+<p>Community : Network장비에서 community를 확인해서 등록해줍니다.</p>
+</li>
+<li>
+<p>Select a Use : Y / N중에 선택이 가능하고, N을 선택 시 등록은 완료되지만 모니터링을 하지는 않습니다. 설정 후 Manager 를 재시작해야 내용이 반영됩니다. </p>
+</li>
+</ul>
+<p><br></p>
+<h3 id="7-data-size">7) Data Size</h3>
+<p>SJMON의 각 테이블 정보 및 Size를 확인하고, 원하는 날짜의 데이터를 수동으로 삭제할 수 있습니다.</p>
+<p><img alt="image-20210602180049496" src="../user_guide_image/image-20210602180049496.png" /></p>
+<p></p>
+
+<p>Delete Data 버튼을 통해 원하는 날짜의 실시간/집계/EPE 데이터를 수동으로 삭제할 수 있습니다.<br />
+<img alt="image-20210602185839026" src="../user_guide_image/image-20210602185839026.png" /></p>
+<p><BR></p>
+<p><br></p>
+<h2 id="9-my-page">9. My page</h2>
+<h3 id="1-info-setting">1) Info &amp; Setting</h3>
+<p>Viewer, Manager, Postgresql 의 버전 정보와 라이선스 정보를 확인할 수 있습니다.</p>
+<p></p>
+
+<ul>
+<li><strong>버전 및 라이센스 정보</strong><br />
+<img alt="image-20210602175213353" src="../user_guide_image/image-20210602175213353.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>화면 및 데이터 관리</strong><br />
+<img alt="image-20210602175231132" src="../user_guide_image/image-20210602175231132.png" /></li>
+</ul>
+<p></p>
+
+<ul>
+<li><strong>OSS 안내</strong><br />
+<img alt="image-20210602175251894" src="../user_guide_image/image-20210602175251894.png" /></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../faq/manager/" class="btn btn-neutral float-right" title="about Manager">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../install/install_client_apm_jeus/" class="btn btn-neutral" title="Jeus"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../install/install_client_apm_jeus/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../faq/manager/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
