@@ -127,45 +127,33 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-top-sql">3) Top SQL</a>
+    <li class="toctree-l3"><a class="reference internal" href="#3-event">3) Event</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_2">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-db-space">4) DB Space</a>
+    <li class="toctree-l3"><a class="reference internal" href="#4-quick-parameter-check">4) Quick Parameter Check</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_3">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-event">5) Event</a>
+    <li class="toctree-l3"><a class="reference internal" href="#5-parameter-health-check">5) Parameter Health Check</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_4">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-quick-parameter-check">6) Quick Parameter Check</a>
+    <li class="toctree-l3"><a class="reference internal" href="#6-parameter-change-history">6) Parameter Change History</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_5">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#7-parameter-health-check">7) Parameter Health Check</a>
+    <li class="toctree-l3"><a class="reference internal" href="#7-aix-virtualization">7) AIX Virtualization</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_6">* 상세 사용 방법</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#8-parameter-change-history">8) Parameter Change History</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_7">* 상세 사용 방법</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#9-aix-virtualization">9) AIX Virtualization</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_8">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
@@ -175,19 +163,19 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-quick-resource-trend">1) Quick Resource Trend</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_9">* 상세 사용 방법</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2-comparative-time-analysis">2) Comparative Time Analysis</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_10">* 상세 사용 방법</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#3-comparative-system-analysis">3) Comparative System Analysis</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_11">* 상세 사용 방법</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_9">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
@@ -653,48 +641,12 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <p><img alt="image-20210531170150082" src="../user_guide_image/image-20210531170150082.png" /></p>
 <p><img alt="image-20210531170303952" src="../user_guide_image/image-20210531170303952.png" /></p>
 <p><br></p>
-<h3 id="3-top-sql">3) Top SQL</h3>
-<p>특정 구간에 가장 많은 자원을 사용한 TOP SQL을 추출할 수 있는 기능입니다.<img alt="image-20210608170749567" src="../user_guide_image/image-20210608170749567.png" /></p>
-<p></p>
-
-<h4 id="_2">* 상세 사용 방법</h4>
-<p>TOP SQL 추출 및 분석 도구 입니다.</p>
-<p><img alt="image-20210608171659737" src="../user_guide_image/image-20210608171659737.png" /><br />
-<strong>STEP 1 :</strong>  DB INSTANCE를 선택합니다.<br />
-<strong>STEP 2 :</strong>  조회할 기간을 선택합니다.</p>
-<p><img alt="image-20210608171712826" src="../user_guide_image/image-20210608171712826.png" /><br />
-<strong>STEP 3 :</strong>  SQL ID를 통한 검색 조건식을 추가합니다.<br />
-<strong>STEP 4 :</strong>  Module 을 통한 검색 조건식을 추가합니다.<br />
-<strong>STEP 5 :</strong>  Action 을 통한 검색 조건식을 추가합니다.</p>
-<p><img alt="image-20210608171840179" src="../user_guide_image/image-20210608171840179.png" /><br />
-<strong>STEP 6 :</strong>  조회 시 TOP SQL 정보를 확인할 수 있습니다.</p>
-<p><img alt="image-20210608171922433" src="../user_guide_image/image-20210608171922433.png" /><br />
-<strong>STEP 7 :</strong>  ROW 클릭 시 SQL TEXT 확인할 수 있습니다.</p>
-<p><img alt="image-20210608171956921" src="../user_guide_image/image-20210608171956921.png" /><br />
-<strong>STEP 8 :</strong>  선택된ROW의 SQL PLAN을 확인할 수 있습니다.</p>
-<p><img alt="image-20210608172054198" src="../user_guide_image/image-20210608172054198.png" /><br />
-<strong>STEP 9 :</strong>  TREND 및 세부 정보를 확인할 수 있습니다.</p>
-<p><br></p>
-<h3 id="4-db-space">4) DB Space</h3>
-<p>DB 테이블 스페이스 및 세그먼트 분석도구 입니다.</p>
-<p><img alt="image-20210608172126592" src="../user_guide_image/image-20210608172126592.png" /></p>
-<p></p>
-
-<h4 id="_3">* 상세 사용 방법</h4>
-<p><img alt="image-20210608172452137" src="../user_guide_image/image-20210608172452137.png" /><br />
-<strong>STEP 1 :</strong>  DB INSTANCE를 선택합니다.<br />
-<strong>STEP 2 :</strong>  Tablespace 선택(선택 하지 않을 경우 전체 Tablespace 조회)합니다.</p>
-<p><img alt="image-20210608172803558" src="../user_guide_image/image-20210608172803558.png" /><br />
-<strong>STEP 3 :</strong>  기간 선택 후 조회를 합니다.</p>
-<p><img alt="image-20210608172833550" src="../user_guide_image/image-20210608172833550.png" /><br />
-<strong>STEP 4 :</strong>  TABLESPACE TREND 차트 및 TABLESPACE, TOP SEGMENT 등의 정보를 확인할 수 있습니다.</p>
-<p><br></p>
-<h3 id="5-event">5) Event</h3>
+<h3 id="3-event">3) Event</h3>
 <p>이벤트 조회 및 분석 도구 입니다. 이를 통해 EVENT들의 상태를 한 눈에 확인할 수 있습니다.</p>
 <p><img alt="image-20210531171940412" src="../user_guide_image/image-20210531171940412.png" /></p>
 <p></p>
 
-<h4 id="_4">* 상세 사용 방법</h4>
+<h4 id="_2">* 상세 사용 방법</h4>
 <p><img alt="image-20210608111052264" src="../user_guide_image/image-20210608111052264.png" /><br />
 <strong>STEP 1 :</strong>  EVENT를 조회할 대상 CLIENT를 조회합니다.<br />
 <strong>STEP 2 :</strong>  EVENT 값을 조회(선택하지 않을 경우 전체 조회)합니다.<br />
@@ -704,12 +656,12 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <p><img alt="image-20210608111208939" src="../user_guide_image/image-20210608111208939.png" /><br />
 <strong>STEP 5 :</strong>  EVENT LIST정보를 확인할 수 있습니다.</p>
 <p><br></p>
-<h3 id="6-quick-parameter-check">6) Quick Parameter Check</h3>
+<h3 id="4-quick-parameter-check">4) Quick Parameter Check</h3>
 <p>전체 시스템 파라미터 권고 적용 여부를 확인하는 도구 입니다. 이를 통해 현재 서버의 파라미터가 권고 값을 따르고 있는지 한눈에 확인이 가능합니다.</p>
 <p><img alt="image-20210608111428509" src="../user_guide_image/image-20210608111428509.png" /></p>
 <p></p>
 
-<h4 id="_5">* 상세 사용 방법</h4>
+<h4 id="_3">* 상세 사용 방법</h4>
 <p><img alt="image-20210608111347828" src="../user_guide_image/image-20210608111347828.png" /><br />
 <strong>STEP 1 :</strong> AIX에서 제공하는 주요 파라미터의 변경여부를 직관적으로 확인이 가능합니다.</p>
 <ul>
@@ -718,12 +670,12 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <li>GREEN : 권고치에 해당하는 파라미터</li>
 </ul>
 <p><br></p>
-<h3 id="7-parameter-health-check">7) Parameter Health Check</h3>
+<h3 id="5-parameter-health-check">5) Parameter Health Check</h3>
 <p>파라미터 변경에 따른 권고사항을 확인할 수 있는 분석도구 입니다. 이를 통해 권고 치와 현재 파라미터 상태를 확인할 수 있습니다.</p>
 <p><img alt="image-20210601102440515" src="../user_guide_image/image-20210601102440515.png" /></p>
 <p></p>
 
-<h4 id="_6">* 상세 사용 방법</h4>
+<h4 id="_4">* 상세 사용 방법</h4>
 <p><img alt="image-20210601102317378" src="C:\Users\JungSunKim\AppData\Roaming\Typora\typora-user-images\image-20210601102317378.png" /><br />
 <strong>STEP 1 :</strong>  SYSTEM을 선택 후 조회합니다.</p>
 <p><img alt="image-20210601102414745" src="../user_guide_image/image-20210601102414745.png" /><br />
@@ -734,12 +686,12 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <strong>STEP 6 :</strong>  SYSTEM의 현재 파라미터 value를 보여줍니다.<br />
 <strong>STEP 7 :</strong>  권고된 VALUE 값을 보여줍니다.</p>
 <p><br></p>
-<h3 id="8-parameter-change-history">8) Parameter Change History</h3>
+<h3 id="6-parameter-change-history">6) Parameter Change History</h3>
 <p>파라미터 변경에 따른 history를 분석할 수 있는 도구입니다.</p>
 <p><img alt="image-20210601103530403" src="../user_guide_image/image-20210601103530403.png" /></p>
 <p></p>
 
-<h4 id="_7">* 상세 사용 방법</h4>
+<h4 id="_5">* 상세 사용 방법</h4>
 <p><img alt="image-20210601104329075" src="../user_guide_image/image-20210601104329075.png" /><br />
 <strong>STEP 1 :</strong>  파라미터 변경을 확인 할 HOST를 선택합니다.<br />
 <strong>STEP 2 :</strong>  변경 기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
@@ -756,12 +708,12 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <p>Time-comparative Analysis 탭에서는 두 날짜의 전체 파라미터 값을 비교할 수 있습니다.<br />
 <img alt="image-20210601111233847" src="../user_guide_image/image-20210601111233847.png" /></p>
 <p><br></p>
-<h3 id="9-aix-virtualization">9) AIX Virtualization</h3>
+<h3 id="7-aix-virtualization">7) AIX Virtualization</h3>
 <p>AIX Virtualization 툴이 제공하는 물리적 machine의 자원 사용 현황을 통해 서버 자원 할당 계획에 활용할 수 있습니다.</p>
 <p><img alt="image-20210601113009784" src="../user_guide_image/image-20210601113009784.png" /></p>
 <p></p>
 
-<h4 id="_8">* 상세 사용 방법</h4>
+<h4 id="_6">* 상세 사용 방법</h4>
 <p><img alt="image-20210608112628727" src="../user_guide_image/image-20210608112628727.png" /><br />
 <strong>STEP 1 :</strong>  MACHINE 을 선택합니다.<br />
 <strong>STEP 2 :</strong>  기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
@@ -777,7 +729,7 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <p><img alt="image-20210601114848162" src="../user_guide_image/image-20210601114848162.png" /></p>
 <p></p>
 
-<h4 id="_9">* 상세 사용 방법</h4>
+<h4 id="_7">* 상세 사용 방법</h4>
 <p><img alt="image-20210608112821309" src="../user_guide_image/image-20210608112821309.png" /><br />
 <strong>STEP 1 :</strong>  MACHINE 을 선택합니다.<br />
 <strong>STEP 2 :</strong>  기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
@@ -793,7 +745,7 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <p><img alt="image-20210601151131857" src="../user_guide_image/image-20210601151131857.png" /></p>
 <p></p>
 
-<h4 id="_10">* 상세 사용 방법</h4>
+<h4 id="_8">* 상세 사용 방법</h4>
 <p><img alt="image-20210601151908388" src="../user_guide_image/image-20210601151908388.png" /><br />
 <strong>STEP 1 :</strong>  CLIENT를 선택합니다..<br />
 <strong>STEP 2 :</strong>  구간 A를 선택합니다.<br />
@@ -810,7 +762,7 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <p><img alt="image-20210601154638562" src="../user_guide_image/image-20210601154638562.png" /></p>
 <p></p>
 
-<h4 id="_11">* 상세 사용 방법</h4>
+<h4 id="_9">* 상세 사용 방법</h4>
 <p><img alt="image-20210601154754455" src="\user_guide_image/image-20210601154754455.png" /><br />
 <strong>STEP 1 :</strong>  구간을 선택합니다.<br />
 <strong>STEP 2 :</strong>  비교 할 system 선택 후 조회합니다.</p>
@@ -1411,7 +1363,7 @@ NAGIOS와 연동 했을 경우 NAGIOS USER도 삭제 됩니다.<br />
 <li><img alt="image-20210602150634045" src="C:\Business\sjmon\sjmon_doc\docs\user-guide\user_guide_image\image-20210602150634045.png" /> -  NAGIOS에 등록 된 호스트와 SJMON의 등록 된 System을 비교하여 </li>
 </ul>
 <p>​                -  SJMON에 없는 HOST를SJMON System으로 등록합니다.</p>
-<h5 id="_12">* 상세 등록 정보</h5>
+<h5 id="_10">* 상세 등록 정보</h5>
 <h6 id="nagios-host">[Nagios Host 등록]</h6>
 <p><img alt="image-20210603162716827" src="../user_guide_image/image-20210603162716827.png" /></p>
 <p><strong>STEP 1 :</strong>  HOST의 정보를 입력합니다.<br />
@@ -1518,7 +1470,7 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <p><img alt="image-20210610141837721" src="../user_guide_image/image-20210610141837721.png" />  -  해당 Host명 클립보드에 저장합니다. (=Copy)</p>
 <p></p>
 
-<h5 id="_13">* 상세 등록 정보</h5>
+<h5 id="_11">* 상세 등록 정보</h5>
 <p><img alt="image-20210610142117248" src="../user_guide_image/image-20210610142117248.png" /><br />
 <strong>STEP 1 :</strong>  설정 할 서비스를 조회합니다. </p>
 <p><img alt="image-20210610142708318" src="../user_guide_image/image-20210610142708318.png" /><br />
@@ -1538,7 +1490,7 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <p><img alt="image-20210610141837721" src="../user_guide_image/image-20210610141837721.png" />  -  해당 Host명 클립보드에 저장합니다. (=Copy)</p>
 <p></p>
 
-<h5 id="_14">* 상세 등록 정보</h5>
+<h5 id="_12">* 상세 등록 정보</h5>
 <p><img alt="image-20210610143531596" src="../user_guide_image/image-20210610143531596.png" /><br />
 <strong>STEP 1 :</strong>  <strong>New Rule</strong>또는 <strong>Edit</strong>를 클릭합니다.  </p>
 <p><img alt="image-20210610143710568" src="../user_guide_image/image-20210610143710568.png" /><br />
