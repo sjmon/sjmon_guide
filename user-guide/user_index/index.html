@@ -85,27 +85,27 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Overview</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-top-menu">1. Top menu</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-home">1. Home</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-home">2. Home</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-dashboard">3. DASHBOARD</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-dashboard">2. DASHBOARD</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-usage-trend-last-1-month">1) Usage &amp; Trend Last 1 Month</a>
+    <li class="toctree-l3"><a class="reference internal" href="#1-notification-sidebar">1) Notification &amp; Sidebar</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-change-item-of-last-1-month-view">2) Change Item of Last 1 Month View</a>
+    <li class="toctree-l3"><a class="reference internal" href="#2-cpu-ranking-for-the-last-5-minutes">2) CPU Ranking for the last 5 minutes</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-event-today">3) EVENT Today</a>
+    <li class="toctree-l3"><a class="reference internal" href="#3-trend-chart-realtime-monitoring-of-the-top-agent">3) Trend Chart &amp; Realtime Monitoring of the Top Agent</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-top-5-servers-last-5-minute">4) Top 5 Servers Last 5 Minute</a>
+    <li class="toctree-l3"><a class="reference internal" href="#4-clock-pm-calendar">4) Clock &amp; PM Calendar</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#5-overall-performance-view">5) Overall Performance View</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-target-process-monitoring">6) Target Process Monitoring</a>
+    <li class="toctree-l3"><a class="reference internal" href="#6-event-today">6) Event Today</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-target-process-monitoring">7) Target Process Monitoring</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-monitor">4. MONITOR</a>
+    <li class="toctree-l2"><a class="reference internal" href="#3-monitor">3. MONITOR</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-menu">1) Menu</a>
     </li>
@@ -117,7 +117,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-tool">5. Tool</a>
+    <li class="toctree-l2"><a class="reference internal" href="#4-tool">4. Tool</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-summary">1) Summary</a>
     </li>
@@ -159,7 +159,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#6-report">6. Report</a>
+    <li class="toctree-l2"><a class="reference internal" href="#5-report">5. Report</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-quick-resource-trend">1) Quick Resource Trend</a>
         <ul>
@@ -191,7 +191,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#7-nagios">7. NAGIOS</a>
+    <li class="toctree-l2"><a class="reference internal" href="#6-nagios">6. NAGIOS</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-host-status">1) Host Status</a>
     </li>
@@ -201,7 +201,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#8-admin">8. Admin</a>
+    <li class="toctree-l2"><a class="reference internal" href="#7-admin">7. Admin</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-user">1) User</a>
     </li>
@@ -238,12 +238,24 @@
     <li class="toctree-l3"><a class="reference internal" href="#5-threshold-monitoring">5) Threshold Monitoring</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#6-admin-setting">6) Admin Setting</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#6-1">6-1) 프로세스 모니터링 설정</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-2">6-2) 네트워크 설정</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-3">6-3) 에러 로그 필터</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-4">6-4) 파라미터 필터</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-5">6-5) 성능 데이터 필터</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#7-data-size">7) Data Size</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#9-my-page">9. My page</a>
+    <li class="toctree-l2"><a class="reference internal" href="#8-my-page">8. My page</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-info-setting">1) Info &amp; Setting</a>
     </li>
@@ -289,129 +301,91 @@
             <div class="section">
               
                 <h1 id="user-manual">User Manual</h1>
-<h2 id="1-top-menu">1. Top menu</h2>
-<p>TOP MENU로 MANAGER에 연결된 CLIENT들의 상태를 확인할 수 있는 MENU입니다. </p>
-<p><img alt="image-20210520151552257" src="../user_guide_image/image-20210520151552257.png" /></p>
+<h2 id="1-home">1. Home</h2>
+<p>HOME은 로그인 후 처음으로 보여지는 메뉴입니다. 우측 상단에서 다크 테마를 해제할 수 있습니다.</p>
+<p>전체 메뉴와 모니터 테마를 한 눈에 확인하여 원하는 메뉴로 이동할 수 있습니다. </p>
+<p>★ 로 등록한 자주 사용하는 테마 및 메뉴를 확인할 수 있으며, 양측 버튼을 클릭하여 전체 테마와 전체 메뉴를 확인할 수 있습니다. </p>
+<p><img alt="home" src="../user_guide_image/home.png" /></p>
+<ul>
+<li><img alt="image-20210520155549535" src="../user_guide_image/image-20210520155549535.png" />  -  유저가 소유한 테마 중 공유하지 않은 테마.</li>
+<li><img alt="image-20210520155604316" src="../user_guide_image/image-20210520155604316.png" />  -  유저가 소유한 테마 중 공유 중인 테마.</li>
+<li><img src="user_guide_image/image-20210520155619428.png" alt="image-20210520155619428" style="zoom:67%;" />   -  즐겨찾기 설정하지 않은 테마 및 메뉴</li>
+<li><img src="user_guide_image/image-20210520155705426.png" alt="image-20210520155705426" style="zoom:67%;" />    -  즐겨찾기 설정하지 않은 테마 및 메뉴</li>
+<li><img alt="image-20210520155722461" src="../user_guide_image/image-20210520155722461.png" />    -  테마 및 메뉴 새 창으로 열기</li>
+</ul>
+<p><br></p>
+<p><br></p>
+<h2 id="2-dashboard">2. DASHBOARD</h2>
+<p>DASHBOARD는 MANAGER에 연결된 CLIENT들의 상태 및 자원 사용 현황, 사용량이 높은 서버, 사용량 패턴, 이벤트 발생 여부 등을 쉽게 확인할 수 있도록 구성되어 있습니다.  </p>
+<p>DASHBOARD 의 위젯은 한 row 가 다른 row 와 위치 변경이 가능합니다.<br />
+<br></p>
+<h3 id="1-notification-sidebar">1) Notification &amp; Sidebar</h3>
+<p>모니터 연결 여부와 Event, Process, Error Log, Param 상태를 확인할 수 있습니다.</p>
+<p><img alt="dashboard_notification" src="../user_guide_image/dashboard_notification.png" /></p>
 <table>
 <thead>
 <tr>
-<th></th>
 <th>메뉴</th>
 <th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="image-20210520145508214" src="../user_guide_image/image-20210520145508214.png" /></td>
-<td>Total List</td>
-<td>Manager에 연결된 모든 CLIENT의 정보를 보여줍니다.</td>
-</tr>
-<tr>
-<td><img alt="image-20210520145545882" src="../user_guide_image/image-20210520145545882.png" /></td>
 <td>Up List</td>
 <td>Manager에 연결되어 데이터를 모니터링 할 수 있는 CLIENT를  보여줍니다.</td>
 </tr>
 <tr>
-<td><img alt="image-20210520145615055" src="../user_guide_image/image-20210520145615055.png" /></td>
 <td>Down List</td>
 <td>Manager와의 연결이 끊어진 CLIENT를 보여줍니다.</td>
 </tr>
 <tr>
-<td><img alt="image-20210520145626766" src="../user_guide_image/image-20210520145626766.png" /></td>
-<td>Threshold Event List</td>
+<td>Event List</td>
 <td>주의, 경고 권고치 값을 초과한 CLIENT를 보여줍니다.</td>
 </tr>
 <tr>
-<td><img alt="image-20210520145656931" src="../user_guide_image/image-20210520145656931.png" /></td>
 <td>Process Event List</td>
 <td>Process Monitoring 중 오류가 있는 CLIENT 정보를 보여줍니다.</td>
 </tr>
 <tr>
-<td><img alt="image-20210520145717619" src="../user_guide_image/image-20210520145717619.png" /></td>
-<td>Error List</td>
-<td>에러가 발생한 CLIENT의 정보를 보여줍니다.</td>
+<td>Error Log List</td>
+<td>에러 로그가 발생한 CLIENT의 정보를 보여줍니다.</td>
 </tr>
 <tr>
-<td><img alt="image-20210520145732125" src="../user_guide_image/image-20210520145732125.png" /></td>
 <td>Parameter Change List</td>
 <td>Parameter가 변경된 CLIENT의 정보를 보여줍니다.</td>
 </tr>
-<tr>
-<td><img alt="image-20210520151611848" src="../user_guide_image/image-20210520151611848.png" /></td>
-<td></td>
-<td>매니저 설치 위치인 /pgdata 의 사용량을 시각적으로  보여줍니다. 마우스를 대면 수치를 확인할 수 있습니다.</td>
-</tr>
 </tbody>
 </table>
-<p></p>
-
-<p>상단 Search바에 System명을 입력하면 검색이 가능합니다. (Total, Up, Down List) <br />
-<img alt="image-20210520150238416" src="../user_guide_image/image-20210520150238416.png" /></p>
+<p><br>
+해당 메뉴를 통한 모니터링 중 변경이 있을 경우, 카드에 종 모양이 나타납니다. 각 카드를 클릭하면, 우측 사이드바가 나타나면서 상세 리스트를 확인할 수 있습니다.</p>
+<p><img alt="dashboard_notification_bell" src="../user_guide_image/dashboard_notification_bell.png" /></p>
+<p>사이드바에서 원하는 헤더를 클릭하면, 해당하는 상세내용을 확인할 수 있습니다.</p>
+<p><img alt="dashboard_sidebar_process" src="../user_guide_image/dashboard_sidebar_process.png" /></p>
+<p>Up, Event, Error Log, Param List의 경우에는 서버 클릭 시 관련 메뉴로 이동합니다.</p>
+<p>메인 화면 아무 곳이나 클릭하면 사이드바가 닫힙니다.</p>
+<p><img alt="dashboard_sidebar_up" src="../user_guide_image/dashboard_sidebar_up.png" /></p>
 <p><br></p>
-<p><br></p>
-<h2 id="2-home">2. Home</h2>
-<p>HOME은 로그인 후 처음으로 보여지는 메뉴입니다. 전체 메뉴와 모니터 테마를 한 눈에 확인하여 원하는 메뉴로 이동할 수 있습니다. </p>
-<p>★ 로 등록한 자주 사용하는 테마 및 메뉴를 확인할 수 있으며, 양측 버튼을 클릭하여 전체 테마와 전체 메뉴를 확인할 수 있습니다. </p>
-<p><img alt="image-20210520155847418" src="../user_guide_image/image-20210520155847418.png" /></p>
+<h3 id="2-cpu-ranking-for-the-last-5-minutes">2) CPU Ranking for the last 5 minutes</h3>
+<p>최근 5분 동안 CPU 자원에 평균적으로 부하가 많이 발생한 5개의 그룹 정보를 보여줍니다.
+<img alt="dashboard_ranking_group" src="../user_guide_image/dashboard_ranking_group.png" /></p>
+<p>차트의 그룹 데이터를 클릭하면, 해당 그룹 내 서버 대상으로 CPU 부하가 많이 발생한 5개의 서버 정보를 보여줍니다.
+<img alt="dashboard_ranking_server" src="../user_guide_image/dashboard_ranking_server.png" /></p>
 <ul>
-<li><img alt="image-20210520155549535" src="../user_guide_image/image-20210520155549535.png" />  -  유저가 소유한 테마 중 공유하지 않은 테마.</li>
-<li><img alt="image-20210520155604316" src="../user_guide_image/image-20210520155604316.png" />  -  유저가 소유한 테마 중 공유 중인 테마.</li>
-<li><img alt="image-20210520155619428" src="../user_guide_image/image-20210520155619428.png" />   -  즐겨찾기 설정하지 않은 테마 및 메뉴</li>
-<li><img alt="image-20210520155705426" src="../user_guide_image/image-20210520155705426.png" />    -  즐겨찾기 설정하지 않은 테마 및 메뉴</li>
-<li><img alt="image-20210520155722461" src="../user_guide_image/image-20210520155722461.png" />    -  테마 및 메뉴 새 창으로 열기</li>
+<li>서버 데이터를 Click하면 아래 위젯에서 해당 CLIENT에 대한 Trend Chart와 실시간 모니터링이 가능합니다.</li>
 </ul>
 <p><br></p>
+<h3 id="3-trend-chart-realtime-monitoring-of-the-top-agent">3) Trend Chart &amp; Realtime Monitoring of the Top Agent</h3>
+<p>CPU 자원에 부하가 가장 많이 발생한 서버의 트렌드 차트와 실시간 데이터를 모니터링 할 수 있습니다.
+랭킹 차트에서 원하는 서버를 클릭한 경우에는, 클릭한 서버에 대한 정보를 보여줍니다.
+<img alt="dashboard_top_monitoring" src="../user_guide_image/dashboard_top_monitoring.png" /></p>
 <p><br></p>
-<h2 id="3-dashboard">3. DASHBOARD</h2>
-<p>DASHBOARD는 MANAGER에 연결된 CLIENT들의 자원 사용 현황과, 사용량이 높은 서버, 사용량 패턴, 이벤트 발생 여부 등을 쉽게 확인할 수 있도록 구성되어 있습니다.<br />
-DASHBOARD 의 위젯은 한 row 가 다른 row 와 위치 변경이 가능합니다.<br />
-기본적으로 연결된 모든 Client 에 대한 정보가 표시되며, OPV 의 Host 를 선택한 경우에는 다른 위젯 역시 선택한 Host 만을 대상으로 한 정보가 표시됩니다.</p>
-<p><br></p>
-<h3 id="1-usage-trend-last-1-month">1) Usage &amp; Trend Last 1 Month</h3>
-<p><img alt="image-20210527093518513" src="../user_guide_image/image-20210527093518513.png" /></p>
-<ul>
-<li>
-<p>현재 시각을 기준으로 모니터링 대상 CLIENT들의 자원(CPU, MEMORY, DISK, NETWORK, DB TIME, NETWORK SWITCH)사용량이 과거 한달과 비교하여 어떤 패턴으로 사용 중인지 확인할 수 있습니다.</p>
-</li>
-<li>
-<p>00시~현재시간 기준으로 CPU 사용량의 평균이, 오늘부터 과거 한달까지의 사용량보다 적으면 파란색, 같거나 높으면 노란색, 1.5배를 초과하는 경우 빨간색으로 변경됩니다.</p>
-</li>
-</ul>
-<p>Example 1) <br />
-<img alt="image-20210608170539852" src="../user_guide_image/image-20210608170539852.png" /></p>
-<ol>
-<li>현재 시각 기준 IT 인프라 CPU 자원을 평소 대비 적게 사용</li>
-<li>과거 한달과 오늘의 평균 사용량을 상세히 비교 가능</li>
-</ol>
-<p></p>
-
-<p>Example 2) <br />
-<img alt="image-20210608165817137" src="../user_guide_image/image-20210608165817137.png" /></p>
-<ol>
-<li>현재 시각 기준 IT 인프라 CPU 자원을 평소 대비 많이 사용 </li>
-<li>과거 한달과 오늘의 평균 사용량을 상세히 비교 가능</li>
-</ol>
-<p><br></p>
-<h3 id="2-change-item-of-last-1-month-view">2) Change Item of Last 1 Month View</h3>
-<p>CPU, Memory, Disk, Network, DB Time, Network Switch로 대표 메뉴를 변경하며 사용 가능합니다<br />
-<img alt="image-20210526154318498" src="../user_guide_image/image-20210526154318498.png" /></p>
-<p><br></p>
-<h3 id="3-event-today">3) EVENT Today</h3>
-<p>하루에 발생되는 EVENT들에 대해 확인할 수 있습니다.<br />
-<img alt="image-20210526154727846" src="../user_guide_image/image-20210526154727846.png" /></p>
-<ul>
-<li>EVENT의 시작 시간, 종료 시간을 확인할 수 있으며 이벤트를 CLICK 하면 상세한 EVENT 내용을 보여주는 화면으로 이동하게 됩니다.</li>
-</ul>
-<p><br></p>
-<h3 id="4-top-5-servers-last-5-minute">4) Top 5 Servers Last 5 Minute</h3>
-<p><strong>Trend last 1 month</strong>에서 선택한 자원 (CPU, memory, disk, network, DB time, network switch)에 따라 최근 5분 동안 해당 자원에 부하가 많이 발생한 top 5개의 서버 정보를 보여줍니다.<br />
-<img alt="image-20210607144845593" src="../user_guide_image/image-20210607144845593.png" /></p>
-<ul>
-<li>가장 높은 자원 사용량을 보이는 서버를 Click하면 해당 CLIENT에 대해 보다 상세한 자원 사용 현황을 보여주는 Monitor화면으로 이동하게 됩니다.</li>
-</ul>
+<h3 id="4-clock-pm-calendar">4) Clock &amp; PM Calendar</h3>
+<p>매니저의 서버 시간과 라이센스 정보, 사용 용량을 함께 보여주는 시계 위젯을 좌측에서 확인 가능합니다.
+우측에는 PM 수집한 날짜와 서버를 확인할 수 있는 달력 위젯을 확인 가능합니다.
+<img alt="dashboard_clock_calendar" src="../user_guide_image/dashboard_clock_calendar.png" /></p>
 <p><br></p>
 <h3 id="5-overall-performance-view">5) Overall Performance View</h3>
-<p><img alt="image-20210607151452653" src="../user_guide_image/image-20210607151452653.png" /></p>
+<p><img alt="dashboard_opv" src="../user_guide_image/dashboard_opv.png" /></p>
 <ol>
 <li>
 <p>모니터링 하고자 하는 CLIENT를 선택할 수 있습니다.</p>
@@ -420,124 +394,131 @@ DASHBOARD 의 위젯은 한 row 가 다른 row 와 위치 변경이 가능합니
 <p>모니터링 하고자 하는 지표를 선택할 수 있습니다.</p>
 </li>
 <li>
-<p>주기적으로 변하는 CLIENT의 performance 정보를 확인할 수 있으며, 체크된 상태의 CLIENT 정보로 이루어진 차트를 Dashboard 상단에서 확인할 수 있습니다.</p>
+<p>주기적으로 변하는 CLIENT의 performance 정보를 확인할 수 있습니다.</p>
 </li>
 <li>
-<p>더 이상 모니터링을 원하지 않는 CLIENT를 삭제할 수 있습니다.</p>
+<p>모니터링을 원하지 않는 CLIENT를 삭제할 수 있습니다.
+   <br></p>
 </li>
 </ol>
+<h3 id="6-event-today">6) Event Today</h3>
+<p>OPV에 선택된 서버들을 대상으로, 하루에 발생되는 EVENT들에 대해 확인할 수 있습니다. OPV에 아무것도 선택되지 않은 경우에는 전체 서버 Event를 확인할 수 있습니다.
+<img alt="dashboard_event" src="../user_guide_image/dashboard_event.png" /></p>
+<ul>
+<li>EVENT의 시작 시간, 종료 시간을 확인할 수 있으며 이벤트를 CLICK 하면 상세한 EVENT 내용을 보여주는 화면으로 이동하게 됩니다.</li>
+</ul>
 <p><br></p>
-<h3 id="6-target-process-monitoring">6) Target Process Monitoring</h3>
-<p>연결된 Client 중에서, 설정한 Process 에 대한 정보를 실시간으로 Monitoring 할 수 있습니다.</p>
-<p><img alt="image-20210607152629769" src="../user_guide_image/image-20210607152629769.png" /></p>
+<h3 id="7-target-process-monitoring">7) Target Process Monitoring</h3>
+<p>OPV에 선택된 서버들을 대상으로, 설정한 Process 에 대한 정보를 실시간으로 Monitoring 할 수 있습니다. OPV에 아무것도 선택되지 않은 경우에는 전체 서버에 대한 정보를 볼 수 있습니다.</p>
+<p><img alt="dashboard_tpm" src="../user_guide_image/dashboard_tpm.png" /></p>
 <ol>
-<li>설정값에 해당하는 Process 가 수집되지 않는 경우 CHKREQ (Check Required)</li>
-<li>설정값에 해당하는 Process 의 State 가 정상이 아닌 경우</li>
-<li>설정값에 해당하는 Process 의 개수가 1개보다 많은 경우</li>
+<li>설정값에 해당하는 Process 가 수집되지 않는 경우 CHKREQ (Check Required) Critical 표시됩니다.</li>
+<li>설정값에 해당하는 Process 의 State 가 정상이 아닌 경우 Warning 표시됩니다.</li>
+<li>설정값에 해당하는 Process 의 개수가 1개보다 많은 경우 Count 값에 Bold &amp; Underline 표시됩니다.</li>
 </ol>
 <p><br></p>
 <p><br></p>
-<h2 id="4-monitor">4. MONITOR</h2>
+<h2 id="3-monitor">3. MONITOR</h2>
 <p>모니터는 CLIENT들이 가지고 있는 다양한 성능 정보를 자유롭게 배치하여 모니터링 할 수 있도록 해줍니다. <br />
 사용자 별로 원하는 성능 정보들을 배치하여 theme로 저장하여 언제든 불러올 수 있도록 도와줍니다.</p>
-<p><img alt="image-20210527110218678" src="../user_guide_image/image-20210527110218678.png" /></p>
+<p><img alt="image-20211201151222063" src="../user_guide_image/image-20211201151222063.png" /></p>
 <p><br></p>
 <h3 id="1-menu">1) Menu</h3>
 <p>Monitor는 위젯 추가, Interval 조정, Auto Refresh, Theme, Fixed Host 기능으로 구성되어 있습니다.</p>
-<p><img alt="image-20210607152936919" src="../user_guide_image/image-20210607152936919.png" /><br />
+<p><img alt="image-20211201154328358" src="../user_guide_image/image-20211201154328358.png" /><br />
 <strong>STEP 1. 위젯 추가 :</strong>  원하는 위젯을 추가할 수 있습니다. <br />
 <strong>STEP 2. Auto Refresh :</strong>  주기적인 Auto Refresh가 발생하고, Checkbox해제 시 해당 화면은 더 이상 Auto Refresh가 안되는 상태로 멈춰 있게 됩니다.<br />
 <strong>STEP 3. Fixed a System :</strong>  기존에 보고 있던 Monitoring화면의 STATISTICS를 “Fixed a System”에서 선택한 CLIENT로 변경합니다.<br />
 <strong>STEP 4. History Theme :</strong>  저장한 Theme List 를 조회 및 선택하여 기존 Theme를 불러올 수 있습니다.<br />
 <strong>STEP 5. Theme :</strong>  Monitor화면에서 자유롭게 배치한 widget들이 상태를 Theme로 저장하여, 나중에 조회가 가능합니다.</p>
 <ul>
-<li><img alt="image-20210527113351782" src="../user_guide_image/image-20210527113351782.png" /> -    테마를 추가 합니다.</li>
-<li><img alt="image-20210527113502482" src="../user_guide_image/image-20210527113502482.png" />  -    현재 화면에 있는 위젯을 저장합니다.</li>
-<li><img alt="image-20210527113514458" src="../user_guide_image/image-20210527113514458.png" /> -    테마명을 수정합니다. (자신이 생성한 경우에만 가능)</li>
-<li><img alt="image-20210527113525641" src="../user_guide_image/image-20210527113525641.png" />  -    테마를 삭제 합니다. (자신이 생성한 경우에만 가능)</li>
+<li><img alt="image-20211201154409122" src="../user_guide_image/image-20211201154409122.png" /> - 테마를 추가 합니다.</li>
+<li><img alt="image-20211201155529937" src="../user_guide_image/image-20211201155529937.png" />  -  현재 화면에 있는 위젯을 저장합니다.</li>
+<li><img alt="image-20211201155545633" src="../user_guide_image/image-20211201155545633.png" /> -  테마명을 수정합니다. (자신이 생성한 경우에만 가능)</li>
+<li><img alt="image-20211201155633411" src="../user_guide_image/image-20211201155633411.png" /> - 테마를 삭제 합니다. (자신이 생성한 경우에만 가능)</li>
 </ul>
 <p><br></p>
 <h3 id="2-screen-widgets">2) Screen widgets</h3>
 <p>Screen Widget을 통해 원하는 chart형식으로 STATISTICS를 조회할 수 있습니다.</p>
-<p><img alt="image-20210527115728896" src="../user_guide_image/image-20210527115728896.png" /><br />
+<p><img alt="image-20211201160057741" src="../user_guide_image/image-20211201160057741.png" /><br />
 <strong>STEP 1 :</strong>  WIDGET 종류에 따라 구분할 수 있는 TAB을 제공하고, WIDGET종류는 CHART, GRID, GROUP, NETWORK, XLOG가 있습니다.<br />
 <strong>STEP 2 :</strong>  DEFAULT로 All을 통해 모든 CLIENT를 선택할 수 있고, OS, DB, Network별 CLIENT 선택도 가능합니다.<br />
 <strong>STEP 3 :</strong>  SYSTEM을 선택합니다. Host, DB, Application를 선택할 수 있습니다. 그룹을 선택하면 해당 그룹에 포함된 System만 확인 및 선택할 수 있습니다.</p>
-<p><img alt="image-20210527120005202" src="../user_guide_image/image-20210527120005202.png" /><br />
+<p><img alt="image-20211201160302636" src="../user_guide_image/image-20211201160302636.png" /><br />
 <strong>STEP 4 :</strong>  CLIENT에 부합하는 STATISICS를 선택합니다. </p>
 <ul>
 <li>
-<p><img alt="image-20210527130340678" src="../user_guide_image/image-20210527130340678.png" /> -  평균 STATISTICS들을 선택할 수 있습니다.</p>
+<p><img alt="image-20211201160355237" src="../user_guide_image/image-20211201160355237.png" /> -  평균 STATISTICS들을 선택할 수 있습니다.</p>
 </li>
 <li>
-<p><img alt="image-20210527130400221" src="../user_guide_image/image-20210527130400221.png" /> - 개별 STATISTICS들을 선택할 수 있습니다.</p>
+<p><img alt="image-20211201160408141" src="../user_guide_image/image-20211201160408141.png" /> - 개별 STATISTICS들을 선택할 수 있습니다.</p>
 </li>
 <li>
-<p><img alt="image-20210527130413635" src="../user_guide_image/image-20210527130413635.png" /> - Process STATISTICS들을 선택할 수 있습니다.</p>
+<p><img alt="image-20211201160423935" src="../user_guide_image/image-20211201160423935.png" /> - Process STATISTICS들을 선택할 수 있습니다.</p>
 </li>
 <li>
-<p><img alt="image-20210527130427769" src="../user_guide_image/image-20210527130427769.png" />  - Application STATISTICS들을 선택할 수 있습니다.</p>
+<p><img alt="image-20211201160438867" src="../user_guide_image/image-20211201160438867.png" /> - Application STATISTICS들을 선택할 수 있습니다.</p>
 </li>
 </ul>
 <p></p>
 
 <p>[Example of Line Chart Widget]<br />
-<img alt="image-20210527131704769" src="../user_guide_image/image-20210527131704769.png" /></p>
+<img alt="image-20211201160609611" src="../user_guide_image/image-20211201160609611.png" /></p>
 <p></p>
 
 <p>[Example of Grid Widget]<br />
-<img alt="image-20210527131737085" src="../user_guide_image/image-20210527131737085.png" /></p>
+<img alt="image-20211201160633105" src="../user_guide_image/image-20211201160633105.png" /></p>
 <p></p>
 
 <p>[Example of Stack chart]<br />
-<img alt="image-20210527133814413" src="../user_guide_image/image-20210527133814413.png" /></p>
+<img alt="image-20211201162915942" src="../user_guide_image/image-20211201162915942.png" /></p>
 <p><br></p>
 <h3 id="3-widget-menu">3) Widget Menu</h3>
 <p>MENU를 통해 최대값, 평균값, 현재값 확인 및 알림설정, Report export 등을 할 수 있습니다.</p>
-<p><img alt="image-20210607163519381" src="../user_guide_image/image-20210607163519381.png" /><br />
+<p><img alt="image-20211201162119339" src="../user_guide_image/image-20211201162119339.png" /><br />
 <strong>STEP 1 :</strong>  현재값, 평균값, 최대값을 라벨에서 확인할 수 있습니다.</p>
 <ul>
 <li>
-<p><img alt="image-20210531131307804" src="../user_guide_image/image-20210531131307804.png" /> -  현재 값과 현재 Agent 시간을 확인할 수 있습니다.</p>
+<p><img alt="image-20211201161620079" src="../user_guide_image/image-20211201161620079.png" /> -  현재 값과 현재 Agent 시간을 확인할 수 있습니다.</p>
 </li>
 <li>
-<p><img alt="image-20210531131311231" src="../user_guide_image/image-20210531131311231.png" /> -  Widget 시작 시간부터 평균값을 확인할 수 있습니다.</p>
+<p><img alt="image-20211201161725797" src="../user_guide_image/image-20211201161725797.png" /> -  Widget 시작 시간부터 평균값을 확인할 수 있습니다.</p>
 </li>
 <li>
-<p><img alt="image-20210531131314590" src="../user_guide_image/image-20210531131314590.png" /> -  최대값과 Agent 시간을 확인할 수 있습니다.</p>
+<p><img alt="image-20211201161851839" src="../user_guide_image/image-20211201161851839.png" /> -  최대값과 Agent 시간을 확인할 수 있습니다.</p>
 </li>
 </ul>
-<p><strong>STEP 2 :</strong>  차트 관련 설정, 데이터 EXPORT를 할 수 있습니다.</p>
+<p><strong>STEP 2 :</strong>  차트 관련 설정을 할 수 있습니다.</p>
 <ul>
 <li><img alt="image-20210531131526206" src="../user_guide_image/image-20210531131526206.png" /> -  해당 위젯의 EVENT 알림을 on/off 합니다.</li>
-<li><img alt="image-20210531131541097" src="../user_guide_image/image-20210531131541097.png" /> -  해당 위젯 데이터를 엑셀 차트로 변환하여 익스포트 합니다.</li>
-<li><img alt="image-20210531132259665" src="../user_guide_image/image-20210531132259665.png" /> -  해당 위젯을 스크린 캡처 합니다.</li>
 <li><img alt="image-20210531132314615" src="../user_guide_image/image-20210531132314615.png" /> -  해당 위젯의 Type, STATISTICS, System을 수정합니다.</li>
 <li><img alt="image-20210531132943767" src="../user_guide_image/image-20210531132943767.png" /> -    해당 위젯을 화면에서 삭제합니다.</li>
 </ul>
+<p><strong>STEP 3 :</strong>  차트 데이터의 Excel EXPORT, PNG Image Download 및 Print를 할 수 있습니다.<br />
+<img alt="image-20211201162243716" src="../user_guide_image/image-20211201162243716.png" /> </p>
 <p><br></p>
 <p>[Example of EXCEL file exported]<br />
-<img alt="image-20210531133350745" src="../user_guide_image/image-20210531133350745.png" /></p>
+<img alt="image-20211201162533525" src="../user_guide_image/image-20211201162533525.png" /></p>
 <p></p>
 
 <p>[Example of Image file exported]<br />
-<img alt="image-20210531133542790" src="../user_guide_image/image-20210531133542790.png" /></p>
+<img alt="image-20211201162433926" src="../user_guide_image/image-20211201162433926.png" /></p>
 <p><br></p>
 <h3 id="4-xlog-chart">4) XLog Chart</h3>
 <p>application의 트랜잭션이 하나의 점으로 표시 됩니다. </p>
-<p><img alt="image-20210607155651391" src="../user_guide_image/image-20210607155651391.png" /><br />
+<p><img alt="image-20211201162820762" src="../user_guide_image/image-20211201162820762.png" /><br />
 <strong>STEP 1 : </strong>위젯 선택 시 XLOG 탭을 클릭합니다. <br />
 <strong>STEP 2 : </strong> SYSTEM과 STATISTICS을 선택합니다. </p>
-<p><img alt="image-20210531135330377" src="../user_guide_image/image-20210531135330377.png" /><br />
+<p><img alt="image-20211201163928009" src="../user_guide_image/image-20211201163928009.png" /><br />
 <strong>STEP 3 : </strong> 원하는 구간을 드래그 합니다</p>
 <p></p>
 
-<p><img alt="image-20210531135512632" src="../user_guide_image/image-20210531135512632.png" /><br />
+<p><img alt="image-20211201163957856" src="../user_guide_image/image-20211201163957856.png" /><br />
 <strong>STEP 4 : </strong> 구간 속 XLOG 상세 리스트가 팝업으로 표시 됩니다. 한 개를 선택하면 상세 PROFILE을 확인할 수 있습니다. </p>
-<p><img alt="image-20210531135549018" src="../user_guide_image/image-20210531135549018.png" /></p>
+<p><img alt="image-20211201164016582" src="../user_guide_image/image-20211201164016582.png" /></p>
 <p><br></p>
 <p><br></p>
-<h2 id="5-tool">5. Tool</h2>
+<h2 id="4-tool">4. Tool</h2>
 <h3 id="1-summary">1) Summary</h3>
 <p>OS와 DB에 대하여, 일정 기간 동안의 CPU 사용량 평균 그래프를 조회하여 비교해 볼 수 있습니다.</p>
 <p><img alt="image-20210531135643604" src="../user_guide_image/image-20210531135643604.png" /></p>
@@ -721,7 +702,7 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <strong>STEP 5 :</strong>  LPAR 정보를 확인합니다.</p>
 <p><br></p>
 <p><br></p>
-<h2 id="6-report">6. Report</h2>
+<h2 id="5-report">5. Report</h2>
 <h3 id="1-quick-resource-trend">1) Quick Resource Trend</h3>
 <p>Resource Trend툴에서 제공하는OS자원 활용 패턴을 통해 Leak등의 문제를 감지할 수 있으며, 아키텍처 개선의 아이디어를 얻을 수 있습니다</p>
 <p><img alt="image-20210601114848162" src="../user_guide_image/image-20210601114848162.png" /></p>
@@ -931,7 +912,7 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 <img alt="image-20210602100655926" src="../user_guide_image/image-20210602100655926.png" /></p>
 <p><br></p>
 <p><br></p>
-<h2 id="7-nagios">7. NAGIOS</h2>
+<h2 id="6-nagios">6. NAGIOS</h2>
 <p>NAGIOS에서 수집한 Host, Service의 정보를 쉽게 확인 할 수 있습니다.<br />
 ※ 해당 메뉴는 NAGIOS와 연동이 되어야 이용 할 수 있는 메뉴입니다.</p>
 <p></p>
@@ -1022,7 +1003,7 @@ Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다
 </ul>
 <p><br></p>
 <p><br></p>
-<h2 id="8-admin">8. Admin</h2>
+<h2 id="7-admin">7. Admin</h2>
 <h3 id="1-user">1) User</h3>
 <p>SJMON에 접속 가능한 유저를 관리할 수 있는 메뉴를 제공합니다. <br />
 NAGIOS연동 시 NAGIOS USER와 연동이 됩니다.<br />
@@ -1530,14 +1511,14 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <strong>STEP 5 :</strong>  Activate affected를 클릭 합니다.</p>
 <p><br></p>
 <h3 id="5-threshold-monitoring">5) Threshold Monitoring</h3>
-<p>임계치가 설정된 host는 임계치가 초과하면Monitoir화면과 Top menu에서 해당 내용을 직관적으로 확인할 수 있습니다.</p>
+<p>임계치가 설정된 host는 임계치가 초과하면 Dashboard와 Monitor에서 해당 내용을 직관적으로 확인할 수 있습니다.</p>
 <p><img alt="image-20210603161158767" src="../user_guide_image/image-20210603161158767.png" /></p>
 <ul>
 <li>
 <p>Top Menu의 Threshold 에 임계치를 초과한 숫자가 표시됩니다.</p>
 </li>
 <li>
-<p>노란 바탕색은 Warning, 빨간 바탕색은 Critical Event 입니다.</p>
+<p>노란색은 Warning, 빨간색은 Critical Event 입니다.</p>
 </li>
 </ul>
 <p><img alt="image-20210608150347991" src="../user_guide_image/image-20210608150347991.png" /></p>
@@ -1554,17 +1535,16 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <p>Nagios와 연동 및 Notification이 설정 되어있는 경우 지정된 사용자에게 설정된 방법으로 전달합니다.</p>
 <p><br></p>
 <h3 id="6-admin-setting">6) Admin Setting</h3>
-<p>Process 와 Network Switch Device를 모니터링 하기 위해서 Admin -&gt; Admin Setting에서 설정 값과 Device 정보를 추가할 수 있습니다.</p>
+<p>Process, Network Switch Device, Error Log, Parameter, 성능데이터를 효과적으로 모니터링 하기 위해서 수집 조건 및 필터를 설정할 수 있습니다.</p>
+<h4 id="6-1">6-1) 프로세스 모니터링 설정</h4>
+<p>이 메뉴에서 설정한 조건에 맞는 프로세스는 Target Process Monitoring 위젯에서 모니터링 가능합니다.</p>
 <p><img alt="image-20210603160200622" src="../user_guide_image/image-20210603160200622.png" /></p>
-<p><img alt="image-20210603160841806" src="../user_guide_image/image-20210603160841806.png" /></p>
-<p></p>
-
-<p>Process setting : Add, Edit, Del 버튼을 통해 Process Setting 을 추가, 수정, 제거할 수 있습니다.<br />
+<p>Add, Edit, Del 버튼을 통해 Process Setting 을 추가, 수정, 제거할 수 있습니다.<br />
 <img alt="image-20210603160534501" src="../user_guide_image/image-20210603160534501.png" /></p>
-<p></p>
-
-<p>NETWORK : Add, Edit, Del 버튼을 통해 모니터링 하려는 Device 를 추가, 수정, 삭제할 수 있습니다.<br />
-<img alt="image-20210603160809757" src="../user_guide_image/image-20210603160809757.png" /></p>
+<h4 id="6-2">6-2) 네트워크 설정</h4>
+<p>Network Switch Device 등록 시 모니터링 가능합니다.</p>
+<p>Add, Edit, Del 버튼을 통해 모니터링 하려는 Device 를 추가, 수정, 삭제할 수 있습니다.  </p>
+<p><img alt="image-20210603160841806" src="../user_guide_image/image-20210603160841806.png" /></p>
 <ul>
 <li>
 <p>IP : Network Switch Device의 Network IP를 등록합니다.</p>
@@ -1582,6 +1562,22 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <p>Select a Use : Y / N중에 선택이 가능하고, N을 선택 시 등록은 완료되지만 모니터링을 하지는 않습니다. 설정 후 Manager 를 재시작해야 내용이 반영됩니다. </p>
 </li>
 </ul>
+<p><img alt="image-20210603160809757" src="../user_guide_image/image-20210603160809757.png" /></p>
+<h4 id="6-3">6-3) 에러 로그 필터</h4>
+<p>특정 패턴의 에러로그만 수집할 수 있도록 기본 설정이 존재합니다. 모든 에러로그 수집을 원하는 경우 비활성화 처리할 수 있습니다.</p>
+<p><img alt="admin_setting_errlog" src="../user_guide_image/admin_setting_errlog.png" /></p>
+<p>Add, Edit, Del 버튼을 통해 filter를 추가, 수정, 제거할 수 있습니다.
+<img alt="admin_setting_errlog_modal" src="../user_guide_image/admin_setting_errlog_modal.png" /></p>
+<h4 id="6-4">6-4) 파라미터 필터</h4>
+<p>특정 패턴의 파라미터 수집을 원하는 경우 설정하면 조건에 맞는 데이터만 저장됩니다.</p>
+<p><img alt="admin_setting_parameter" src="../user_guide_image/admin_setting_parameter.png" /></p>
+<p>Add, Edit, Del 버튼을 통해 filter를 추가, 수정, 제거할 수 있습니다.
+<img alt="admin_setting_parameter_modal" src="../user_guide_image/admin_setting_parameter_modal.png" /></p>
+<h4 id="6-5">6-5) 성능 데이터 필터</h4>
+<p>특정 패턴의 성능 데이터만 수집을 원하는 경우 설정하면 조건에 맞는 데이터만 저장됩니다.</p>
+<p><img alt="admin_setting_perfdata" src="../user_guide_image/admin_setting_perfdata.png" /></p>
+<p>Add, Edit, Del 버튼을 통해 filter를 추가, 수정, 제거할 수 있습니다.
+<img alt="admin_setting_perfdata_modal" src="../user_guide_image/admin_setting_perfdata_modal.png" /></p>
 <p><br></p>
 <h3 id="7-data-size">7) Data Size</h3>
 <p>SJMON의 각 테이블 정보 및 Size를 확인하고, 원하는 날짜의 데이터를 수동으로 삭제할 수 있습니다.</p>
@@ -1592,7 +1588,7 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <img alt="image-20210602185839026" src="../user_guide_image/image-20210602185839026.png" /></p>
 <p><BR></p>
 <p><br></p>
-<h2 id="9-my-page">9. My page</h2>
+<h2 id="8-my-page">8. My page</h2>
 <h3 id="1-info-setting">1) Info &amp; Setting</h3>
 <p>Viewer, Manager, Postgresql 의 버전 정보와 라이선스 정보를 확인할 수 있습니다.</p>
 <p></p>
