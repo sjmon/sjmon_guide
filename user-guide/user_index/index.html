@@ -521,14 +521,14 @@
 <h2 id="4-tool">4. Tool</h2>
 <h3 id="1-summary">1) Summary</h3>
 <p>OS와 DB에 대하여, 일정 기간 동안의 CPU 사용량 평균 그래프를 조회하여 비교해 볼 수 있습니다.</p>
-<p><img alt="image-20210531135643604" src="../user_guide_image/image-20210531135643604.png" /></p>
+<p><img alt="image-20211202085634509" src="../user_guide_image/Summary.png" /></p>
 <p>조회 후 기본 그래프는 CPU 평균 그래프를 보여줍니다. CPU 최대 사용 값과 CPU 평균 사용률에 대해서 비교가 가능합니다.</p>
 <p><br></p>
 <ul>
 <li><strong>상세 사용 방법</strong></li>
 </ul>
 <p>상단의 메뉴를 통해 아래와 같이 CLIENT와 조회 기간을 선택할 수 있습니다.</p>
-<p><img alt="image-20210607155906142" src="../user_guide_image/image-20210607155906142.png" /><br />
+<p><img alt="image-20211202085911366" src="../user_guide_image/summary_menu.png" /><br />
 <strong>STEP 1 : </strong> System 선택(OS, DB, aPPLICATION)<br />
 <strong>STEP 2 : </strong> 편리한 방식의 combo방식 기간 선택(1일, 1주일, 1개월, 3개월, 6개월, 1년)<br />
 <strong>STEP 3 : </strong> 사용자가 직접 기간 선택<br />
@@ -542,34 +542,33 @@
 
 <ul>
 <li>TOP 서버들의 CPU 평균<br />
-<img alt="image-20210531145211884" src="../user_guide_image/image-20210531145211884.png" /></li>
+<img alt="image-20211202093341971" src="../user_guide_image/summary_cpu.png" /></li>
 </ul>
 <p></p>
 
 <ul>
 <li>TOP 서버들의 CPU 가중치 평균값 확인<br />
-<img alt="image-20210531150020927" src="../user_guide_image/image-20210531150020927.png" /></li>
+<img alt="image-20211202093443627" src="../user_guide_image/summary_cpu_wavg.png" /></li>
 </ul>
 <p></p>
 
-<p>※ DB 의 경우 , DB Time을 비교할 수 있습니다.<br />
-※ Application 의 경우 , TPS를 비교할 수 있습니다.<br />
-<img alt="image-20210531150332085" src="../user_guide_image/image-20210531150332085.png" /></p>
+<p>※ Application 의 경우 , TPS를 비교할 수 있습니다.<br />
+<img alt="image-20211202093739508" src="../user_guide_image/summary_tps.png" /></p>
 <p></p>
 
 <p>특정 CLIENT의 상세내역을 조회하기 위해서는 해당 서버의 BAR를 클릭하면, 해당 서버의 CPU, Memory, Paging, Disk, Network에 대한 사용률을 확인할 수 있습니다. <br />
-TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수 있고 DB는 TOP SQL을 확인할 수 있습니다.<br />
+TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수 있습니다.<br />
 Application은 TOP Service, TOP SQL, Top Exception을 확인할 수 있습니다.</p>
-<p><img alt="image-20210531150744427" src="../user_guide_image/image-20210531150744427.png" /></p>
-<p><img alt="image-20210531150818395" src="../user_guide_image/image-20210531150818395.png" /></p>
-<p><img alt="image-20210531150832238" src="../user_guide_image/image-20210531150832238.png" /></p>
+<p><img alt="image-20211202093835712" src="../user_guide_image/summary_detial.png" /></p>
+<p><img alt="image-20211202093958802" src="../user_guide_image/summary_detail2.png" /></p>
+<p><img alt="image-20211202094028923" src="../user_guide_image/summary_top_processed.png" /></p>
 <p></p>
 
 <p>Top Process, Disk, Network TAB을 통해서 가장 많이 사용한 자원을 확인할 수 있습니다.<br />
-<img alt="image-20210531154344524" src="../user_guide_image/image-20210531154344524.png" /></p>
-<p><img alt="image-20210531154406192" src="../user_guide_image/image-20210531154406192.png" /></p>
-<p><img alt="image-20210531154431247" src="../user_guide_image/image-20210531154431247.png" /></p>
-<p><img alt="image-20210531154443586" src="../user_guide_image/image-20210531154443586.png" /></p>
+<img alt="image-20211202094046266" src="../user_guide_image/summary_top_process.png" /></p>
+<p><img alt="image-20211202094105299" src="../user_guide_image/summary_top_process2.png" /></p>
+<p><img alt="image-20211202094116758" src="../user_guide_image/summary_disk.png" /></p>
+<p><img alt="image-20211202094129431" src="../user_guide_image/summary_network.png" /></p>
 <p><br></p>
 <h3 id="2-analyzer">2) Analyzer</h3>
 <p>Analyzer기능을 통해 기간별로 CLIENT의 과거 데이터 분석이 가능합니다. 원하는 CLIENT와 STATISTICS를 선택하여 확인이 가능합니다.</p>
