@@ -143,6 +143,8 @@
             <div class="section">
               
                 <h1 id="linux-sjmon-manager">Linux 서버에 SJMON Manager 설치</h1>
+<p>Java 설치 여부를 확인합니다.  Manager는 <strong>Java 1.8</strong> 이상 사용되어야 합니다.<br />
+<img alt="image-20220209140237985" src="../images/jdk_version.png" /></p>
 <p><a href="https://ibm.box.com/v/sjmon-setup-linux">SJMON_for_Linux.zip</a> 파일을 다운로드 받아, 원하는 디렉터리에 압축 해제 합니다. 권장 위치는 /pgdata 입니다.</p>
 <pre><code class="language-powershell">[root@sjmon-m-2 ~]# cd /pgdata
 [root@sjmon-m-2 pgdata]# ls -l
@@ -151,13 +153,13 @@ total 1507088
 [root@sjmon-m-2 pgdata]# unzip SJMON_for_Linux.zip
 Archive:  SJMON_for_Linux.zip
 </code></pre>
-<p>파일 압축 해제 후 폴더 구조는 아래와 같습니다.</p>
-<p><img alt="image-20210407160006242" src="../images/image-20210407160006242.png" /></p>
+<p>파일 압축 해제 후 폴더 구조는 아래와 같습니다.<br />
+<img alt="image-20210407160006242" src="../images/image-20210407160006242.png" /></p>
 <h3 id="1-postgresql">1. Postgresql 설치</h3>
-<p><strong>postgre_installer</strong> 디렉토리로 이동하여, <strong>postgresql_install.sh</strong>을 실행합니다. shell 파일에 실행 권한이 없다면 <code>chmod +x postgresql_install.sh</code> 을 수행하여 실행 권한을 부여합니다.</p>
-<p><img alt="image-20210407170002280" src="../images/image-20210407170002280.png" /></p>
-<p><strong>000</strong> 을입력하여 일괄 진행합니다. 단계별로 개별 진행하고자 하는 경우에는 <strong>AAA</strong> 부터 <strong>KKK</strong> 까지 순차적으로 입력합니다.</p>
-<p><img alt="image-20210408093308026" src="../images/image-20210408093308026.png" /></p>
+<p><strong>postgre_installer</strong> 디렉토리로 이동하여, <strong>postgresql_install.sh</strong>을 실행합니다. shell 파일에 실행 권한이 없다면 <code>chmod +x postgresql_install.sh</code> 을 수행하여 실행 권한을 부여합니다.<br />
+<img alt="image-20210407170002280" src="../images/image-20210407170002280.png" /></p>
+<p><strong>000</strong> 을입력하여 일괄 진행합니다. 단계별로 개별 진행하고자 하는 경우에는 <strong>AAA</strong> 부터 <strong>KKK</strong> 까지 순차적으로 입력합니다.<br />
+<img alt="image-20210408093308026" src="../images/image-20210408093308026.png" /></p>
 <p>각 단계 설명은 아래와 같습니다.</p>
 <table>
 <thead>
@@ -217,26 +219,28 @@ Archive:  SJMON_for_Linux.zip
 </tr>
 </tbody>
 </table>
-<p>설치가 자동으로 진행되며, 진행이 완료되면 “Postgre is successfully installed”라는 message와 함께 shell이 종료됩니다.</p>
-<p><img alt="image-20210412094918541" src="../images/image-20210412094918541.png" /></p>
+<p></p>
+
+<p>설치가 자동으로 진행되며, 진행이 완료되면 “Postgre is successfully installed”라는 message와 함께 shell이 종료됩니다.<br />
+<img alt="image-20210412094918541" src="../images/image-20210412094918541.png" /></p>
 <p><strong>PostgreSQL Database가 정상적으로 구동되었는지 확인</strong></p>
 <ol>
-<li>실행 중인 프로세스로 확인하는 방법:  <code>ps -ef | grep postgres</code></li>
-</ol>
-<p><img alt="image-20210407180105957" src="../images/image-20210407180105957.png" /></p>
-<ol>
+<li>
+<p>실행 중인 프로세스로 확인하는 방법:  <code>ps -ef | grep postgres</code><br />
+<img alt="image-20210407180105957" src="../images/image-20210407180105957.png" /></p>
+</li>
 <li>
 <p>서비스 상태 조회 명령어로 확인하는 방법</p>
 </li>
 <li>
-<p>centos 6의 경우 <code>service postgresql-9.4 status</code></p>
+<p>centos 6의 경우 <code>service postgresql-9.4 status</code><br />
+<img alt="image-20210408092215431" src="../images/image-20210408092215431.png" /></p>
+</li>
+<li>
+<p>centos 7의 경우 <code>systemctl status postgresql-9.4</code> 혹은 <code>su - postgres -c "/usr/pgsql-9.4/bin/pg_ctl status"</code><br />
+<img alt="image-20210407180353730" src="../images/image-20210407180353730.png" /></p>
 </li>
 </ol>
-<p><img alt="image-20210408092215431" src="../images/image-20210408092215431.png" /></p>
-<ul>
-<li>centos 7의 경우 <code>systemctl status postgresql-9.4</code> 혹은 <code>su - postgres -c "/usr/pgsql-9.4/bin/pg_ctl status"</code></li>
-</ul>
-<p><img alt="image-20210407180353730" src="../images/image-20210407180353730.png" /></p>
 <h3 id="2-repository">2. Repository 구성</h3>
 <p>기본 설치 위치 (기본값 /pgdata)  에 있는 <strong>sjmon_file.tar</strong> 파일의 권한을 <code>sjmonv2user</code> 로 변경한 후, <code>sjmonv2user</code> 의 Home Directory로 옮깁니다.</p>
 <p><img alt="image-20210408140347243" src="../images/image-20210408140347243.png" /></p>
@@ -301,17 +305,21 @@ Archive:  SJMON_for_Linux.zip
 <p><img alt="image-20210408105929403" src="../images/image-20210408105929403.png" /></p>
 <p>Manager, Tomcat, Scouter 가 정상적으로 구동된 경우 아래와 같이 프로세스를 확인할 수 있습니다.</p>
 <ul>
-<li>Manager </li>
+<li>Manager <br />
+<img alt="image-20210408134544420" src="../images/image-20210408134544420.png" /></li>
 </ul>
-<p>​ <img alt="image-20210408134544420" src="../images/image-20210408134544420.png" /></p>
+<p></p>
+
 <ul>
-<li>Tomcat</li>
+<li>Tomcat<br />
+<img alt="image-20210408134605569" src="../images/image-20210408134605569.png" /></li>
 </ul>
-<p>​ <img alt="image-20210408134605569" src="../images/image-20210408134605569.png" /></p>
+<p></p>
+
 <ul>
-<li>Scouter</li>
+<li>Scouter<br />
+<img alt="image-20210408134715584" src="../images/image-20210408134715584.png" /></li>
 </ul>
-<p>​ <img alt="image-20210408134715584" src="../images/image-20210408134715584.png" /></p>
 <h3 id="4-viewer">4. Viewer 접속 확인</h3>
 <p>Chrome web browser에 http://localhost:9090을 입력하여 SJMON Viewer에 접속합니다. 기본 계정 ID는  <code>admin</code>, 비밀번호는 <code>IBMP@ssw0rd</code> 입니다.</p>
 <h2 id="nagios">Nagios 연동 설치</h2>
@@ -470,8 +478,8 @@ Archive:  SJMON_for_Linux.zip
 <p><strong>SJMON Manager</strong>와 NAGIOS 연동 프로그램이 연결되기 까지 약 1분 소요됩니다. <code>manager</code> 폴더 내의 로그에서 연결여부를 확인할 수 있습니다.</p>
 <p><img alt="image-20210414132043177" src="../images/image-20210414132043177.png" /></p>
 <p>[설정 파일 수동 확인]
-NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다음 형식으로 등록되었는지 확인합니다. 해당 파일의 기본 위치는 <code>/omd/sites/사이트명/sjmon</code> 입니다.</p>
-<p><img alt="image-20210414132242870" src="../images/image-20210414132242870.png" /></p>
+NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다음 형식으로 등록되었는지 확인합니다. 해당 파일의 기본 위치는 <code>/omd/sites/사이트명/sjmon</code> 입니다.<br />
+<img alt="image-20210414132242870" src="../images/image-20210414132242870.png" /></p>
 <p>각 항목에 대한 내용은 다음과 같습니다.</p>
 <table>
 <thead>
@@ -525,9 +533,9 @@ NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다
 </tbody>
 </table>
 <ol>
-<li><code>manager/config.properties</code> 파일이 다음 형식으로 등록되었는지 확인합니다. </li>
+<li><code>manager/config.properties</code> 파일이 다음 형식으로 등록되었는지 확인합니다. <br />
+<img alt="image-20210414162630300" src="../images/image-20210414162630300.png" /></li>
 </ol>
-<p><img alt="image-20210414162630300" src="../images/image-20210414162630300.png" /></p>
 <p>각 설정 항목에 대한 설명은 아래와 같습니다.</p>
 <table>
 <thead>
@@ -575,8 +583,8 @@ NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다
 <pre><code># unzip Scouter_for_Linux.zip
 </code></pre>
 <p><img alt="image-20210414130617809" src="../images/image-20210414130617809.png" /></p>
-<p><code>scouter/server/conf/scouter.conf</code> 파일을 열어, <code>ext_plugin_sjmon_target_ip</code> 에 Manager IP를, <code>ext_plugin_sjmon_target_port</code>에 Manager 연결 Port를 입력합니다.</p>
-<p><img alt="image-20210414130710295" src="../images/image-20210414130710295.png" /></p>
+<p><code>scouter/server/conf/scouter.conf</code> 파일을 열어, <code>ext_plugin_sjmon_target_ip</code> 에 Manager IP를, <code>ext_plugin_sjmon_target_port</code>에 Manager 연결 Port를 입력합니다.<br />
+<img alt="image-20210414130710295" src="../images/image-20210414130710295.png" /></p>
               
             </div>
           </div>
