@@ -145,7 +145,9 @@
                 <h1 id="linux-sjmon-manager">Linux 서버에 SJMON Manager 설치</h1>
 <p>Java 설치 여부를 확인합니다.  Manager는 <strong>Java 1.8</strong> 이상 사용되어야 합니다.<br />
 <img alt="image-20220209140237985" src="../images/jdk_version.png" /></p>
-<p><a href="https://ibm.box.com/v/sjmon-setup-linux">SJMON_for_Linux.zip</a> 파일을 다운로드 받아, 원하는 디렉터리에 압축 해제 합니다. 권장 위치는 /pgdata 입니다.</p>
+<p></p>
+
+<p><a href="https://ibm.box.com/v/sjmon-setup-linux">SJMON_for_Linux.zip</a> 파일을 다운로드 받아, 원하는 디렉터리에 압축 해제 합니다. 권장 위치는 /pgdata 입니다.   </p>
 <pre><code class="language-powershell">[root@sjmon-m-2 ~]# cd /pgdata
 [root@sjmon-m-2 pgdata]# ls -l
 total 1507088
@@ -155,6 +157,7 @@ Archive:  SJMON_for_Linux.zip
 </code></pre>
 <p>파일 압축 해제 후 폴더 구조는 아래와 같습니다.<br />
 <img alt="image-20210407160006242" src="../images/image-20210407160006242.png" /></p>
+<p><br></p>
 <h3 id="1-postgresql">1. Postgresql 설치</h3>
 <p><strong>postgre_installer</strong> 디렉토리로 이동하여, <strong>postgresql_install.sh</strong>을 실행합니다. shell 파일에 실행 권한이 없다면 <code>chmod +x postgresql_install.sh</code> 을 수행하여 실행 권한을 부여합니다.<br />
 <img alt="image-20210407170002280" src="../images/image-20210407170002280.png" /></p>
@@ -241,6 +244,7 @@ Archive:  SJMON_for_Linux.zip
 <img alt="image-20210407180353730" src="../images/image-20210407180353730.png" /></p>
 </li>
 </ol>
+<p><br></p>
 <h3 id="2-repository">2. Repository 구성</h3>
 <p>기본 설치 위치 (기본값 /pgdata)  에 있는 <strong>sjmon_file.tar</strong> 파일의 권한을 <code>sjmonv2user</code> 로 변경한 후, <code>sjmonv2user</code> 의 Home Directory로 옮깁니다.</p>
 <p><img alt="image-20210408140347243" src="../images/image-20210408140347243.png" /></p>
@@ -291,6 +295,7 @@ Archive:  SJMON_for_Linux.zip
 </tr>
 </tbody>
 </table>
+<p><br></p>
 <h3 id="3-manager-installer-manager-tomcat-scouter">3. Manager Installer 를 통해 Manager &amp; Tomcat &amp; Scouter 설치</h3>
 <p>기본 설치 위치 (기본값 /pgdata) 로 이동하여 아래 명령을 수행합니다. shell 파일에 실행 권한이 없다면 <code>chmod +x managerInstall.sh</code> 을 수행하여 실행 권한을 부여합니다. Postgresql 기본 포트는 <strong>5432</strong>, 매니저 기본 포트는 <strong>43001</strong>입니다.</p>
 <p>[Usage]</p>
@@ -300,7 +305,7 @@ Archive:  SJMON_for_Linux.zip
 <pre><code class="language-powershell"> ./managerInstall.sh all localhost 5432 43001
 </code></pre>
 <p><img alt="image-20210408092553261" src="../images/image-20210408092553261.png" /></p>
-<p>발급받은 License 정보를 입력하</p>
+<p>발급받은 License 정보를 입력한다.</p>
 <p>Tomcat 과 Manager 설치가 완료되면, Scouter 설치 여부를 선택한다. Default는 n 이며, y 입력 시 Scouter 설치를 진행하고 n 입력 시 Scouter 설치 없이 종료한다.</p>
 <p><img alt="image-20210408105929403" src="../images/image-20210408105929403.png" /></p>
 <p>Manager, Tomcat, Scouter 가 정상적으로 구동된 경우 아래와 같이 프로세스를 확인할 수 있습니다.</p>
@@ -320,9 +325,13 @@ Archive:  SJMON_for_Linux.zip
 <li>Scouter<br />
 <img alt="image-20210408134715584" src="../images/image-20210408134715584.png" /></li>
 </ul>
+<p><br></p>
 <h3 id="4-viewer">4. Viewer 접속 확인</h3>
 <p>Chrome web browser에 http://localhost:9090을 입력하여 SJMON Viewer에 접속합니다. 기본 계정 ID는  <code>admin</code>, 비밀번호는 <code>IBMP@ssw0rd</code> 입니다.</p>
+<p><br></p>
+<p><br></p>
 <h2 id="nagios">Nagios 연동 설치</h2>
+<p><br></p>
 <h4 id="nagios_1">Nagios 연동 설치 전 확인 사항</h4>
 <p>SJMON과 Nagios를 연동하려면 사전에 CHECKMK 1.4.x 혹은 1.5.x 가 Manager서버에 설치되어 있어야 합니다. 설치가 완료된 상태에서 아래 순서에 따라 진행해주세요.</p>
 <p>또한, Database를 이용한 SMS을 사용 할 경우 설치 전 다음 파일을 설정하여 주시기 바랍니다.</p>
@@ -377,6 +386,8 @@ Archive:  SJMON_for_Linux.zip
 </tr>
 </tbody>
 </table>
+<p></p>
+
 <ul>
 <li>Postgresql 을 연결하는 예시 화면입니다. <code>COLUMNS</code> 내에 컬럼명과 컬럼값을 json 형식으로 입력합니다.</li>
 </ul>
@@ -389,11 +400,14 @@ Archive:  SJMON_for_Linux.zip
 <li>Oracle 예시</li>
 </ul>
 <p><img alt="image-20210406164944610" src="../images/image-20210406164944610.png" /></p>
+<p><br></p>
 <h4 id="nagios_2">Nagios 연동 스크립트 실행</h4>
 <p>매니저 설치 위치(기본값 <code>/pgdata</code>) 에 있는 Nagios_for_Sjmon.tar 파일을 압축해제 합니다.</p>
 <p><img alt="image-20211124114238710" src="../images/image-20211124114238710.png" /></p>
 <p>압축해제 후  <code>nagios</code>폴더가 생성된 것을 확인할 수 있습니다. SJMON과 Nagios를 연동하기 위한 설정 파일이 존재합니다.</p>
 <p><img alt="image-20210414130328052" src="../images/image-20210414130328052.png" /></p>
+<p></p>
+
 <table>
 <thead>
 <tr>
@@ -428,14 +442,18 @@ Archive:  SJMON_for_Linux.zip
 </tr>
 </tbody>
 </table>
+<p></p>
+
 <p>nagios 폴더 내에 있는 설치 shell을 실행합니다.</p>
 <p>[Usage]</p>
 <pre><code>./nagios_plugin_install.sh &lt;설치 옵션&gt; &lt;CHECKMK SITE명&gt; &lt;Apache 포트&gt; &lt;SJMON과 통신 할 포트&gt; 
 &lt;CHECKMK AUTOMATION 계정명&gt; &lt;SJMON ADMIN ROLE과 연결 될 CHECKMK ROLE명&gt;
 &lt;SJMON USER ROLE과 연결 될 CHECKMK ROLE명&gt;
 </code></pre>
-<p>[Example]</p>
-<p><img alt="image-20210414130516037" src="../images/image-20210414130516037.png" /></p>
+<p>[Example]<br />
+<img alt="image-20210414130516037" src="../images/image-20210414130516037.png" /></p>
+<p></p>
+
 <p>각 옵션에 대한 설명입니다. 옵션 없이 설치를 진행할 경우 입력요청에 따라 진행합니다.</p>
 <ul>
 <li>다음 두 가지 옵션 중 한 가지를 입력합니다.
@@ -449,6 +467,8 @@ Archive:  SJMON_for_Linux.zip
 <li>Admin Role(=SJMON ADMIN ROLE과 연결 될 CHECKMK ROLE)은 DEFAULT로 admin(=SITE 초기 등록 된 권한)이 입력되어 있고, 수정을 원하는 경우 수정 할 Admin Role을 입력한 뒤 Enter를 누릅니다.</li>
 <li>User Role(=SJMON USER ROLE과 연결 될 CHECKMK ROLE)은 DEFAULT로 user(=SITE 초기 등록 된 권한)이 입력되어 있고, 수정을 원하는 경우 수정 할 Admin Role을 입력한 뒤 Enter를 누릅니다.</li>
 </ul>
+<p></p>
+
 <p>설치 시 적용되는 내용은 아래와 같습니다.</p>
 <ul>
 <li>CHECK_MK SITE 체크 및 생성</li>
@@ -458,6 +478,8 @@ Archive:  SJMON_for_Linux.zip
 <li>SJMON 전용 NOTIFICATION 스크립트 추가 </li>
 <li>SJMON 매니저 NAGIOS 연동 항목 설정</li>
 </ul>
+<p></p>
+
 <p>[설치 진행 예시]</p>
 <p>설치 전 SJMON MANAGER, TOMCAT을 중지시킵니다.<img alt="image-20210414131345249" src="../images/image-20210414131345249.png" /></p>
 <p>NAGIOS 연동 전용 프로그램에 대한 필수 라이브러리를 설치가 진행됩니다.</p>
@@ -477,10 +499,14 @@ Archive:  SJMON_for_Linux.zip
 <p><img alt="image-20210414131951645" src="../images/image-20210414131951645.png" /></p>
 <p><strong>SJMON Manager</strong>와 NAGIOS 연동 프로그램이 연결되기 까지 약 1분 소요됩니다. <code>manager</code> 폴더 내의 로그에서 연결여부를 확인할 수 있습니다.</p>
 <p><img alt="image-20210414132043177" src="../images/image-20210414132043177.png" /></p>
+<p></p>
+
 <p>[설정 파일 수동 확인]
 NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다음 형식으로 등록되었는지 확인합니다. 해당 파일의 기본 위치는 <code>/omd/sites/사이트명/sjmon</code> 입니다.<br />
 <img alt="image-20210414132242870" src="../images/image-20210414132242870.png" /></p>
 <p>각 항목에 대한 내용은 다음과 같습니다.</p>
+<p></p>
+
 <table>
 <thead>
 <tr>
@@ -532,6 +558,8 @@ NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다
 </tr>
 </tbody>
 </table>
+<p></p>
+
 <ol>
 <li><code>manager/config.properties</code> 파일이 다음 형식으로 등록되었는지 확인합니다. <br />
 <img alt="image-20210414162630300" src="../images/image-20210414162630300.png" /></li>
@@ -571,14 +599,22 @@ NAGIOS 연동프로그램 설정파일인 <code>config.json</code>을 열어 다
 </tr>
 </tbody>
 </table>
+<p></p>
+
 <ol>
-<li>매니저의 <strong>repo.sh</strong>에 NAGIOS SITE명이 올바르게 입력되었는지 확인합니다. 
-    ※ NAGS_SITE입력되는 SITE명은 반드시 <code>/omd/sites/사이트명/sjmon/config.json</code>의 <code>BASE.SITE</code>와 일치해야 합니다.</li>
+<li>
+<p>매니저의 <strong>repo.sh</strong>에 NAGIOS SITE명이 올바르게 입력되었는지 확인합니다. 
+    ※ NAGS_SITE입력되는 SITE명은 반드시 <code>/omd/sites/사이트명/sjmon/config.json</code>의 <code>BASE.SITE</code>와 일치해야 합니다.  </p>
+<p><img alt="image-20210414162836059" src="../images/image-20210414162836059.png" /></p>
+</li>
 </ol>
-<p>​    <img alt="image-20210414162836059" src="../images/image-20210414162836059.png" /></p>
 <p><img alt="image-20210414163212604" src="../images/image-20210414163212604.png" /></p>
 <p>Nagios 연동 후에는 Viewer를 재로그인해야 관련 메뉴를 확인할 수 있습니다.</p>
+<p><br></p>
+<p><br></p>
 <h2 id="scouter">최초 설치 이후 Scouter 추가 설치 시</h2>
+<p></p>
+
 <p>최초 설치 시 Scouter를 설치하지 않는 경우에는, 필요 없는 기능으로 판단하여 관련 폴더 및 파일을 모두 삭제합니다. Scouter를 추가로 설치하고자 하는 경우, <a href="https://ibm.box.com/v/scouter-setup-linux">Scouter_for_Linux.zip</a> 파일을 다운로드 받아, 기존 매니저 설치 위치(기본값 <code>/pgdata</code>)에 압축 해제 합니다.</p>
 <pre><code># unzip Scouter_for_Linux.zip
 </code></pre>
