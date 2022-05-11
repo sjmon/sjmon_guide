@@ -182,9 +182,9 @@
 <p><code>${TOMCAT_HOME}/bin/</code><strong>catalina.sh</strong> 파일을 수정합니다.<br />
 아래와 같이 scouter.agent.jar 위치와 scouter.conf 위치를 적어줍니다. </p>
 <pre><code>CATALINA_OPTS=&quot;$CATALINA_OPTS -javaagent:/pgdata/tomcat/lib/scouter.agent.jar&quot;
-CATALINA_OPTS=&quot;$CATALINA_OPTS -Discouter.config=/pgdata/tomcat/conf/scouter.conf&quot;
+CATALINA_OPTS=&quot;$CATALINA_OPTS -Dscouter.config=/pgdata/tomcat/conf/scouter.conf&quot;
 </code></pre>
-<p><img alt="image-20210510174837160" src="../tomcat_image/image-20210510174837160.png" /></p>
+<p><img alt="image-20220511120020391" src="../tomcat_image/catalina._sh.png" /></p>
 <p><br></p>
 <p><br></p>
 <h2 id="4-tomcat">4. tomcat재시작</h2>
