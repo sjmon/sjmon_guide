@@ -131,33 +131,39 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-event">3) Event</a>
+    <li class="toctree-l3"><a class="reference internal" href="#3-error-log">3) Error Log</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_3">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-quick-parameter-check">4) Quick Parameter Check</a>
+    <li class="toctree-l3"><a class="reference internal" href="#4-event">4) Event</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_4">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-parameter-health-check">5) Parameter Health Check</a>
+    <li class="toctree-l3"><a class="reference internal" href="#5-quick-parameter-check">5) Quick Parameter Check</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_5">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-parameter-change-history">6) Parameter Change History</a>
+    <li class="toctree-l3"><a class="reference internal" href="#6-parameter-health-check">6) Parameter Health Check</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_6">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#7-aix-virtualization">7) AIX Virtualization</a>
+    <li class="toctree-l3"><a class="reference internal" href="#7-parameter-change-history">7) Parameter Change History</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#_7">* 상세 사용 방법</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-aix-virtualization">8) AIX Virtualization</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
@@ -167,19 +173,19 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-quick-resource-trend">1) Quick Resource Trend</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_8">* 상세 사용 방법</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_9">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2-comparative-time-analysis">2) Comparative Time Analysis</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_9">* 상세 사용 방법</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_10">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#3-comparative-system-analysis">3) Comparative System Analysis</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_10">* 상세 사용 방법</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_11">* 상세 사용 방법</a>
     </li>
         </ul>
     </li>
@@ -621,12 +627,26 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 </li>
 </ul>
 <p><br></p>
-<h3 id="3-event">3) Event</h3>
+<h3 id="3-error-log">3) Error Log</h3>
+<p>Error Log 조회 및 분석 도구 입니다. 이를 통해 Error Log들의 정보를 한 눈에 확인 할 수 있습니다.<br />
+<img alt="image-20220915091841065" src="../user_guide_image/error_log.png" /></p>
+<p></p>
+
+<h4 id="_3">* 상세 사용 방법</h4>
+<p><img alt="image-20220915094036766" src="../user_guide_image/error_log_search.png" /><br />
+<strong>STEP 1 :</strong> Error Log를 조회 할 대상 CLIENT를 조회합니다.<br />
+<strong>STEP 2 :</strong> 기간을 선택 합니다. <br />
+<strong>STEP 3 :</strong> 로그식별자 값을 조회합니다.(선택하지 않을 경우 전체 조회)<br />
+<strong>STEP 4 :</strong> Error Type을 조회합니다. (선택하지 않을 경우 전체 조회)</p>
+<p><img alt="image-20220915094408563" src="../user_guide_image/error_log_list.png" /> <br />
+<strong>STEP 5 :</strong> Error Log LIST 정보를 확인 할 수 있습니다.</p>
+<p><br></p>
+<h3 id="4-event">4) Event</h3>
 <p>이벤트 조회 및 분석 도구 입니다. 이를 통해 EVENT들의 상태를 한 눈에 확인할 수 있습니다.<br />
 <img alt="image-20211202095757802" src="../user_guide_image/event.png" /></p>
 <p></p>
 
-<h4 id="_3">* 상세 사용 방법</h4>
+<h4 id="_4">* 상세 사용 방법</h4>
 <p><img alt="image-20211202100017916" src="../user_guide_image/event_menu.png" /><br />
 <strong>STEP 1 :</strong>  EVENT를 조회할 대상 CLIENT를 조회합니다.<br />
 <strong>STEP 2 :</strong>  EVENT 값을 조회(선택하지 않을 경우 전체 조회)합니다.<br />
@@ -636,12 +656,12 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <p><img alt="image-20211202100141005" src="../user_guide_image/event_event_log.png" /><br />
 <strong>STEP 5 :</strong>  EVENT LIST정보를 확인할 수 있습니다.</p>
 <p><br></p>
-<h3 id="4-quick-parameter-check">4) Quick Parameter Check</h3>
+<h3 id="5-quick-parameter-check">5) Quick Parameter Check</h3>
 <p>전체 시스템 파라미터 권고 적용 여부를 확인하는 도구 입니다. 이를 통해 현재 서버의 파라미터가 권고 값을 따르고 있는지 한눈에 확인이 가능합니다.<br />
 <img alt="image-20211202100212256" src="../user_guide_image/quick_parameter_check.png" /></p>
 <p></p>
 
-<h4 id="_4">* 상세 사용 방법</h4>
+<h4 id="_5">* 상세 사용 방법</h4>
 <p><img alt="image-20211202100332916" src="../user_guide_image/quick_parameter_check_detail.png" /><br />
 <strong>STEP 1 :</strong> AIX에서 제공하는 주요 파라미터의 변경여부를 직관적으로 확인이 가능합니다.</p>
 <ul>
@@ -650,12 +670,12 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <li>GREEN : 권고치에 해당하는 파라미터</li>
 </ul>
 <p><br></p>
-<h3 id="5-parameter-health-check">5) Parameter Health Check</h3>
+<h3 id="6-parameter-health-check">6) Parameter Health Check</h3>
 <p>파라미터 변경에 따른 권고사항을 확인할 수 있는 분석도구 입니다. 이를 통해 권고 치와 현재 파라미터 상태를 확인할 수 있습니다.<br />
 <img alt="image-20211202100402732" src="../user_guide_image/parameter_Health_check.png" /></p>
 <p></p>
 
-<h4 id="_5">* 상세 사용 방법</h4>
+<h4 id="_6">* 상세 사용 방법</h4>
 <p><img alt="image-20211202100448447" src="../user_guide_image/parameter_health_check_menu.png" /><br />
 <strong>STEP 1 :</strong>  SYSTEM을 선택 후 조회합니다.</p>
 <p><img alt="image-20211202100627876" src="../user_guide_image/parameter_health_check_detail.png" /><br />
@@ -666,12 +686,12 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <strong>STEP 6 :</strong>  SYSTEM의 현재 파라미터 value를 보여줍니다.<br />
 <strong>STEP 7 :</strong>  권고된 VALUE 값을 보여줍니다.</p>
 <p><br></p>
-<h3 id="6-parameter-change-history">6) Parameter Change History</h3>
+<h3 id="7-parameter-change-history">7) Parameter Change History</h3>
 <p>파라미터 변경에 따른 history를 분석할 수 있는 도구입니다.<br />
 <img alt="image-20211202101317144" src="../user_guide_image/parameter_change_history.png" /></p>
 <p></p>
 
-<h4 id="_6">* 상세 사용 방법</h4>
+<h4 id="_7">* 상세 사용 방법</h4>
 <p><img alt="image-20211202101419945" src="../user_guide_image/parameter_change_history_menu.png" /><br />
 <strong>STEP 1 :</strong>  파라미터 변경을 확인 할 HOST를 선택합니다.<br />
 <strong>STEP 2 :</strong>  변경 기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
@@ -687,12 +707,12 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <p>Time-comparative Analysis 탭에서는 두 날짜의 전체 파라미터 값을 비교할 수 있습니다. <br />
 <img alt="image-20210601111233847" src="../user_guide_image/parameter_change_history_time.png" /></p>
 <p><br></p>
-<h3 id="7-aix-virtualization">7) AIX Virtualization</h3>
+<h3 id="8-aix-virtualization">8) AIX Virtualization</h3>
 <p>AIX Virtualization 툴이 제공하는 물리적 machine의 자원 사용 현황을 통해 서버 자원 할당 계획에 활용할 수 있습니다.<br />
 <img alt="image-20211202102034626" src="../user_guide_image/aix_virtualization.png" /></p>
 <p></p>
 
-<h4 id="_7">* 상세 사용 방법</h4>
+<h4 id="_8">* 상세 사용 방법</h4>
 <p><img alt="image-20210608112628727" src="../user_guide_image/aix_virtualization_menu.png" /><br />
 <strong>STEP 1 :</strong>  MACHINE 을 선택합니다.<br />
 <strong>STEP 2 :</strong>  기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
@@ -708,7 +728,7 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <img alt="image-20210601114848162" src="../user_guide_image/quick_trend_report.png" /></p>
 <p></p>
 
-<h4 id="_8">* 상세 사용 방법</h4>
+<h4 id="_9">* 상세 사용 방법</h4>
 <p><img alt="image-20210608112821309" src="../user_guide_image/quick_trend_report_menu.png" /><br />
 <strong>STEP 1 :</strong>  MACHINE 을 선택합니다.<br />
 <strong>STEP 2 :</strong>  기간 선택 후 <strong>INQUIRY</strong> 버튼을 누릅니다.</p>
@@ -724,7 +744,7 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <img alt="image-20210601151131857" src="../user_guide_image/comparative_time_analysis2.png" /></p>
 <p></p>
 
-<h4 id="_9">* 상세 사용 방법</h4>
+<h4 id="_10">* 상세 사용 방법</h4>
 <p><img alt="image-20210601151908388" src="../user_guide_image/comparative_time_analysis_menu.png" /><br />
 <strong>STEP 1 :</strong>  CLIENT를 선택합니다.<br />
 <strong>STEP 2 :</strong>  구간 A를 선택합니다.<br />
@@ -741,7 +761,7 @@ TOP-DOWN 방식으로 분석이 가능하고, OS는 Top process를 확인할 수
 <img alt="image-20211202104429860" src="../user_guide_image/comparative_system_analysis.png" /></p>
 <p></p>
 
-<h4 id="_10">* 상세 사용 방법</h4>
+<h4 id="_11">* 상세 사용 방법</h4>
 <p><img alt="image-20210601154754455" src="../user_guide_image/comparative_system_analysis_menu.png" /><br />
 <strong>STEP 1 :</strong>  구간을 선택합니다.<br />
 <strong>STEP 2 :</strong>  비교 할 system 선택 후 조회합니다.</p>
@@ -1346,7 +1366,7 @@ NAGIOS와 연동 했을 경우 NAGIOS USER도 삭제 됩니다.<br />
                    -단일 선택에 대해서만 팝업 발생합니다.</li>
 <li><img alt="image-20211210160025919" src="../user_guide_image/admin_inven_nagios_btn_sync.png" /> -  NAGIOS에 등록 된 호스트와 SJMON의 등록 된 System을 비교하여 SJMON에 없는 HOST를 SJMON System으로 등록합니다.</li>
 </ul>
-<h5 id="_11">* 상세 등록 정보</h5>
+<h5 id="_12">* 상세 등록 정보</h5>
 <h6 id="nagios-host">[Nagios Host 등록]</h6>
 <p><img alt="image-20210603162716827" src="../user_guide_image/admin_inven_nagios_add.png" /><br />
 <strong>STEP 1 :</strong>  HOST의 정보를 입력합니다.<br />
@@ -1453,7 +1473,7 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <p><img alt="image-20210610141837721" src="../user_guide_image/admin_threshold_nagios_notifi_copy.png" />  -  해당 Host명 클립보드에 저장합니다. (=Copy)</p>
 <p></p>
 
-<h5 id="_12">* 상세 등록 정보</h5>
+<h5 id="_13">* 상세 등록 정보</h5>
 <p><img alt="image-20210610142117248" src="../user_guide_image/admin_threshold_nagios_detail.png" /><br />
 <strong>STEP 1 :</strong>  설정 할 서비스를 조회합니다. </p>
 <p><img alt="image-20210610142708318" src="../user_guide_image/admin_threshold_nagios_detail2.png" /><br />
@@ -1473,7 +1493,7 @@ NAGIOS로그인 연동 시 화면에 출력 됩니다.</p>
 <p><img alt="image-20210610141837721" src="../user_guide_image/admin_threshold_nagios_notifi_copy.png" />  -  해당 Host명 클립보드에 저장합니다. (=Copy)</p>
 <p></p>
 
-<h5 id="_13">* 상세 등록 정보</h5>
+<h5 id="_14">* 상세 등록 정보</h5>
 <p><img alt="image-20210610143531596" src="../user_guide_image/admin_threshold_nagios_notifi_detail.png" /><br />
 <strong>STEP 1 :</strong>  <strong>New Rule</strong>또는 <strong>Edit</strong>를 클릭합니다.  </p>
 <p><img alt="image-20210610143710568" src="../user_guide_image/admin_threshold_nagios_notifi_detail2.png" /><br />
